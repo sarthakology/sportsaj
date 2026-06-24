@@ -1,3 +1,127 @@
+@import url('https://fonts.cdnfonts.com/css/911-porscha');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Audiowide&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #E5E5E5;
+  color: #4A4A4A;
+  overflow-x: hidden;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+::selection {
+  background-color: rgba(208, 16, 46, 0.25);
+  color: #1A1A1A;
+}
+
+@layer components {
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full;
+  }
+
+  .section-py {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  .section-py-lg {
+    @apply py-14 sm:py-20 lg:py-28;
+  }
+
+  /* Light backgrounds */
+  .btn-primary {
+    @apply inline-flex items-center justify-center min-h-[44px] px-6 py-3 sm:px-8 sm:py-3.5 bg-brand-red hover:bg-brand-red-dark text-white font-porsche tracking-wide sm:tracking-porsche text-xs sm:text-sm uppercase transition-all active:scale-[0.98] sm:hover:scale-105 shadow-lg shadow-brand-red/20 w-full sm:w-auto;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center min-h-[44px] px-6 py-3 sm:px-8 sm:py-3.5 border-2 border-brand-charcoal hover:border-brand-red text-brand-charcoal hover:text-brand-red font-porsche tracking-wide sm:tracking-porsche text-xs sm:text-sm uppercase transition-all w-full sm:w-auto;
+  }
+
+  .section-label {
+    @apply text-brand-red font-porsche tracking-wide sm:tracking-porsche text-xs uppercase;
+  }
+
+  .section-title {
+    @apply font-porsche tracking-wide sm:tracking-porsche text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-charcoal uppercase leading-tight;
+  }
+
+  .card {
+    @apply bg-white border border-brand-gray-light/60 shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  .card-pad {
+    @apply p-5 sm:p-6 lg:p-8;
+  }
+
+  /* Dark backgrounds */
+  .on-dark-label {
+    @apply flex items-center gap-2 sm:gap-3 font-porsche tracking-wide sm:tracking-porsche text-[10px] sm:text-xs uppercase text-white/90;
+  }
+
+  .on-dark-label::before {
+    content: '';
+    @apply block w-6 sm:w-8 h-0.5 bg-brand-red-light flex-shrink-0;
+  }
+
+  .on-dark-heading {
+    @apply font-porsche tracking-wide sm:tracking-porsche text-white uppercase leading-tight;
+  }
+
+  .on-dark-body {
+    @apply text-brand-gray-light leading-relaxed text-sm sm:text-base;
+  }
+
+  .on-dark-stat {
+    @apply border-l-2 border-brand-red-light pl-3 sm:pl-4;
+  }
+
+  .on-dark-stat-value {
+    @apply font-porsche tracking-wide sm:tracking-porsche text-xl sm:text-2xl md:text-3xl text-white;
+  }
+
+  .on-dark-stat-label {
+    @apply text-[10px] sm:text-xs text-white/70 mt-1 uppercase tracking-wide leading-snug;
+  }
+
+  .on-dark-card {
+    @apply p-4 sm:p-6 bg-brand-dark border border-white/15 hover:border-white/40 transition-colors;
+  }
+
+  .on-dark-card-title {
+    @apply font-porsche tracking-wide sm:tracking-porsche text-white uppercase text-xs sm:text-sm mb-2 leading-snug;
+  }
+
+  .on-dark-link {
+    @apply text-white/75 hover:text-white transition-colors;
+  }
+
+  .on-dark-link-active {
+    @apply text-white font-semibold underline decoration-brand-red-light decoration-2 underline-offset-4;
+  }
+
+  .on-dark-highlight {
+    @apply inline-block px-2 sm:px-3 py-1 bg-brand-red text-white font-semibold text-xs sm:text-sm;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center min-h-[44px] px-6 py-3 sm:px-8 sm:py-3.5 border-2 border-white/40 text-white hover:bg-white hover:text-brand-charcoal font-porsche tracking-wide sm:tracking-porsche text-xs sm:text-sm uppercase transition-all w-full sm:w-auto;
+  }
+
+  .footer-heading {
+    @apply font-porsche tracking-wide sm:tracking-porsche uppercase text-sm text-white mb-4 pl-3 border-l-2 border-brand-red-light;
+  }
+}
