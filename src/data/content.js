@@ -7,7 +7,7 @@ export const company = {
   description:
     'Sports AJ is the official showcase of Seven3Sports — an integrated sports venture delivering media rights, league development, broadcast production, and digital fan engagement across cricket, football, and tennis.',
   showcaseIntro:
-    'Explore the Seven3Sports portfolio — from IPL and FIFA World Cup broadcast rights to Nepal Premier League, Bundesliga digital streaming, and fan communities built for the world\'s greatest sports stars.',
+    'Explore the Seven3Sports portfolio — from IPL and FIFA World Cup broadcast rights to Bundesliga digital streaming, and fan communities built for the world\'s greatest sports stars.',
   metaDescription:
     'Sports AJ showcases Seven3Sports — media rights, league development, sports production, and digital innovation across cricket, football, and tennis.',
   address: {
@@ -33,7 +33,7 @@ export const stats = [
   { value: '375M+', label: 'TV Homes Reached' },
   { value: '28M', label: 'Social Followers Built' },
   { value: '6', label: 'Countries — FIFA WC' },
-  { value: '10 Yrs', label: 'NPL Partnership' },
+  { value: '100+', label: 'Sports Shows Produced' },
   { value: '50+', label: 'Sports Stars Engaged' },
   { value: '15+', label: 'Years Experience' },
 ];
@@ -67,7 +67,7 @@ export const capabilities = [
   {
     title: 'League Development',
     description: 'End-to-end league structuring, franchise packaging, sponsorship deals, and broadcast syndication.',
-    details: 'We developed the Nepal Premier League partnership, Bangladesh Premier League delivery, and Sri Lankan Cricket League franchise packages — building leagues from concept to commercial success.',
+    details: 'We delivered the Bangladesh Premier League and structured Sri Lankan Cricket League franchise packages — building leagues from concept to commercial success.',
     icon: '🏆',
   },
   {
@@ -91,7 +91,7 @@ export const capabilities = [
   {
     title: 'Consultancy',
     description: 'Sports infrastructure consultancy and certification work for national and international sports bodies.',
-    details: 'Advisory services for cricket associations, sports federations, and investors — including our role as Advisor to Cricket Association of Nepal.',
+    details: 'Advisory services for cricket associations, sports federations, and investors on league structuring, commercial strategy, and sports infrastructure.',
     icon: '🤝',
   },
 ];
@@ -109,7 +109,7 @@ export const milestones = [
     year: '2014',
     title: 'FIFA World Cup',
     description:
-      'Acquired TV broadcast rights to bring the FIFA World Cup to 6 South Asian countries including Nepal — a unique innovation bringing first-time FIFA WC experience to over half a billion fans.',
+      'Acquired TV broadcast rights to bring the FIFA World Cup to 6 South Asian countries — a unique innovation bringing first-time FIFA WC experience to over half a billion fans.',
     image: '/assets/fifa.jpg',
     tag: 'Football',
   },
@@ -134,20 +134,6 @@ export const milestones = [
       'First sports company to broadcast India\'s Tour of New Zealand on YouTube — a groundbreaking digital feat unmatched in the industry.',
     tag: 'Cricket',
   },
-  {
-    year: '2020',
-    title: 'Nepal Premier League',
-    description:
-      'Cricket Association of Nepal sold NPL rights to Seven3Sports for Rs 420 million over 10 years — strategic and commercial partner for Nepal cricket.',
-    tag: 'Cricket',
-  },
-];
-
-export const nplDetails = [
-  'Organize Nepal Premier League T20 as Strategic and Commercial Partner for 10 years',
-  'Appointed as Advisor to Cricket Association of Nepal',
-  'Undertake grass root cricket program — Junior Cricket Championship',
-  'Promote cricket from grass root level and take the game closer to Nepal youth',
 ];
 
 export const digitalStats = [
@@ -212,12 +198,6 @@ export const mediaHighlights = [
     description: 'Brought Roland Garros tennis action to mobile and Internet devices across India.',
     source: 'Pocket News Alert',
     link: 'https://www.pocketnewsalert.com/2014/05/seven3sports-acquires-digital-and.html',
-  },
-  {
-    title: 'NPL Rights Deal',
-    description: 'CAN sold Nepal Premier League rights for Rs 420 million over 10 years to Seven3Sports.',
-    source: 'The Himalayan Times',
-    link: '#',
   },
   {
     title: 'US Open Digital Rights',
@@ -287,11 +267,11 @@ export const careerLogos = [
 
 export const broadcasters = [
   'Star TV', 'Sony MSM', 'ESPN', 'Supersports', 'Geo TV',
-  'Channel 9', 'Kantipur', 'Sky Sports', 'NDTV', 'UTV',
+  'Channel 9', 'Sky Sports', 'NDTV', 'UTV',
 ];
 
 export const sportsVerticals = [
-  { name: 'Cricket', events: ['IPL', 'NPL', 'BPL', 'SLPL', 'Asia Cup', 'India Tours'] },
+  { name: 'Cricket', events: ['IPL', 'BPL', 'SLPL', 'Asia Cup', 'India Tours'] },
   { name: 'Football', events: ['FIFA World Cup', 'Bundesliga', 'EURO Cup'] },
   { name: 'Tennis', events: ['French Open', 'US Open', 'Wimbledon Digital'] },
   { name: 'Multi-Sport', events: ['Digital Fan Engagement', 'Mobile VOD', 'Social Launches'] },

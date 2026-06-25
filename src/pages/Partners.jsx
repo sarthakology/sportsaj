@@ -38,7 +38,7 @@ export default function Partners() {
                 <img
                   src={`/assets/partners/${logo}`}
                   alt="Partner"
-                  className="max-h-8 sm:max-h-10 max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+                  className="max-h-8 sm:max-h-10 max-w-full object-contain hover:opacity-100 transition-opacity hover:grayscale-0"
                 />
               </div>
             ))}

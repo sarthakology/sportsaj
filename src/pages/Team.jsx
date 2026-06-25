@@ -61,7 +61,7 @@ export default function Team() {
               <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-charcoal uppercase text-lg sm:text-xl mb-5 sm:mb-6">
                 Founder&apos;s Profile
               </h3>
-              <ul className="space-y-3 sm:space-y-4">
+              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {founderEducation.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-5 h-5 bg-brand-red flex items-center justify-center mt-0.5">
@@ -71,24 +71,7 @@ export default function Team() {
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className="card card-pad lg:p-10">
-              <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-charcoal uppercase text-lg sm:text-xl mb-5 sm:mb-6">
-                Professional Career
-              </h3>
-              <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-                {founderCareer.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-5 h-5 bg-brand-red flex items-center justify-center mt-0.5">
-                      <span className="w-1.5 h-1.5 bg-white rounded-full" />
-                    </span>
-                    <span className="text-brand-charcoal text-sm leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="flex flex-wrap gap-2 sm:gap-3 pt-4 border-t border-brand-gray-light">
+                            <div className="flex flex-wrap gap-2 sm:gap-3 pt-4 border-t border-brand-gray-light">
                 {careerLogos.map((logo) => (
                   <div key={logo} className="p-2 bg-brand-gray-bg border border-brand-gray-light">
                     <img
@@ -99,6 +82,24 @@ export default function Team() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            <div className="card card-pad lg:p-10">
+              <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-charcoal uppercase text-lg sm:text-xl mb-5 sm:mb-6">
+                Professional Career
+              </h3>
+              <ul className="space-y-3 sm:space-y-4">
+                {founderCareer.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="flex-shrink-0 w-5 h-5 bg-brand-red flex items-center justify-center mt-0.5">
+                      <span className="w-1.5 h-1.5 bg-white rounded-full" />
+                    </span>
+                    <span className="text-brand-charcoal text-sm leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+
             </div>
           </div>
         </div>
