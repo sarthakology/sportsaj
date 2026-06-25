@@ -17,6 +17,7 @@ export const company = {
   },
   email: 'info@sportsaj.com',
   phone: '+91 XXX XXX XXXX',
+  web3FormsAccessKey: 'd7ee421f-4dc1-4daa-a7dc-0b34a05f9a61',
 };
 
 export const navLinks = [

@@ -3,12 +3,42 @@ import PageHeader from '../components/PageHeader';
 import { company } from '../data/content';
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
+  const [form, setForm] = useState({ name: '', email: '', topic: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError('');
+    setLoading(true);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: company.web3FormsAccessKey,
+          name: form.name,
+          email: form.email,
+          subject: form.topic,
+          topic: form.topic,
+          message: form.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError(data.message || 'Something went wrong. Please try again or email us directly.');
+      }
+    } catch {
+      setError('Could not send your message. Please try again or email us directly.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputClass =
@@ -119,21 +149,16 @@ export default function Contact() {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="contact-subject" className="block text-brand-charcoal text-sm font-medium mb-1.5">Subject</label>
-                      <select
-                        id="contact-subject"
-                        value={form.subject}
-                        onChange={(e) => setForm({ ...form, subject: e.target.value })}
+                      <label htmlFor="contact-topic" className="block text-brand-charcoal text-sm font-medium mb-1.5">Topic</label>
+                      <input
+                        id="contact-topic"
+                        type="text"
+                        required
+                        value={form.topic}
+                        onChange={(e) => setForm({ ...form, topic: e.target.value })}
                         className={inputClass}
-                      >
-                        <option value="">Select a topic</option>
-                        <option value="media-rights">Media Rights</option>
-                        <option value="league">League Development</option>
-                        <option value="digital">Digital & Social</option>
-                        <option value="production">Sports Production</option>
-                        <option value="partnership">Partnership</option>
-                        <option value="other">Other</option>
-                      </select>
+                        placeholder="e.g. Media rights inquiry, partnership proposal"
+                      />
                     </div>
                     <div>
                       <label htmlFor="contact-message" className="block text-brand-charcoal text-sm font-medium mb-1.5">Message</label>
@@ -147,8 +172,11 @@ export default function Contact() {
                         placeholder="Tell us about your inquiry..."
                       />
                     </div>
-                    <button type="submit" className="btn-primary">
-                      Send Message
+                    {error && (
+                      <p className="text-brand-red text-sm" role="alert">{error}</p>
+                    )}
+                    <button type="submit" className="btn-primary" disabled={loading}>
+                      {loading ? 'Sending...' : 'Send Message'}
                     </button>
                   </form>
                 )}
