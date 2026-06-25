@@ -11,12 +11,12 @@ export const company = {
   metaDescription:
     'Sports AJ showcases Seven3Sports — media rights, league development, sports production, and digital innovation across cricket, football, and tennis.',
   address: {
-    line1: '217, Star Towers',
-    line2: 'Sector 30, Gurgaon 122001',
+    line1: 'Unit No. 001, BPTP, Park Centra, Jal Vayu Vihar',
+    line2: 'Sector 31, Gurugram, Haryana 122001',
     country: 'INDIA',
   },
   email: 'info@sportsaj.com',
-  phone: '+91 124 000 0000',
+  phone: '+91 XXX XXX XXXX',
 };
 
 export const navLinks = [
