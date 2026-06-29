@@ -32,7 +32,7 @@ export default function MediaPage() {
                     </svg>
                   )}
                 </div>
-                <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-charcoal uppercase text-sm mb-2 sm:mb-3 group-hover:text-brand-red transition-colors leading-snug">
+                <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase text-sm mb-2 sm:mb-3 group-hover:text-brand-red transition-colors leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-brand-gray text-sm leading-relaxed">{item.description}</p>
@@ -42,11 +42,11 @@ export default function MediaPage() {
         </div>
       </section>
 
-      <section className="section-py bg-brand-gray-bg">
+      <section className="section-py bg-white">
         <div className="page-container max-w-4xl">
           <div className="card card-pad lg:p-12 border-l-4 border-l-brand-red">
             <p className="section-label mb-3">Featured Quote</p>
-            <blockquote className="text-brand-charcoal text-base sm:text-lg leading-relaxed italic mb-4">
+            <blockquote className="text-brand-black text-base sm:text-lg leading-relaxed italic mb-4">
               &ldquo;With inclusion of this undertaking to our portfolio, {company.showcaseBrand} is bringing a
               bouquet of diverse sports to its viewers. We are targeting to go beyond the conventional
               sports loved in India; introducing new experiences such as French Open in the past and

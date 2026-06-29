@@ -28,7 +28,7 @@ export default function Digital() {
                 Demand for IPL with Airtel.
               </p>
 
-              <blockquote className="border-l-4 border-brand-red pl-4 sm:pl-6 italic text-brand-charcoal text-sm sm:text-base">
+              <blockquote className="border-l-4 border-brand-red pl-4 sm:pl-6 italic text-brand-black text-sm sm:text-base">
                 &ldquo;With inclusion of this undertaking to our portfolio, {company.showcaseBrand} is bringing a
                 bouquet of diverse sports to its viewers — introducing new experiences such as French
                 Open and Bundesliga.&rdquo;
@@ -59,7 +59,7 @@ export default function Digital() {
             {digitalServices.map((service) => (
               <div key={service.title} className="card card-pad hover:border-brand-red/40">
                 <div className="w-10 h-1 bg-brand-red mb-4 sm:mb-5" />
-                <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-charcoal uppercase mb-2 sm:mb-3 text-sm sm:text-base leading-snug">
+                <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase mb-2 sm:mb-3 text-sm sm:text-base leading-snug">
                   {service.title}
                 </h3>
                 <p className="text-brand-gray text-sm leading-relaxed">{service.description}</p>
@@ -71,7 +71,7 @@ export default function Digital() {
 
       <section className="py-12 sm:py-16 bg-brand-gray-bg">
         <div className="page-container max-w-4xl text-center">
-          <h2 className="font-porsche tracking-wide sm:tracking-porsche text-xl sm:text-2xl text-brand-charcoal uppercase mb-3 sm:mb-4">
+          <h2 className="font-porsche tracking-wide sm:tracking-porsche text-xl sm:text-2xl text-brand-black uppercase mb-3 sm:mb-4">
             Worked With Leading Sports Stars
           </h2>
           <p className="text-brand-gray mb-5 sm:mb-6 text-sm sm:text-base">

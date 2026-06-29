@@ -4,18 +4,20 @@
   "description": "Media rights, league development, sports production, and digital fan engagement across cricket, football, and tennis.",
   "icons": [
     {
-      "src": "assets/logo-sportsaj.png",
+      "src": "icon-192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any"
     },
     {
-      "src": "assets/logo-sportsaj.png",
+      "src": "icon-512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#4A4A4A",
-  "background_color": "#E5E5E5"
+  "theme_color": "#D0102E",
+  "background_color": "#FFFFFF"
 }

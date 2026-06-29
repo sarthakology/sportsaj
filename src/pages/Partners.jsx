@@ -22,7 +22,7 @@ export default function Partners() {
             {broadcasters.map((b) => (
               <span
                 key={b}
-                className="px-3 sm:px-5 py-1.5 sm:py-2 bg-brand-gray-bg border border-brand-gray-light font-porsche tracking-wide sm:tracking-porsche uppercase text-[10px] sm:text-xs text-brand-charcoal"
+                className="px-3 sm:px-5 py-1.5 sm:py-2 bg-brand-gray-bg border border-brand-gray-light font-porsche tracking-wide sm:tracking-porsche uppercase text-[10px] sm:text-xs text-brand-black"
               >
                 {b}
               </span>
@@ -57,8 +57,8 @@ export default function Partners() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
               {achievements.map((item) => (
                 <div key={item} className="flex items-start gap-3 p-2 sm:p-3">
-                  <span className="text-brand-red mt-1 flex-shrink-0 text-xs">■</span>
-                  <span className="text-brand-charcoal text-sm leading-relaxed">{item}</span>
+                  <span className="w-1.5 h-1.5 bg-brand-red rounded-full mt-1.5 flex-shrink-0" />
+                  <span className="text-brand-black text-sm leading-relaxed">{item}</span>
                 </div>
               ))}
             </div>
@@ -66,12 +66,12 @@ export default function Partners() {
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 bg-brand-charcoal">
+      <section className="py-12 sm:py-16 bg-white border-t border-brand-gray-light">
         <div className="page-container max-w-4xl text-center">
-          <h2 className="on-dark-heading text-xl sm:text-2xl mb-3 sm:mb-4">
+          <h2 className="section-title text-xl sm:text-2xl mb-3 sm:mb-4">
             Become a Partner
           </h2>
-          <p className="on-dark-body mb-0">
+          <p className="text-brand-gray text-sm sm:text-base">
             We collaborate with cricket boards, broadcasters, sponsors, and sports federations to
             deliver world-class sporting experiences and commercial returns.
           </p>

@@ -3,15 +3,8 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { navLinks, company } from '../data/content';
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -22,17 +15,8 @@ export default function Navbar() {
     return () => document.body.classList.remove('menu-open');
   }, [menuOpen]);
 
-  const isHome = location.pathname === '/';
-  const solidNav = scrolled || !isHome || menuOpen;
-
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-safe-top ${
-        solidNav
-          ? 'bg-white/95 backdrop-blur-md shadow-md shadow-brand-charcoal/10'
-          : 'bg-brand-black/70 backdrop-blur-sm md:bg-transparent'
-      }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm shadow-black/5 border-b border-brand-gray-light pt-safe-top">
       <div className="page-container">
         <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           <Link to="/" className="flex items-center gap-2 sm:gap-3 min-w-0">
@@ -52,12 +36,8 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `px-2.5 lg:px-3 py-2 text-xs font-porsche tracking-porsche uppercase transition-colors rounded ${
                     isActive
-                      ? solidNav || !isHome
-                        ? 'text-brand-red border-b-2 border-brand-red'
-                        : 'text-white border-b-2 border-brand-red-light'
-                      : solidNav || !isHome
-                        ? 'text-brand-charcoal hover:text-brand-red'
-                        : 'text-white/85 hover:text-white'
+                      ? 'text-brand-red border-b-2 border-brand-red'
+                      : 'text-brand-black hover:text-brand-red'
                   }`
                 }
               >
@@ -76,9 +56,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`xl:hidden p-2.5 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center ${
-              solidNav ? 'text-brand-charcoal' : 'text-white'
-            }`}
+            className="xl:hidden p-2.5 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-brand-black"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
           >
@@ -96,7 +74,7 @@ export default function Navbar() {
       {menuOpen && (
         <>
           <div
-            className="xl:hidden fixed inset-0 top-14 sm:top-16 bg-black/40 z-[-1]"
+            className="xl:hidden fixed inset-0 top-14 sm:top-16 bg-white/60 z-[-1]"
             onClick={() => setMenuOpen(false)}
             aria-hidden="true"
           />
@@ -109,7 +87,7 @@ export default function Navbar() {
                   end={link.path === '/'}
                   className={({ isActive }) =>
                     `flex items-center min-h-[48px] px-4 py-3 font-porsche tracking-porsche uppercase text-sm rounded-lg transition-colors ${
-                      isActive ? 'text-brand-red bg-brand-red/5' : 'text-brand-charcoal hover:text-brand-red hover:bg-brand-gray-bg'
+                      isActive ? 'text-brand-red bg-brand-red/5' : 'text-brand-black hover:text-brand-red hover:bg-brand-gray-bg'
                     }`
                   }
                 >

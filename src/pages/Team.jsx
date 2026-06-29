@@ -33,7 +33,7 @@ export default function Team() {
                     </div>
                   </div>
                   <div className="flex-1 text-center sm:text-left min-w-0">
-                    <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-charcoal uppercase text-xl sm:text-2xl">
+                    <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase text-xl sm:text-2xl">
                       {person.name}
                     </h3>
                     <p className="inline-block mt-2 mb-3 sm:mb-4 px-3 py-1 bg-brand-red/10 text-brand-red border border-brand-red/20 font-porsche tracking-porsche uppercase text-[10px] sm:text-xs">
@@ -44,7 +44,7 @@ export default function Team() {
                       {person.highlights.map((h) => (
                         <span
                           key={h}
-                          className="px-2 py-1 bg-brand-gray-bg text-brand-charcoal text-xs border border-brand-gray-light"
+                          className="px-2 py-1 bg-brand-gray-bg text-brand-black text-xs border border-brand-gray-light"
                         >
                           {h}
                         </span>
@@ -58,7 +58,7 @@ export default function Team() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12">
             <div className="card card-pad lg:p-10">
-              <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-charcoal uppercase text-lg sm:text-xl mb-5 sm:mb-6">
+              <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase text-lg sm:text-xl mb-5 sm:mb-6">
                 Founder&apos;s Profile
               </h3>
               <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
@@ -67,7 +67,7 @@ export default function Team() {
                     <span className="flex-shrink-0 w-5 h-5 bg-brand-red flex items-center justify-center mt-0.5">
                       <span className="w-1.5 h-1.5 bg-white rounded-full" />
                     </span>
-                    <span className="text-brand-charcoal text-sm leading-relaxed">{item}</span>
+                    <span className="text-brand-black text-sm leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -85,7 +85,7 @@ export default function Team() {
             </div>
 
             <div className="card card-pad lg:p-10">
-              <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-charcoal uppercase text-lg sm:text-xl mb-5 sm:mb-6">
+              <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase text-lg sm:text-xl mb-5 sm:mb-6">
                 Professional Career
               </h3>
               <ul className="space-y-3 sm:space-y-4">
@@ -94,7 +94,7 @@ export default function Team() {
                     <span className="flex-shrink-0 w-5 h-5 bg-brand-red flex items-center justify-center mt-0.5">
                       <span className="w-1.5 h-1.5 bg-white rounded-full" />
                     </span>
-                    <span className="text-brand-charcoal text-sm leading-relaxed">{item}</span>
+                    <span className="text-brand-black text-sm leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -105,10 +105,10 @@ export default function Team() {
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 bg-brand-charcoal">
+      <section className="py-12 sm:py-16 bg-brand-gray-bg border-t border-brand-gray-light">
         <div className="page-container max-w-3xl text-center">
-          <p className="on-dark-label justify-center mb-3 sm:mb-4">Thought Leadership</p>
-          <p className="on-dark-body">
+          <p className="section-label justify-center mb-3 sm:mb-4">Thought Leadership</p>
+          <p className="text-brand-gray text-sm sm:text-base leading-relaxed">
             Driving innovation in sports media, digital fan engagement, and league development —
             {company.showcaseBrand} continues to shape the future of sports entertainment across South Asia and beyond.
           </p>

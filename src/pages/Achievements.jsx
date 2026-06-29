@@ -46,7 +46,7 @@ export default function Achievements() {
 
                 <div className={`w-full min-w-0 ${item.image ? 'lg:w-1/2' : 'lg:w-2/3'}`}>
                   <span className="font-porsche tracking-porsche text-brand-red text-3xl sm:text-4xl">{item.year}</span>
-                  <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-charcoal uppercase text-xl sm:text-2xl lg:text-3xl mt-2 mb-3 sm:mb-4 leading-snug">
+                  <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase text-xl sm:text-2xl lg:text-3xl mt-2 mb-3 sm:mb-4 leading-snug">
                     {item.title}
                   </h3>
                   <p className="text-brand-gray leading-relaxed text-sm sm:text-base">{item.description}</p>

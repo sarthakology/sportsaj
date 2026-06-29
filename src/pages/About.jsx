@@ -20,7 +20,7 @@ export default function About() {
               <h2 className="section-title mb-4 sm:mb-6">Who We Are</h2>
               <p className="text-brand-gray leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
                 {company.name} is the official showcase platform for{' '}
-                <span className="text-brand-charcoal font-semibold">{company.showcaseBrand}</span> — run by
+                <span className="text-brand-black font-semibold">{company.showcaseBrand}</span> — run by
                 a group of avid entrepreneurs and sports industry professionals with deep expertise across
                 the global sports media landscape.
               </p>
@@ -32,14 +32,14 @@ export default function About() {
               </p>
 
               <div className="space-y-3">
-                <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-charcoal uppercase text-sm">
+                <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase text-sm">
                   Broadcast Partners
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {broadcasters.map((b) => (
                     <span
                       key={b}
-                      className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-brand-gray-bg border border-brand-gray-light text-brand-charcoal text-xs sm:text-sm"
+                      className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-brand-gray-bg border border-brand-gray-light text-brand-black text-xs sm:text-sm"
                     >
                       {b}
                     </span>
@@ -49,7 +49,7 @@ export default function About() {
             </div>
 
             <div className="relative order-1 lg:order-2">
-              <div className="absolute -inset-2 sm:-inset-4 bg-brand-red/10 blur-2xl" />
+              <div className="absolute -inset-2 sm:-inset-4 bg-brand-red/20 blur-2xl" />
               <div className="relative overflow-hidden border-l-4 border-brand-red">
                 <img
                   src="/assets/hero-bg.png"
@@ -73,7 +73,7 @@ export default function About() {
             {values.map((v) => (
               <div key={v.title} className="card card-pad text-center hover:border-brand-red/30">
                 <div className="w-12 h-1 bg-brand-red mx-auto mb-4 sm:mb-6" />
-                <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-charcoal uppercase mb-2 sm:mb-3 text-sm sm:text-base">
+                <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase mb-2 sm:mb-3 text-sm sm:text-base">
                   {v.title}
                 </h3>
                 <p className="text-brand-gray text-sm leading-relaxed">{v.description}</p>
@@ -107,12 +107,12 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 bg-brand-charcoal">
+      <section className="py-12 sm:py-16 bg-brand-gray-bg border-t border-brand-gray-light">
         <div className="page-container text-center">
-          <p className="on-dark-body mb-5 sm:mb-6">Explore the {company.showcaseBrand} portfolio</p>
+          <p className="text-brand-gray mb-5 sm:mb-6 text-sm sm:text-base">Explore the {company.showcaseBrand} portfolio</p>
           <div className="flex flex-col xs:flex-row flex-wrap justify-center gap-3 sm:gap-4 max-w-sm xs:max-w-none mx-auto">
             <Link to="/services" className="btn-primary">Our Services</Link>
-            <Link to="/team" className="btn-outline-light">Meet The Team</Link>
+            <Link to="/team" className="btn-outline">Meet The Team</Link>
           </div>
         </div>
       </section>

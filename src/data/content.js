@@ -63,37 +63,37 @@ export const capabilities = [
     title: 'Media Rights Management',
     description: 'Expert syndication and sublicensing across TV, mobile, and digital platforms for premier global sporting events.',
     details: 'From IPL sub-licensing across Pakistan, Bangladesh, and Sri Lanka to FIFA World Cup broadcast rights across six nations — we structure, negotiate, and deliver media rights that maximize reach and returns.',
-    icon: '📺',
+    icon: 'media',
   },
   {
     title: 'League Development',
     description: 'End-to-end league structuring, franchise packaging, sponsorship deals, and broadcast syndication.',
     details: 'We delivered the Bangladesh Premier League and structured Sri Lankan Cricket League franchise packages — building leagues from concept to commercial success.',
-    icon: '🏆',
+    icon: 'league',
   },
   {
     title: 'Sports Production',
     description: 'Broadcast-level sports production and program management for cricket, football, tennis, and more.',
     details: 'Our in-house team has produced and directed over 100 cricket and sports shows, managing live broadcasts, highlights packages, and multi-platform content delivery.',
-    icon: '🎬',
+    icon: 'production',
   },
   {
     title: 'Digital & Social',
     description: 'Pioneering digital fan engagement, social media launches, and mobile VOD experiences for sports stars and events.',
     details: 'From launching Sachin Tendulkar\'s official Facebook page to 28 million followers to pioneering Mobile VOD for IPL with Airtel — we lead digital sports innovation.',
-    icon: '📱',
+    icon: 'digital',
   },
   {
     title: 'Event Management',
     description: 'Organizing, marketing, and promoting large-scale sports events and infrastructure across the globe.',
     details: 'Full-service event management including ticket and gate management, sponsorship activation, and on-ground operations for tournaments and leagues worldwide.',
-    icon: '🌍',
+    icon: 'events',
   },
   {
     title: 'Consultancy',
     description: 'Sports infrastructure consultancy and certification work for national and international sports bodies.',
     details: 'Advisory services for cricket associations, sports federations, and investors on league structuring, commercial strategy, and sports infrastructure.',
-    icon: '🤝',
+    icon: 'consultancy',
   },
 ];
 

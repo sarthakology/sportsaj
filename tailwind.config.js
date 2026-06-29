@@ -9,14 +9,13 @@ module.exports = {
       colors: {
         brand: {
           red: '#D0102E',
-          'red-dark': '#A80C24',
-          'red-light': '#FF6B7A',
-          charcoal: '#4A4A4A',
-          gray: '#9E9E9E',
-          'gray-light': '#CCCCCC',
-          'gray-bg': '#E5E5E5',
-          dark: '#2A2A2A',
-          black: '#1A1A1A',
+          'red-dark': '#B00D26',
+          'red-light': '#FF4D6D',
+          black: '#0A0A0A',
+          white: '#FFFFFF',
+          gray: '#6B6B6B',
+          'gray-light': '#E5E5E5',
+          'gray-bg': '#F5F5F5',
         },
       },
       fontFamily: {

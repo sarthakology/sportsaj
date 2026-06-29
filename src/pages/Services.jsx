@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
+import ServiceIcon from '../components/ServiceIcon';
 import { capabilities, sportsVerticals, company } from '../data/content';
 
 export default function Services() {
@@ -14,22 +15,20 @@ export default function Services() {
 
       <section className="section-py bg-white">
         <div className="page-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-8">
-            {capabilities.map((cap, i) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-8 items-start">
+            {capabilities.map((cap) => (
               <div
                 key={cap.title}
-                className={`card card-pad lg:p-10 hover:border-brand-red/40 transition-all ${
-                  i % 2 === 1 ? 'lg:translate-y-4' : ''
-                }`}
+                className="card card-pad lg:p-10 hover:border-brand-red/40 transition-all"
               >
                 <div className="flex flex-col xs:flex-row items-start gap-4 sm:gap-5">
-                  <div className="text-3xl sm:text-4xl flex-shrink-0">{cap.icon}</div>
+                  <ServiceIcon name={cap.icon} className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0" />
                   <div className="min-w-0">
-                    <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-charcoal uppercase text-base sm:text-lg mb-2 sm:mb-3 leading-snug">
+                    <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase text-base sm:text-lg mb-2 sm:mb-3 leading-snug">
                       {cap.title}
                     </h3>
                     <p className="text-brand-gray text-sm leading-relaxed mb-3 sm:mb-4">{cap.description}</p>
-                    <p className="text-brand-charcoal/80 text-sm leading-relaxed border-l-2 border-brand-red pl-3 sm:pl-4">
+                    <p className="text-brand-black/80 text-sm leading-relaxed border-l-2 border-brand-red pl-3 sm:pl-4">
                       {cap.details}
                     </p>
                   </div>
@@ -55,7 +54,7 @@ export default function Services() {
                 </h3>
                 <ul className="space-y-2">
                   {v.events.map((e) => (
-                    <li key={e} className="flex items-start gap-2 text-brand-charcoal text-sm">
+                    <li key={e} className="flex items-start gap-2 text-brand-black text-sm">
                       <span className="w-1.5 h-1.5 bg-brand-red rounded-full flex-shrink-0 mt-1.5" />
                       {e}
                     </li>
@@ -77,7 +76,7 @@ export default function Services() {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto px-8 py-3 bg-white text-brand-red font-porsche tracking-porsche uppercase text-sm hover:bg-brand-gray-light transition-colors"
+            className="inline-flex items-center justify-center min-h-[44px] w-full sm:w-auto px-8 py-3 bg-white text-brand-red font-porsche tracking-porsche uppercase text-sm hover:bg-brand-gray-bg transition-colors"
           >
             Contact Our Team
           </Link>
