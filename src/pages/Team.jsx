@@ -72,11 +72,11 @@ export default function Team() {
                 ))}
               </ul>
                             <div className="flex flex-wrap gap-2 sm:gap-3 pt-4 border-t border-brand-gray-light">
-                {careerLogos.map((logo) => (
+                {careerLogos.map((logo, index) => (
                   <div key={logo} className="p-2 bg-brand-gray-bg border border-brand-gray-light">
                     <img
                       src={`/assets/career/${logo}`}
-                      alt="Organization"
+                      alt={`${leadership[0].name} career organization logo ${index + 1}`}
                       className="h-6 sm:h-7 w-auto object-contain opacity-70"
                     />
                   </div>

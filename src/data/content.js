@@ -1,3 +1,7 @@
+export const siteUrl = 'https://sportsaj.com';
+
+export const defaultOgImage = '/assets/sports-hero.jpg';
+
 export const company = {
   name: 'Sports AJ',
   legalName: 'Sports AJ',
@@ -18,6 +22,62 @@ export const company = {
   email: 'info@sportsaj.com',
   phone: '+91 XXX XXX XXXX',
   web3FormsAccessKey: 'd7ee421f-4dc1-4daa-a7dc-0b34a05f9a61',
+};
+
+export const pageSeo = {
+  '/': {
+    title: 'Sports AJ | Showcasing Seven3Sports',
+    description: company.metaDescription,
+  },
+  '/about': {
+    title: 'About Us',
+    description:
+      'Learn about Sports AJ and Seven3Sports — sports media professionals delivering IPL, FIFA World Cup, and Bundesliga rights across cricket, football, and tennis.',
+    breadcrumb: 'About',
+  },
+  '/services': {
+    title: 'Services',
+    description:
+      'Media rights management, league development, sports production, digital fan engagement, event management, and consultancy by Seven3Sports.',
+    breadcrumb: 'Services',
+  },
+  '/achievements': {
+    title: 'Achievements',
+    description:
+      'Seven3Sports milestones — IPL broadcast rights across 375M+ homes, FIFA World Cup 2014 across six nations, Bundesliga digital, and French Open rights.',
+    breadcrumb: 'Achievements',
+    image: '/assets/ipl.jpg',
+  },
+  '/digital': {
+    title: 'Digital Innovation',
+    description:
+      'Digital sports innovation by Seven3Sports — Sachin Tendulkar Facebook launch, mobile VOD for IPL, live streaming, and fan engagement programs.',
+    breadcrumb: 'Digital',
+  },
+  '/partners': {
+    title: 'Partners',
+    description:
+      'Seven3Sports partners include BCCI, FIFA, Star TV, Sony MSM, ESPN, and leading cricket boards, broadcasters, and sports federations.',
+    breadcrumb: 'Partners',
+  },
+  '/media': {
+    title: 'Press & Coverage',
+    description:
+      'Seven3Sports in the news — IPL sublicensing, FIFA World Cup broadcast rights, Bundesliga digital rights, and sports media innovation.',
+    breadcrumb: 'Media',
+  },
+  '/team': {
+    title: 'Leadership Team',
+    description:
+      'Meet the Seven3Sports leadership team — sports media entrepreneurs with experience at STAR TV, ESPN, IBM, Accenture, and global sports bodies.',
+    breadcrumb: 'Team',
+  },
+  '/contact': {
+    title: 'Contact',
+    description:
+      'Contact Sports AJ in Gurugram, India for media rights, league development, sports production, and digital fan engagement partnerships.',
+    breadcrumb: 'Contact',
+  },
 };
 
 export const navLinks = [

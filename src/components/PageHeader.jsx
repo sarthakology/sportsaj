@@ -7,7 +7,7 @@ export default function PageHeader({ label, title, description, breadcrumb }) {
 
       <div className="relative page-container">
         {breadcrumb && (
-          <nav className="page-breadcrumb">
+          <nav className="page-breadcrumb" aria-label="Breadcrumb">
             <Link to="/">Home</Link>
             <span>/</span>
             <span className="page-breadcrumb-active">{breadcrumb}</span>

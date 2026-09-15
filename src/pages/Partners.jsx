@@ -30,14 +30,14 @@ export default function Partners() {
           </div>
 
           <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-4 mb-10 sm:mb-16">
-            {partnerLogos.map((logo) => (
+            {partnerLogos.map((logo, index) => (
               <div
                 key={logo}
                 className="flex items-center justify-center p-3 sm:p-4 card aspect-square hover:border-brand-red/30"
               >
                 <img
                   src={`/assets/partners/${logo}`}
-                  alt="Partner"
+                  alt={`${company.showcaseBrand} sports and media partner logo ${index + 1}`}
                   className="max-h-8 sm:max-h-10 max-w-full object-contain hover:opacity-100 transition-opacity hover:grayscale-0"
                 />
               </div>
