@@ -1,14 +1,34 @@
 import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
-import { company, broadcasters, values } from '../data/content';
+import SEO from '../components/SEO';
+
+const showcaseIntro =
+  'Explore the Seven3Sports portfolio — from IPL and FIFA World Cup broadcast rights to Bundesliga digital streaming, and fan communities built for the world\'s greatest sports stars.';
+
+const broadcasters = [
+  'Star TV', 'Sony MSM', 'ESPN', 'Supersports', 'Geo TV',
+  'Channel 9', 'Sky Sports', 'NDTV', 'UTV',
+];
+
+const values = [
+  { title: 'Innovation', description: 'Pioneering first-of-its-kind digital and broadcast experiences across cricket, football, and tennis.' },
+  { title: 'Integrity', description: 'Trusted partnerships with cricket boards, FIFA, broadcasters, and global sports bodies.' },
+  { title: 'Excellence', description: 'Broadcast-level production quality and strategic league development at every scale.' },
+  { title: 'Global Reach', description: 'Connecting South Asian audiences to the world\'s biggest sporting events and properties.' },
+];
 
 export default function About() {
   return (
     <>
+      <SEO
+        title="About Us"
+        description="Learn about Sports AJ and Seven3Sports — sports media professionals across cricket, football, and tennis."
+        breadcrumb="About"
+      />
       <PageHeader
         label="About Sports AJ"
         title="Our Story"
-        description={company.showcaseIntro}
+        description={showcaseIntro}
         breadcrumb="About"
       />
 
@@ -16,16 +36,16 @@ export default function About() {
         <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <p className="section-label mb-3">Showcasing {company.showcaseBrand}</p>
+              <p className="section-label mb-3">Showcasing Seven3Sports</p>
               <h2 className="section-title mb-4 sm:mb-6">Who We Are</h2>
               <p className="text-brand-gray leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
-                {company.name} is the official showcase platform for{' '}
-                <span className="text-brand-black font-semibold">{company.showcaseBrand}</span> — run by
+                Sports AJ is the official showcase platform for{' '}
+                <span className="text-brand-black font-semibold">Seven3Sports</span> — run by
                 a group of avid entrepreneurs and sports industry professionals with deep expertise across
                 the global sports media landscape.
               </p>
               <p className="text-brand-gray leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
-                {company.showcaseBrand} possesses in-house expertise for large sports program management,
+                Seven3Sports possesses in-house expertise for large sports program management,
                 media rights management, sports production and league development — serving prestigious
                 cricket boards like BCCI and New Zealand, and maintaining working relations with top
                 broadcasters worldwide.
@@ -53,7 +73,7 @@ export default function About() {
               <div className="relative overflow-hidden border-l-4 border-brand-red">
                 <img
                   src="/assets/hero-bg.png"
-                  alt={company.showcaseBrand}
+                  alt="Seven3Sports"
                   className="w-full h-auto object-cover max-h-64 sm:max-h-none"
                 />
               </div>
@@ -65,7 +85,7 @@ export default function About() {
       <section className="section-py bg-brand-gray-bg">
         <div className="page-container">
           <div className="text-center mb-8 sm:mb-14">
-            <p className="section-label mb-2">{company.showcaseBrand} Values</p>
+            <p className="section-label mb-2">Seven3Sports Values</p>
             <h2 className="section-title">What Drives Us</h2>
           </div>
 
@@ -86,22 +106,13 @@ export default function About() {
       <section className="section-py bg-white">
         <div className="page-container max-w-4xl">
           <div className="card card-pad lg:p-12 border-t-4 border-t-brand-red">
-            <h2 className="section-title text-xl sm:text-2xl md:text-3xl mb-2 text-center">{company.name}</h2>
+            <h2 className="section-title text-xl sm:text-2xl md:text-3xl mb-2 text-center">Sports AJ</h2>
             <p className="text-brand-red font-porsche tracking-porsche uppercase text-xs text-center mb-6 sm:mb-8">
-              Legal Name: {company.legalName}
+              Legal Name: Sports AJ
             </p>
             <p className="text-brand-gray leading-relaxed text-center mb-6 sm:mb-8 text-sm sm:text-base">
-              Corporate office at {company.address.line1}, {company.address.line2},{' '}
-              {company.address.country}. {company.name} serves as the showcase website for{' '}
-              {company.showcaseBrand}, presenting its credentials, achievements, and partnerships to
-              cricket boards, broadcasters, sponsors, and sports industry stakeholders.
-            </p>
-            <p className="text-brand-gray leading-relaxed text-center text-sm sm:text-base">
-              {company.showcaseBrand} is engaged in organizing, marketing and promotion of sports events
-              and infrastructure, league development, media rights, broadcast level sports production,
-              ticket and gate management, and all kinds of commercial activities in the sports and
-              sports related fields — including sports infrastructure consultancy and certification work
-              for national and international sports bodies.
+              Corporate office at Unit No. 001, BPTP, Park Centra, Jal Vayu Vihar, Sector 31, Gurugram, Haryana 122001,
+              INDIA. Sports AJ serves as the showcase website for Seven3Sports.
             </p>
           </div>
         </div>
@@ -109,10 +120,10 @@ export default function About() {
 
       <section className="py-12 sm:py-16 bg-brand-gray-bg border-t border-brand-gray-light">
         <div className="page-container text-center">
-          <p className="text-brand-gray mb-5 sm:mb-6 text-sm sm:text-base">Explore the {company.showcaseBrand} portfolio</p>
+          <p className="text-brand-gray mb-5 sm:mb-6 text-sm sm:text-base">Explore the Seven3Sports portfolio</p>
           <div className="flex flex-col xs:flex-row flex-wrap justify-center gap-3 sm:gap-4 max-w-sm xs:max-w-none mx-auto">
-            <Link to="/services" className="btn-primary">Our Services</Link>
-            <Link to="/team" className="btn-outline">Meet The Team</Link>
+            <Link to="/team" className="btn-primary">Meet The Team</Link>
+            <Link to="/our-journey" className="btn-outline">Our Journey</Link>
           </div>
         </div>
       </section>

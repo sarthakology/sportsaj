@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import PageHeader from '../components/PageHeader';
-import { company } from '../data/content';
+import SEO from '../components/SEO';
+
+const WEB3FORMS_KEY = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY || 'd7ee421f-4dc1-4daa-a7dc-0b34a05f9a61';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', topic: '', message: '' });
@@ -18,7 +20,7 @@ export default function Contact() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          access_key: company.web3FormsAccessKey,
+          access_key: WEB3FORMS_KEY,
           name: form.name,
           email: form.email,
           subject: form.topic,
@@ -46,10 +48,15 @@ export default function Contact() {
 
   return (
     <>
+      <SEO
+        title="Contact"
+        description="Contact Sports AJ in Gurugram, India for El Clásico Legends tickets and partnerships."
+        breadcrumb="Contact"
+      />
       <PageHeader
         label="Get In Touch"
         title="Contact Us"
-        description="Reach out to discuss media rights, league development, digital partnerships, or sports consultancy."
+        description="Reach out to discuss tickets, partnerships, or event inquiries."
         breadcrumb="Contact"
       />
 
@@ -62,10 +69,10 @@ export default function Contact() {
                   Office
                 </h2>
                 <address className="not-italic text-brand-gray space-y-1.5 sm:space-y-2 text-sm sm:text-base">
-                  <p className="font-semibold text-brand-black">{company.legalName}</p>
-                  <p>{company.address.line1}</p>
-                  <p>{company.address.line2}</p>
-                  <p>{company.address.country}</p>
+                  <p className="font-semibold text-brand-black">Sports AJ</p>
+                  <p>Unit No. 001, BPTP, Park Centra, Jal Vayu Vihar</p>
+                  <p>Sector 31, Gurugram, Haryana 122001</p>
+                  <p>INDIA</p>
                 </address>
               </div>
 
@@ -76,27 +83,17 @@ export default function Contact() {
                 <div className="space-y-2 sm:space-y-3 text-brand-gray text-sm sm:text-base">
                   <p className="break-words">
                     <span className="text-brand-black font-medium">Email: </span>
-                    <a href={`mailto:${company.email}`} className="hover:text-brand-red transition-colors break-all">
-                      {company.email}
+                    <a href="mailto:info@sportsaj.com" className="hover:text-brand-red transition-colors break-all">
+                      info@sportsaj.com
                     </a>
                   </p>
                   <p>
                     <span className="text-brand-black font-medium">Phone: </span>
-                    <a href={`tel:${company.phone.replace(/\s/g, '')}`} className="hover:text-brand-red transition-colors">
-                      {company.phone}
+                    <a href="tel:+91XXXXXXXXXX" className="hover:text-brand-red transition-colors">
+                      +91 XXX XXX XXXX
                     </a>
                   </p>
                 </div>
-              </div>
-
-              <div className="card card-pad bg-brand-gray-bg border-l-4 border-l-brand-red">
-                <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase text-sm mb-2 sm:mb-3">
-                  Partnership Inquiries
-                </h3>
-                <p className="text-brand-gray text-sm leading-relaxed">
-                  We welcome inquiries from cricket boards, broadcasters, sponsors, sports federations,
-                  and investors looking to develop or commercialize sporting properties.
-                </p>
               </div>
             </div>
 
@@ -157,7 +154,7 @@ export default function Contact() {
                         value={form.topic}
                         onChange={(e) => setForm({ ...form, topic: e.target.value })}
                         className={inputClass}
-                        placeholder="e.g. Media rights inquiry, partnership proposal"
+                        placeholder="e.g. Tickets, partnership"
                       />
                     </div>
                     <div>

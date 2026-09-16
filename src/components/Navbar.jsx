@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { navLinks, company } from '../data/content';
+
+const navLinks = [
+  { label: 'Our Journey', path: '/our-journey' },
+  { label: 'About', path: '/about' },
+];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,8 +25,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           <Link to="/" className="flex items-center gap-2 sm:gap-3 min-w-0">
             <img
-              src={company.logo}
-              alt={company.name}
+              src="/assets/logo-sportsaj.png"
+              alt="Sports AJ"
               className="h-8 sm:h-9 lg:h-11 w-auto max-w-[140px] sm:max-w-none object-contain"
             />
           </Link>
@@ -47,10 +51,10 @@ export default function Navbar() {
           </div>
 
           <Link
-            to="/contact"
+            to="/buy-now"
             className="hidden xl:inline-flex btn-primary !py-2.5 !px-6 !text-xs !w-auto"
           >
-            Contact
+            Buy now
           </Link>
 
           <button
@@ -95,10 +99,10 @@ export default function Navbar() {
                 </NavLink>
               ))}
               <Link
-                to="/contact"
+                to="/buy-now"
                 className="flex items-center justify-center min-h-[48px] mt-2 btn-primary !text-xs"
               >
-                Contact Us
+                Buy Now
               </Link>
             </div>
           </div>

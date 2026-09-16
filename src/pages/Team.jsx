@@ -1,19 +1,56 @@
 import PageHeader from '../components/PageHeader';
-import {
-  leadership,
-  founderEducation,
-  founderCareer,
-  careerLogos,
-  company,
-} from '../data/content';
+import SEO from '../components/SEO';
+
+const leadership = [
+  {
+    name: 'Jatin Ahluwalia',
+    role: 'Founder & CEO',
+    image: '/assets/jatin.jpg',
+    bio: 'An avid entrepreneur and innovator with proven track record at STAR TV, Ericsson, IBM, and Accenture. Credited with sports value proposition deals for IPL, Cricket Asia Cup, FIFA World Cup 2014, US Open, and French Open.',
+    highlights: ['STAR TV', 'IBM', 'Accenture', 'Harvard Business School'],
+  },
+  {
+    name: 'Abhishek Saklani',
+    role: 'Sports Media Professional',
+    image: '/assets/abhishek.jpg',
+    bio: 'Over a decade in sports industry. Youngest Sports Producer of Indian Media at 23. Instrumental in ICC/FIFA World Cup Bidding 2014, EURO 2012, IPL media syndication (2012-2017), and French Open (2012-2015).',
+    highlights: ['ESPN', 'ZEE Media', 'SAHARA TV', 'NEWS24'],
+  },
+];
+
+const founderEducation = [
+  'Delhi University Graduate',
+  'British Chevening Scholarship — Leeds University Business School (LUBS)',
+  'Accenture Partners Program at Harvard Business School',
+  'Executive programs at London Business School / Duke',
+];
+
+const founderCareer = [
+  'Leading Cricket entrepreneur and general management professional',
+  'Held several leadership positions at globally acclaimed organizations',
+  'Accomplished in building brand equity, growth strategies and business transformation',
+  'Launched brands and nurtured businesses across media and technology',
+  'Global exposure with local expertise in sports and entertainment',
+];
+
+const careerLogos = [
+  'image49.png', 'image50.png', 'image51.png', 'image52.png', 'image53.png',
+  'image54.png', 'image55.png', 'image56.jpeg', 'image57.jpeg', 'image58.jpeg',
+  'image59.jpeg', 'image60.png', 'image61.png', 'image62.png',
+];
 
 export default function Team() {
   return (
     <>
+      <SEO
+        title="Leadership Team"
+        description="Meet the Seven3Sports leadership team — sports media entrepreneurs with experience at STAR TV, ESPN, IBM, and Accenture."
+        breadcrumb="Team"
+      />
       <PageHeader
         label="Leadership Team"
         title="Our Team"
-        description={`The leadership behind ${company.showcaseBrand} — avid entrepreneurs and sports industry professionals driving innovation in global sports media.`}
+        description="The leadership behind Seven3Sports — avid entrepreneurs and sports industry professionals driving innovation in global sports media."
         breadcrumb="Team"
       />
 
@@ -71,7 +108,7 @@ export default function Team() {
                   </li>
                 ))}
               </ul>
-                            <div className="flex flex-wrap gap-2 sm:gap-3 pt-4 border-t border-brand-gray-light">
+              <div className="flex flex-wrap gap-2 sm:gap-3 pt-4 border-t border-brand-gray-light">
                 {careerLogos.map((logo, index) => (
                   <div key={logo} className="p-2 bg-brand-gray-bg border border-brand-gray-light">
                     <img
@@ -98,8 +135,6 @@ export default function Team() {
                   </li>
                 ))}
               </ul>
-
-
             </div>
           </div>
         </div>
@@ -110,7 +145,7 @@ export default function Team() {
           <p className="section-label justify-center mb-3 sm:mb-4">Thought Leadership</p>
           <p className="text-brand-gray text-sm sm:text-base leading-relaxed">
             Driving innovation in sports media, digital fan engagement, and league development —
-            {company.showcaseBrand} continues to shape the future of sports entertainment across South Asia and beyond.
+            Seven3Sports continues to shape the future of sports entertainment across South Asia and beyond.
           </p>
         </div>
       </section>
