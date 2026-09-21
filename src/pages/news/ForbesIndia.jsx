@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import PageHeader from '../../components/PageHeader';
 import SEO from '../../components/SEO';
+import Reveal from '../../components/Reveal';
 
 const pageDescription =
   'Jatin Ahluwalia and Abhishek Saklani featured on the cover of Forbes India — FILA winners and pioneers reshaping India\'s football ecosystem.';
@@ -77,7 +78,8 @@ export default function ForbesIndia() {
 
       <section className="section-py bg-white">
         <div className="page-container">
-          <div className="max-w-sm mx-auto">
+          <Reveal>
+            <div className="max-w-sm mx-auto">
             <div className="card overflow-hidden group">
               <div className="aspect-[3/4] overflow-hidden bg-brand-gray-bg">
                 <img
@@ -95,31 +97,36 @@ export default function ForbesIndia() {
                 <p className="text-brand-gray text-sm leading-relaxed">{cover.subheadline}</p>
               </div>
             </div>
-          </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="section-py bg-brand-gray-bg">
         <div className="page-container max-w-4xl">
-          <p className="section-label mb-3">The Story</p>
-          <h2 className="section-title text-xl sm:text-2xl mb-6">
-            A New Generation of Sports Entrepreneurs
-          </h2>
-          <p className="text-brand-gray text-sm sm:text-base leading-relaxed mb-8">
-            Abhishek Saklani and Jatin Ahluwalia represent a new generation of sports entrepreneurs,
-            driven by vision, credibility, and a commitment to reshape the sporting landscape in India.
-            Featured in the Forbes India Leadership Awards 2026 special edition, they are recognised for
-            doing what they believe in — even when it goes against conventional wisdom.
-          </p>
+          <Reveal>
+            <p className="section-label mb-3">The Story</p>
+            <h2 className="section-title text-xl sm:text-2xl mb-6">
+              A New Generation of Sports Entrepreneurs
+            </h2>
+            <p className="text-brand-gray text-sm sm:text-base leading-relaxed mb-8">
+              Abhishek Saklani and Jatin Ahluwalia represent a new generation of sports entrepreneurs,
+              driven by vision, credibility, and a commitment to reshape the sporting landscape in India.
+              Featured in the Forbes India Leadership Awards 2026 special edition, they are recognised for
+              doing what they believe in — even when it goes against conventional wisdom.
+            </p>
+          </Reveal>
 
           <div className="space-y-6">
-            {storyPoints.map((point) => (
+            {storyPoints.map((point, index) => (
+              <Reveal key={point.title} delay={index * 100}>
               <div key={point.title} className="card card-pad border-l-4 border-l-brand-red">
                 <h3 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase text-sm sm:text-base mb-2">
                   {point.title}
                 </h3>
                 <p className="text-brand-gray text-sm leading-relaxed">{point.description}</p>
               </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -127,12 +134,15 @@ export default function ForbesIndia() {
 
       <section className="section-py bg-white">
         <div className="page-container">
-          <div className="text-center mb-8 sm:mb-10">
-            <p className="section-label justify-center mb-2">By The Numbers</p>
-            <h2 className="section-title">The Seven3Sports Legacy</h2>
-          </div>
+          <Reveal>
+            <div className="text-center mb-8 sm:mb-10">
+              <p className="section-label justify-center mb-2">By The Numbers</p>
+              <h2 className="section-title">The Seven3Sports Legacy</h2>
+            </div>
+          </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {highlights.map((item) => (
+            {highlights.map((item, index) => (
+              <Reveal key={item.label} delay={index * 80}>
               <div key={item.label} className="card card-pad text-center border-t-4 border-t-brand-red">
                 <div className="font-porsche tracking-porsche text-2xl sm:text-3xl text-brand-red mb-1">
                   {item.value}
@@ -142,6 +152,7 @@ export default function ForbesIndia() {
                 </div>
                 <p className="text-brand-gray text-xs leading-relaxed">{item.description}</p>
               </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -149,10 +160,12 @@ export default function ForbesIndia() {
 
       <section className="section-py bg-brand-gray-bg border-t border-brand-gray-light">
         <div className="page-container text-center">
-          <div className="flex flex-col xs:flex-row flex-wrap justify-center gap-3 sm:gap-4">
-            <Link to="/in-the-news" className="btn-outline">In The News</Link>
-            <Link to="/our-journey" className="btn-primary">Our Journey</Link>
-          </div>
+          <Reveal>
+            <div className="flex flex-col xs:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+              <Link to="/in-the-news" className="btn-outline">In The News</Link>
+              <Link to="/our-journey" className="btn-primary">Our Journey</Link>
+            </div>
+          </Reveal>
         </div>
       </section>
     </>

@@ -4,7 +4,6 @@ import FootballPitch from '../components/FootballPitch';
 import BrandLockup from '../components/BrandLockup';
 import EventIdentity from '../components/EventIdentity';
 import JourneyTimeline from '../components/JourneyTimeline';
-import FounderCard from '../components/FounderCard';
 import Reveal from '../components/Reveal';
 import {
   site,
@@ -46,7 +45,7 @@ export default function Home() {
         <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             <Reveal className="lg:col-span-5" from="left">
-              <p className="section-label mb-4">India Tour {site.year}</p>
+              <p className="section-label mb-4 text-sm sm:text-base tracking-[0.2em]">India Tour {site.year}</p>
               <h2 className="font-sans font-light text-brand-black text-2xl sm:text-3xl lg:text-4xl leading-snug">
                 {site.welcome}
               </h2>
@@ -85,10 +84,23 @@ export default function Home() {
             </h2>
             <p className="prose-copy text-base sm:text-lg">{founders.intro}</p>
           </Reveal>
+          <Reveal className="max-w-sm mx-auto mb-8 sm:mb-10">
+            <Link to="/news/forbes-india" className="group block">
+              <img
+                src={founders.image}
+                alt={founders.imageAlt}
+                className="w-full shadow-xl transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+              />
+            </Link>
+          </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {founders.people.map((founder, index) => (
-              <Reveal key={founder.name} delay={index * 120}>
-                <FounderCard founder={founder} />
+              <Reveal key={founder.name} delay={index * 120} className="text-center">
+                <p className="section-label mb-2">{founder.role}</p>
+                <h3 className="font-sans font-light text-brand-black uppercase tracking-[0.16em] text-lg sm:text-xl mb-3">
+                  {founder.name}
+                </h3>
+                <p className="prose-copy">{founder.bio}</p>
               </Reveal>
             ))}
           </div>

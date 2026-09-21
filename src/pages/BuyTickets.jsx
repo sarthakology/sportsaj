@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import SEO from '../components/SEO';
+import Reveal from '../components/Reveal';
 import { matches, brandNameYear } from '../content';
 
 const pageHeading = 'Buy Tickets';
@@ -189,32 +190,36 @@ export default function BuyTickets() {
       />
       <section className="section-py bg-white pt-24 sm:pt-28 lg:pt-36">
         <div className="page-container max-w-3xl">
-          <div className="mb-8 sm:mb-10">
-            <h1 className="section-title text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4">
-              {pageHeading}
-            </h1>
-            <p className="text-brand-gray text-sm sm:text-base leading-relaxed max-w-2xl">
-              {pageSubheading}
-            </p>
-          </div>
-          <div className="flex border-b border-brand-gray-light mb-8 sm:mb-10">
-            {events.map((event) => (
-              <button
-                key={event.slug}
-                type="button"
-                onClick={() => setActiveTab(event.slug)}
-                className={`flex-1 min-h-[48px] px-4 py-3 font-porsche tracking-porsche uppercase text-xs sm:text-sm transition-colors border-b-2 -mb-px ${
-                  activeTab === event.slug
-                    ? 'border-brand-red text-brand-red'
-                    : 'border-transparent text-brand-gray hover:text-brand-black'
-                }`}
-              >
-                {event.title}
-              </button>
-            ))}
-          </div>
-
-          <div className="card card-pad lg:p-10 border-t-4 border-t-brand-red">
+          <Reveal>
+            <div className="mb-8 sm:mb-10">
+              <h1 className="section-title text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4">
+                {pageHeading}
+              </h1>
+              <p className="text-brand-gray text-sm sm:text-base leading-relaxed max-w-2xl">
+                {pageSubheading}
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="flex border-b border-brand-gray-light mb-8 sm:mb-10">
+              {events.map((event) => (
+                <button
+                  key={event.slug}
+                  type="button"
+                  onClick={() => setActiveTab(event.slug)}
+                  className={`flex-1 min-h-[48px] px-4 py-3 font-porsche tracking-porsche uppercase text-xs sm:text-sm transition-colors border-b-2 -mb-px ${
+                    activeTab === event.slug
+                      ? 'border-brand-red text-brand-red'
+                      : 'border-transparent text-brand-gray hover:text-brand-black'
+                  }`}
+                >
+                  {event.title}
+                </button>
+              ))}
+            </div>
+          </Reveal>
+          <Reveal delay={180}>
+            <div className="card card-pad lg:p-10 border-t-4 border-t-brand-red">
             <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-6 mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-brand-gray-light">
               <img
                 src={activeEvent.logo}
@@ -238,6 +243,7 @@ export default function BuyTickets() {
 
             <InterestForm key={activeEvent.slug} event={activeEvent} />
           </div>
+          </Reveal>
         </div>
       </section>
     </>

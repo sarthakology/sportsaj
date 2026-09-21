@@ -42,6 +42,14 @@ module.exports = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideDown: {
+          '0%': { opacity: '0', transform: 'translateY(-16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
         scaleX: {
           '0%': { transform: 'scaleX(0)' },
           '100%': { transform: 'scaleX(1)' },

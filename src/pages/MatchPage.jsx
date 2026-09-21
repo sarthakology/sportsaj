@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import Reveal from '../components/Reveal';
 import { legendaryPlayers, experience, matches, aboutCompany, brandNameYear, players } from '../content';
 
 export default function MatchPage({ city }) {
@@ -15,22 +16,26 @@ export default function MatchPage({ city }) {
 
       <section className="bg-white pt-24 sm:pt-28 lg:pt-36">
         <div className="page-container mb-8 sm:mb-10">
-          <h1 className="section-title text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4">
-            {match.title}
-          </h1>
-          <p className="prose-copy max-w-2xl">
-            {match.city}
-          </p>
+          <Reveal>
+            <h1 className="section-title text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4">
+              {match.title}
+            </h1>
+            <p className="prose-copy max-w-2xl">
+              {match.city}
+            </p>
+          </Reveal>
         </div>
 
         <div className="page-container mb-10 sm:mb-14">
-          <div className="overflow-hidden border border-brand-gray-light">
-            <img
-              src={match.stadiumImage}
-              alt={match.venue}
-              className="w-full h-48 sm:h-64 md:h-80 object-cover bg-brand-gray-bg"
-            />
-          </div>
+          <Reveal delay={120}>
+            <div className="overflow-hidden border border-brand-gray-light">
+              <img
+                src={match.stadiumImage}
+                alt={match.venue}
+                className="w-full h-48 sm:h-64 md:h-80 object-cover bg-brand-gray-bg"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -39,22 +44,28 @@ export default function MatchPage({ city }) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             <div className="lg:col-span-2 space-y-10">
               {players.enabled && (
-                <div>
-                  <h2 className="section-title text-xl sm:text-2xl mb-4">{legendaryPlayers.heading}</h2>
-                  <p className="prose-copy">{legendaryPlayers.body}</p>
-                </div>
+                <Reveal>
+                  <div>
+                    <h2 className="section-title text-xl sm:text-2xl mb-4">{legendaryPlayers.heading}</h2>
+                    <p className="prose-copy">{legendaryPlayers.body}</p>
+                  </div>
+                </Reveal>
               )}
-              <div>
-                <h2 className="section-title text-xl sm:text-2xl mb-4">{experience.heading}</h2>
-                <p className="prose-copy">{experience.body}</p>
-              </div>
-              <div>
-                <h2 className="section-title text-xl sm:text-2xl mb-4">{aboutCompany.heading}</h2>
-                <p className="prose-copy">{aboutCompany.body}</p>
-              </div>
+              <Reveal delay={80}>
+                <div>
+                  <h2 className="section-title text-xl sm:text-2xl mb-4">{experience.heading}</h2>
+                  <p className="prose-copy">{experience.body}</p>
+                </div>
+              </Reveal>
+              <Reveal delay={160}>
+                <div>
+                  <h2 className="section-title text-xl sm:text-2xl mb-4">{aboutCompany.heading}</h2>
+                  <p className="prose-copy">{aboutCompany.body}</p>
+                </div>
+              </Reveal>
             </div>
 
-            <div className="space-y-6">
+            <Reveal className="space-y-6" from="right" delay={120}>
               <div className="card card-pad border-t-4 border-t-brand-red">
                 <img
                   src={match.logo}
@@ -83,7 +94,7 @@ export default function MatchPage({ city }) {
               <Link to="/buy-tickets" className="btn-primary w-full">
                 Buy Tickets
               </Link>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>

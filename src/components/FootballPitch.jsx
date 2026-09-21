@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import EventIdentity from './EventIdentity';
+import Reveal from './Reveal';
 
 function PitchBackground() {
   return (
@@ -37,9 +38,11 @@ function Half({ event, side }) {
       }`}
     >
       <div className="relative transition-transform duration-500 group-hover:scale-105">
-        <EventIdentity event={event} size="lg" cityPosition="top" />
+        <Reveal from={isLeft ? 'left' : 'right'} delay={isLeft ? 80 : 200}>
+          <EventIdentity event={event} size="lg" cityPosition="top" />
+          <span className="relative mt-4 mx-auto block w-8 h-px bg-brand-red" />
+        </Reveal>
       </div>
-      <span className="relative mt-4 w-8 h-px bg-brand-red" />
     </Link>
   );
 }

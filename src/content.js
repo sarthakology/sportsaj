@@ -172,6 +172,8 @@ export const founders = {
   heading: "Founders' Association",
   intro:
     'The founders have worked across sports and entertainment projects throughout a career spanning approximately 25 years.',
+  image: '/assets/forbes-billion-dollar-kick-cover.jpg',
+  imageAlt: 'Forbes India — Jatin Ahluwalia and Abhishek Saklani',
   people: [
     {
       name: 'Jatin Ahluwalia',
