@@ -2,7 +2,6 @@ import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import OurJourney from './pages/OurJourney';
-import About from './pages/About';
 import InTheNews from './pages/InTheNews';
 import BuyTickets from './pages/BuyTickets';
 import Gujarat from './pages/Gujarat';
@@ -18,7 +17,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/our-journey" element={<OurJourney />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<Navigate to="/our-journey" replace />} />
           <Route path="/in-the-news" element={<InTheNews />} />
           <Route path="/buy-tickets" element={<BuyTickets />} />
           <Route path="/buy-now" element={<Navigate to="/buy-tickets" replace />} />

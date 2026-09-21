@@ -122,7 +122,7 @@ export default function OurJourney() {
               </h2>
               <p className="prose-copy mb-3">{aboutCompany.body}</p>
               <p className="prose-copy mb-6">{aboutCompany.separation}</p>
-              <Link to="/about" className="btn-outline">About</Link>
+              <Link to="/buy-tickets" className="btn-primary">Buy Tickets</Link>
             </Reveal>
           </div>
         </div>

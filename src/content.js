@@ -176,14 +176,14 @@ export const founders = {
     {
       name: 'Jatin Ahluwalia',
       role: 'Founder',
-      image: null,
+      image: '/assets/jatin-ahluwalia.png',
       bio: 'Professional profile to be added.',
       highlights: [],
     },
     {
       name: 'Abhishek Saklani',
       role: 'Founder',
-      image: null,
+      image: '/assets/abhishek-saklani.jpg',
       bio: 'Professional profile to be added.',
       highlights: [],
     },
