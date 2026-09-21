@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/911-porscha');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Audiowide&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Oswald:wght@400;500;600;700&family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Instrument+Serif:ital@0;1&family=Archivo+Black&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -92,5 +92,9 @@ body.menu-open {
 
   .page-breadcrumb-active {
     @apply text-brand-black font-semibold;
+  }
+
+  .prose-copy {
+    @apply text-brand-gray text-sm sm:text-base leading-relaxed;
   }
 }

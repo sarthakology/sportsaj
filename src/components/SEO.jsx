@@ -1,9 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
+import { brandNameUpperYear, site } from '../content';
 
 const SITE_URL = 'https://sportsaj.com';
-const SITE_NAME = 'Sports AJ';
-const DEFAULT_OG_IMAGE = '/assets/sports-hero.jpg';
+const SITE_NAME = brandNameUpperYear();
+const ORG_NAME = site.brand;
+const DEFAULT_OG_IMAGE = '/assets/amdavad-el-clasico.png';
 
 export default function SEO({ title, description, breadcrumb, image = DEFAULT_OG_IMAGE }) {
   const { pathname } = useLocation();
@@ -15,7 +17,7 @@ export default function SEO({ title, description, breadcrumb, image = DEFAULT_OG
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: SITE_NAME,
+      name: ORG_NAME,
       url: SITE_URL,
       logo: `${SITE_URL}/assets/logo-sportsaj.png`,
       email: 'info@sportsaj.com',
