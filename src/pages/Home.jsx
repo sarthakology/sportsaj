@@ -31,15 +31,8 @@ export default function Home() {
       />
       <section className="relative bg-white pt-20 sm:pt-24 lg:pt-28">
         <div className="px-4 sm:px-6 lg:px-10 pt-8 sm:pt-12 lg:pt-16 pb-8 sm:pb-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)_minmax(0,1.1fr)] items-center gap-6 lg:gap-8">
-            <Reveal className="flex justify-center lg:justify-start" from="left">
-              <img
-                src="/assets/barca-legends.png"
-                alt="Barça Legends"
-                className="w-full max-w-md lg:max-w-none h-40 sm:h-48 lg:h-56 xl:h-72 object-contain"
-              />
-            </Reveal>
-            <div className="text-center">
+          <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)_minmax(0,1.1fr)] lg:items-center lg:gap-8">
+            <div className="order-1 text-center lg:order-2">
               <Reveal>
                 <h1>
                     <span className="block text-center">
@@ -58,13 +51,22 @@ export default function Home() {
                 </Link>
               </Reveal>
             </div>
-            <Reveal className="flex justify-center lg:justify-end" from="right" delay={120}>
-              <img
-                src="/assets/real-madrid-leyendas.png"
-                alt="Real Madrid Leyendas"
-                className="w-full max-w-[220px] sm:max-w-[260px] lg:max-w-none h-40 sm:h-48 lg:h-56 xl:h-72 object-contain"
-              />
-            </Reveal>
+            <div className="order-2 grid grid-cols-2 items-center gap-4 sm:gap-6 lg:contents">
+              <Reveal className="flex justify-center lg:justify-start lg:order-1" from="left">
+                <img
+                  src="/assets/barca-legends.png"
+                  alt="Barça Legends"
+                  className="w-full max-w-[200px] sm:max-w-md lg:max-w-none h-28 sm:h-40 lg:h-56 xl:h-72 object-contain"
+                />
+              </Reveal>
+              <Reveal className="flex justify-center lg:justify-end lg:order-3" from="right" delay={120}>
+                <img
+                  src="/assets/real-madrid-leyendas.png"
+                  alt="Real Madrid Leyendas"
+                  className="w-full max-w-[160px] sm:max-w-[260px] lg:max-w-none h-28 sm:h-40 lg:h-56 xl:h-72 object-contain"
+                />
+              </Reveal>
+            </div>
           </div>
         </div>
 
