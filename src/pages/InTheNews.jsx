@@ -5,51 +5,49 @@ import Reveal from '../components/Reveal';
 import { newsItems, site, brandNameYear } from '../content';
 
 export default function InTheNews() {
+  const featured = newsItems[0];
+
   return (
     <>
       <SEO
-        title="In The News"
-        description={`In The News — ${site.brand} and ${brandNameYear()}.`}
-        breadcrumb="In The News"
+        title="Press & Coverage"
+        description={`Press & Coverage — ${site.brand} and ${brandNameYear()}.`}
+        breadcrumb="Press & Coverage"
       />
       <PageHeader
-        label="Sports AJ"
-        title="In The News"
+        label={site.brand}
+        title="Press & Coverage"
         breadcrumb="In The News"
       />
       <section className="section-py bg-white">
         <div className="page-container">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {newsItems.map((item, index) => (
-              <Reveal key={item.slug} delay={index * 100}>
-                <Link
-                  to={item.path}
-                  className="card overflow-hidden group block h-full hover:border-brand-red/40 transition-all sm:hover:-translate-y-1"
-                >
-                  <div className="aspect-[3/4] overflow-hidden bg-brand-gray-bg">
-                    <img
-                      src={item.image}
-                      alt={`${item.source} — ${item.title}`}
-                      className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="card-pad border-t-4 border-t-brand-red">
-                    <div className="flex items-center justify-between gap-2 mb-3">
-                      <span className="section-label">{item.source}</span>
-                      <span className="text-brand-gray text-xs">{item.date}</span>
-                    </div>
-                    <h2 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase text-base sm:text-lg mb-2 leading-snug group-hover:text-brand-red transition-colors">
-                      {item.title}
-                    </h2>
-                    <p className="text-brand-gray text-sm leading-relaxed mb-4">{item.excerpt}</p>
-                    <p className="text-brand-red font-porsche tracking-porsche uppercase text-[10px] sm:text-xs">
-                      Read story →
-                    </p>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal>
+            <Link
+              to={featured.path}
+              className="group grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center"
+            >
+              <div className="lg:col-span-5">
+                <div className="overflow-hidden border border-brand-gray-light bg-white">
+                  <img
+                    src={featured.image}
+                    alt={`${featured.source} — ${featured.title}`}
+                    className="w-full group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                </div>
+              </div>
+              <div className="lg:col-span-7">
+                <p className="section-label mb-3">{featured.source}</p>
+                <p className="text-brand-gray text-xs mb-4">{featured.date}</p>
+                <h2 className="font-sans font-light text-brand-black uppercase tracking-[0.12em] text-2xl sm:text-3xl lg:text-4xl mb-4 leading-tight group-hover:text-brand-red transition-colors">
+                  {featured.title}
+                </h2>
+                <p className="prose-copy text-base sm:text-lg mb-6">{featured.excerpt}</p>
+                <p className="text-brand-red font-porsche tracking-porsche uppercase text-[10px] sm:text-xs">
+                  Read story →
+                </p>
+              </div>
+            </Link>
+          </Reveal>
         </div>
       </section>
     </>

@@ -15,6 +15,7 @@ import {
   aboutCompany,
   hostCities,
   brandNameYear,
+  story,
 } from '../content';
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
     <>
       <SEO
         title={brandNameYear()}
-        description={site.intro}
+        description={story.tour.body}
       />
       <section className="relative bg-white pt-20 sm:pt-24 lg:pt-28">
         <div className="page-container text-center pt-8 sm:pt-12 lg:pt-16 pb-8 sm:pb-10">
@@ -51,7 +52,7 @@ export default function Home() {
               </h2>
             </Reveal>
             <Reveal className="lg:col-span-7" from="right" delay={120}>
-              <p className="prose-copy text-base sm:text-lg">{site.intro}</p>
+              <p className="prose-copy text-base sm:text-lg">{story.tour.body}</p>
             </Reveal>
           </div>
         </div>
@@ -78,7 +79,7 @@ export default function Home() {
       <section className="section-py bg-white overflow-hidden">
         <div className="page-container">
           <Reveal className="max-w-3xl mb-8 sm:mb-12 mx-auto text-center">
-            <p className="section-label mb-3">The founders</p>
+            <p className="section-label mb-3">About Us</p>
             <h2 className="section-title text-xl sm:text-2xl md:text-3xl mb-4">
               {founders.heading}
             </h2>
@@ -97,10 +98,10 @@ export default function Home() {
             {founders.people.map((founder, index) => (
               <Reveal key={founder.name} delay={index * 120} className="text-center">
                 <p className="section-label mb-2">{founder.role}</p>
-                <h3 className="font-sans font-light text-brand-black uppercase tracking-[0.16em] text-lg sm:text-xl mb-3">
+                <h3 className="font-sans font-light text-brand-black uppercase tracking-[0.16em] text-lg sm:text-xl">
                   {founder.name}
                 </h3>
-                <p className="prose-copy">{founder.bio}</p>
+                {founder.bio ? <p className="prose-copy mt-3">{founder.bio}</p> : null}
               </Reveal>
             ))}
           </div>

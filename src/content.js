@@ -120,10 +120,32 @@ export const elClasico = {
   ],
 };
 
+export const contact = {
+  lines: ['001 BPTP Park Centra', 'Sector 31, Gurugram,', 'Haryana 122001', 'INDIA'],
+  email: 'info@sportsaj.com',
+};
+
+export const story = {
+  buildingBeyond: {
+    heading: 'Building Beyond',
+    body:
+      'From an early stage in their entrepreneurial journey, they looked beyond cricket—acquiring the broadcast rights for the FIFA World Cup across six South Asian markets, introducing the Bundesliga’s official digital experience in India, building the French Open’s digital presence in the country and pioneering sports video-on-demand innovations with Airtel. A Forbes India cover story recognised their bold, contrarian approach to expanding and transforming India’s sports ecosystem.',
+  },
+  globalFootprint: {
+    heading: 'Global Footprint, Local Impact',
+    body:
+      'Through their presence in London and Barcelona, the duo has extended India’s influence across the global sports industry while remaining firmly committed to developing grassroots sport and creating new opportunities for young athletes at home.',
+  },
+  tour: {
+    heading: 'El Clásico Legends India Tour',
+    body:
+      'Sports AJ is proud to present the first ever El Clásico Legends Tour 2026, bringing legendary footballers from FC Barcelona Legends and Real Madrid Leyendas together to celebrate the world’s most iconic football rivalry in India. Featuring celebrated former players who have represented the two clubs at the highest level, the landmark tour will give Indian fans a rare opportunity to witness footballing legends renew the historic El Clásico rivalry on Indian soil. This landmark India tour will feature matches in Ahmedabad on November 22 and Kolkata on November 25, 2026 — one of the most ambitious exhibition football events India has ever hosted.',
+  },
+};
+
 export const experience = {
-  heading: `The ${brandNameYear()} Experience`,
-  body:
-    `More than a football match, the ${brandNameYear()} will be a landmark celebration of sporting history, iconic rivalry and world-class entertainment. Fans, football enthusiasts, sponsors, partners and distinguished guests will witness legendary players in action while enjoying exclusive gala evenings, meet-and-greet opportunities, premium hospitality and immersive fan engagements—creating truly money-can’t-buy experiences. Centred on the passion and global prestige of FC Barcelona Legends and Real Madrid Leyendas, the tour will bring the emotion and spectacle of football’s greatest rivalry to India in an unprecedented format.`,
+  heading: story.tour.heading,
+  body: story.tour.body,
 };
 
 export const legendaryPlayers = {
@@ -151,10 +173,10 @@ export const journey = {
     'Over 25 years of creating and delivering experiences around some of the world’s most recognised sporting properties.',
   foundersLine:
     'Led by sports entrepreneurs Jatin Ahluwalia and Abhishek Saklani, our leadership team brings extensive experience in acquiring, broadcasting and monetising some of the world’s leading sports properties.',
-  paragraphs: [
-    'Our football journey began with the broadcast of the 2014 FIFA World Cup across six Asian markets, including countries in the Indian subcontinent—bringing the FIFA experience to millions of television viewers. Our association with UEFA Euro 2012 and the introduction of the Bundesliga’s official digital experience in India further strengthened this journey.',
-    'Our wider portfolio includes the Indian Premier League, international cricket series and major global tennis properties. The team has also created digital platforms and fan-engagement initiatives for sporting icons, including Sachin Tendulkar—combining global sports IP, broadcast expertise, digital innovation and live-event execution.',
-    'The journey of the founders of Sports AJ Ventures Private Limited has been nothing short of remarkable—driven by the ambition to create iconic sporting experiences and contribute meaningfully to sporting excellence in India.',
+  sections: [
+    story.buildingBeyond,
+    story.globalFootprint,
+    story.tour,
   ],
   milestones: [
     { id: 'years', label: '25+ Years' },
@@ -169,9 +191,9 @@ export const journey = {
 };
 
 export const founders = {
-  heading: "Founders' Association",
+  heading: 'About Us',
   intro:
-    'The founders have worked across sports and entertainment projects throughout a career spanning approximately 25 years.',
+    'Led by sports entrepreneurs Jatin Ahluwalia and Abhishek Saklani, our leadership team brings extensive experience in acquiring, broadcasting and monetising some of the world’s leading sports properties.',
   image: '/assets/forbes-billion-dollar-kick-cover.jpg',
   imageAlt: 'Forbes India — Jatin Ahluwalia and Abhishek Saklani',
   people: [
@@ -179,14 +201,14 @@ export const founders = {
       name: 'Jatin Ahluwalia',
       role: 'Founder',
       image: '/assets/jatin-ahluwalia.png',
-      bio: 'Professional profile to be added.',
+      bio: '',
       highlights: [],
     },
     {
       name: 'Abhishek Saklani',
       role: 'Founder',
       image: '/assets/abhishek-saklani.jpg',
-      bio: 'Professional profile to be added.',
+      bio: '',
       highlights: [],
     },
   ],
@@ -194,7 +216,7 @@ export const founders = {
 
 export const navItems = [
   { label: 'Our Journey', path: '/our-journey' },
-  { label: 'In The News', path: '/in-the-news' },
+  { label: 'Press & Coverage', path: '/in-the-news' },
 ];
 
 export const newsItems = [

@@ -81,8 +81,8 @@ export default function OurJourney() {
             </div>
 
             <div className="space-y-10 sm:space-y-14">
-              {journey.paragraphs.slice(0, 2).map((paragraph, index) => (
-                <Reveal key={paragraph.slice(0, 40)} delay={index * 140}>
+              {journey.sections.map((section, index) => (
+                <Reveal key={section.heading} delay={index * 140}>
                   <article className="relative sm:pl-16">
                     <span className="hidden sm:flex absolute left-0 top-1 w-9 h-9 items-center justify-center bg-white border border-brand-gray-light font-sans text-[11px] tracking-[0.2em] text-brand-red">
                       {String(index + 1).padStart(2, '0')}
@@ -90,7 +90,10 @@ export default function OurJourney() {
                     <p className="sm:hidden section-label mb-3">
                       {String(index + 1).padStart(2, '0')}
                     </p>
-                    <p className="prose-copy text-base sm:text-lg">{paragraph}</p>
+                    <h3 className="font-sans font-light text-brand-black uppercase tracking-[0.16em] text-xl sm:text-2xl mb-4">
+                      {section.heading}
+                    </h3>
+                    <p className="prose-copy text-base sm:text-lg">{section.body}</p>
                   </article>
                 </Reveal>
               ))}
@@ -103,7 +106,7 @@ export default function OurJourney() {
         <Reveal>
           <div className="page-container max-w-4xl text-center">
             <p className="font-sans font-light text-lg sm:text-xl lg:text-2xl leading-relaxed text-white">
-              {journey.paragraphs[2]}
+              {journey.foundersLine}
             </p>
           </div>
         </Reveal>

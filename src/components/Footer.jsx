@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { navItems, site } from '../content';
+import { navItems, site, contact } from '../content';
 import Reveal from './Reveal';
 
 export default function Footer() {
@@ -74,15 +74,15 @@ export default function Footer() {
             <div className="text-center sm:text-left">
               <h4 className="footer-heading inline-block sm:block">Contact</h4>
               <address className="not-italic text-brand-gray text-sm space-y-1.5 sm:space-y-2">
-                <p>Unit No. 001, BPTP, Park Centra, Jal Vayu Vihar</p>
-                <p>Sector 31, Gurugram, Haryana 122001</p>
-                <p>INDIA</p>
+                {contact.lines.map((line) => (
+                  <p key={line}>{line}</p>
+                ))}
                 <p className="pt-2">
                   <a
-                    href="mailto:info@sportsaj.com"
+                    href={`mailto:${contact.email}`}
                     className="text-brand-black hover:text-brand-red transition-colors underline decoration-brand-gray-light underline-offset-2 break-all"
                   >
-                    info@sportsaj.com
+                    {contact.email}
                   </a>
                 </p>
               </address>
