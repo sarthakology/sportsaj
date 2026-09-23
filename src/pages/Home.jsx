@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
 import FootballPitch from '../components/FootballPitch';
 import EventIdentity from '../components/EventIdentity';
 import Reveal from '../components/Reveal';
@@ -10,8 +9,9 @@ import {
   founders,
   aboutCompany,
   brandNameYear,
-  story,
+  seoCopy,
 } from '../content';
+import SEO, { sportsEventSchema } from '../components/SEO';
 
 export default function Home() {
   const journeyItems = [
@@ -26,8 +26,18 @@ export default function Home() {
   return (
     <>
       <SEO
-        title={brandNameYear()}
-        description={story.tour.body}
+        title={seoCopy.homeTitle}
+        description={seoCopy.homeDescription}
+        keywords={seoCopy.homeKeywords}
+        imageAlt={seoCopy.homeTitle}
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'EventSeries',
+          name: brandNameYear(),
+          description: seoCopy.homeDescription,
+          url: 'https://sportsaj.com/',
+          subEvent: confirmedEvents.map(sportsEventSchema),
+        }}
       />
       <section className="relative bg-white pt-20 sm:pt-24 lg:pt-28">
         <div className="px-4 sm:px-6 lg:px-10 pt-8 sm:pt-12 lg:pt-16 pb-8 sm:pb-10">

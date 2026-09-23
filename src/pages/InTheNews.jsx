@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import PageHeader from '../components/PageHeader';
 import Reveal from '../components/Reveal';
-import { newsItems, site, brandNameYear } from '../content';
+import { newsItems, site, seoCopy } from '../content';
 
 export default function InTheNews() {
   const featured = newsItems[0];
@@ -11,13 +11,15 @@ export default function InTheNews() {
     <>
       <SEO
         title="Press & Coverage"
-        description={`Press & Coverage — ${site.brand} and ${brandNameYear()}.`}
+        description={seoCopy.pressDescription}
         breadcrumb="Press & Coverage"
+        image={featured.image}
+        imageAlt={featured.title}
       />
       <PageHeader
         label={site.brand}
         title="Press & Coverage"
-        breadcrumb="In The News"
+        breadcrumb="Press & Coverage"
       />
       <section className="section-py bg-white">
         <div className="page-container">

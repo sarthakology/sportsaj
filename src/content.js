@@ -67,7 +67,10 @@ export const matches = {
     city: 'Ahmedabad',
     variant: 'gujarat',
     date: 'Saturday, 22 November 2026',
+    startDateISO: '2026-11-22',
     venue: 'Eka Arena, Ahmedabad',
+    venueName: 'Eka Arena',
+    addressRegion: 'Gujarat',
     stadiumImage: '/assets/stadium-ahemdabad.webp',
     logo: '/assets/amdavad-el-clasico.png',
     path: '/gujarat',
@@ -79,7 +82,10 @@ export const matches = {
     city: 'Kolkata',
     variant: 'kolkata',
     date: 'Wednesday, 25 November 2026',
+    startDateISO: '2026-11-25',
     venue: 'Salt Lake Stadium, Kolkata',
+    venueName: 'Salt Lake Stadium',
+    addressRegion: 'West Bengal',
     stadiumImage: '/assets/stadium-kolkata.jpg',
     logo: '/assets/EL KOLKATA.png',
     path: '/kolkata',
@@ -224,9 +230,26 @@ export const newsItems = [
     path: '/news/forbes-india',
     source: 'Forbes India',
     date: 'April 3, 2026',
+    dateISO: '2026-04-03',
     title: 'The Billion Dollar Kick!',
     excerpt:
       'How India’s dynamic duo has chosen the challenging pathway to build a sustainable future for football in India.',
     image: '/assets/forbes-billion-dollar-kick-cover.jpg',
   },
 ];
+
+export const seoCopy = {
+  homeTitle: brandNameUpperYear(),
+  homeDescription: `The first ever ${brandNameYear()}: FC Barcelona Legends vs Real Madrid Leyendas in Ahmedabad on 22 November and Kolkata on 25 November 2026.`,
+  homeKeywords:
+    'El Clasico India Tour 2026, El Clásico India Tour, Gujarat El Clásico, Kolkata El Clásico, Ahmedabad, FC Barcelona Legends, Real Madrid Leyendas, Sports AJ',
+  journeyDescription: journey.lead,
+  pressDescription: `Press and coverage of ${site.brand} and ${brandNameYear()}, including the Forbes India feature on founders Jatin Ahluwalia and Abhishek Saklani.`,
+  ticketsDescription: `Register your interest for ${brandNameYear()} tickets — Gujarat El Clásico in Ahmedabad and Kolkata El Clásico.`,
+  privacyDescription: `Privacy Policy for ${site.legalName} and ${brandNameYear()}.`,
+  termsDescription: `Terms and Conditions for ${site.legalName} and ${brandNameYear()}.`,
+};
+
+export function matchSeoDescription(event) {
+  return `${event.title} at ${event.venue} on ${event.date}. FC Barcelona Legends vs Real Madrid Leyendas as part of ${brandNameYear()}.`;
+}

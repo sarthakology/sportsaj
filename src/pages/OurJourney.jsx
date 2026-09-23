@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader';
 import Reveal from '../components/Reveal';
 import SEO from '../components/SEO';
 import EventIdentity from '../components/EventIdentity';
-import { journey, aboutCompany, matches } from '../content';
+import { journey, aboutCompany, matches, seoCopy } from '../content';
 
 export default function OurJourney() {
   const lineRef = useRef(null);
@@ -36,7 +36,7 @@ export default function OurJourney() {
 
   return (
     <>
-      <SEO title={journey.heading} description={journey.lead} breadcrumb={journey.heading} />
+      <SEO title={journey.heading} description={seoCopy.journeyDescription} breadcrumb={journey.heading} />
       <PageHeader title={journey.heading} breadcrumb={journey.heading} />
 
       <section className="relative bg-white border-b border-brand-gray-light overflow-hidden">

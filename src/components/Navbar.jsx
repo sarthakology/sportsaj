@@ -25,7 +25,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm shadow-black/5 border-b border-brand-gray-light pt-safe-top motion-safe:animate-slide-down">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm shadow-black/5 border-b border-brand-gray-light pt-safe-top motion-safe:animate-slide-down">
+      <nav aria-label="Primary">
       <div className="page-container">
         <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           <Link
@@ -123,5 +124,6 @@ export default function Navbar() {
         </>
       )}
     </nav>
+    </header>
   );
 }

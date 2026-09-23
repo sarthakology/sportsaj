@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
 import Reveal from '../components/Reveal';
-import { legendaryPlayers, experience, matches, aboutCompany, brandNameYear, players } from '../content';
+import { legendaryPlayers, experience, matches, aboutCompany, players, matchSeoDescription } from '../content';
+import SEO, { sportsEventSchema } from '../components/SEO';
 
 export default function MatchPage({ city }) {
   const match = matches[city];
@@ -9,9 +9,12 @@ export default function MatchPage({ city }) {
   return (
     <>
       <SEO
-        title={`${match.title} — ${brandNameYear()}`}
-        description={`${match.title}. ${match.date}. ${match.venue}.`}
+        title={`${match.title}, ${match.city}`}
+        description={matchSeoDescription(match)}
         breadcrumb={match.title}
+        image={match.logo}
+        imageAlt={match.title}
+        schema={sportsEventSchema(match)}
       />
 
       <section className="bg-white pt-24 sm:pt-28 lg:pt-36">

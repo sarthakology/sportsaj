@@ -39,9 +39,17 @@ export default function ForbesIndia() {
   return (
     <>
       <SEO
-        title="Forbes India Feature"
-        description={journey.foundersLine}
-        breadcrumb="Forbes India"
+        title={`${item.title} — ${item.source}`}
+        description={item.excerpt}
+        breadcrumb={item.source}
+        image={item.image}
+        imageAlt={item.title}
+        type="article"
+        article={{
+          headline: item.title,
+          datePublished: item.dateISO,
+          source: item.source,
+        }}
       />
       <PageHeader
         label="Press & Coverage"
