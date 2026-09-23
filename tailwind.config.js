@@ -19,9 +19,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        porsche: ['911 Porscha', 'Audiowide', 'system-ui', 'sans-serif'],
-        display: ['911 Porscha', 'Audiowide', 'system-ui', 'sans-serif'],
+        sans: ['Cormorant', 'Georgia', 'serif'],
+        porsche: ['Cormorant', 'Georgia', 'serif'],
+        display: ['Cormorant', 'Georgia', 'serif'],
       },
       letterSpacing: {
         porsche: '0.08em',

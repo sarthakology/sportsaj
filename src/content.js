@@ -185,8 +185,7 @@ export const journey = {
     { id: 'bundesliga', label: 'Bundesliga Digital Experience' },
     { id: 'french-open', label: 'French Open' },
     { id: 'us-open', label: 'US Open' },
-    { id: 'barca-academy', label: 'Barça Academy India' },
-    { id: 'tour', label: brandNameUpper() },
+    { id: 'tour', label: 'EL CLÁSICO INDIA TOUR' },
   ],
 };
 

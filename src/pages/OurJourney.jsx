@@ -3,14 +3,21 @@ import { Link } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import Reveal from '../components/Reveal';
 import SEO from '../components/SEO';
-import JourneyTimeline from '../components/JourneyTimeline';
 import EventIdentity from '../components/EventIdentity';
 import { journey, aboutCompany, matches } from '../content';
 
 export default function OurJourney() {
   const lineRef = useRef(null);
   const [lineOn, setLineOn] = useState(false);
-
+  const journeyItems = [
+    { id: 'years', label: '25+ Years' },
+    { id: 'fifa', label: 'FIFA' },
+    { id: 'ipl', label: 'IPL Broadcast' },
+    { id: 'bundesliga', label: 'Bundesliga Digital Experience' },
+    { id: 'french-open', label: 'French Open' },
+    { id: 'us-open', label: 'US Open' },
+    { id: 'tour', label: 'EL CLÁSICO INDIA TOUR' },
+  ];
   useEffect(() => {
     const el = lineRef.current;
     if (!el) return;
@@ -64,7 +71,24 @@ export default function OurJourney() {
               25+ years of sporting experiences
             </h2>
           </Reveal>
-          <JourneyTimeline items={journey.milestones} />
+          <ol className="relative">
+            <span
+              aria-hidden="true"
+              className="hidden sm:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-brand-gray-light"
+            />
+
+            {journeyItems.map((item) => (
+              <li key={item.id} className="relative">
+                <div className="flex flex-col items-center py-6 sm:py-8 text-center">
+                  <span className="relative z-10 mb-3 h-2 w-2 rounded-full bg-brand-red" />
+
+                  <p className="font-sans font-extralight text-brand-black uppercase tracking-[0.22em] text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+                    {item.label}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
