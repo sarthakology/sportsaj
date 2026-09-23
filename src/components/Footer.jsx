@@ -14,7 +14,7 @@ export default function Footer() {
               alt="Sports AJ"
               className="h-10 sm:h-12 w-auto mb-4 sm:mb-5 mx-auto sm:mx-0"
             />
-            <p className="text-brand-gray text-sm leading-relaxed max-w-md mb-4 sm:mb-6 mx-auto sm:mx-0">
+            <p className="text-brand-black/80 font-medium text-sm leading-relaxed max-w-md mb-4 sm:mb-6 mx-auto sm:mx-0">
               {site.welcome}
             </p>
             <p className="text-brand-gray text-xs">{site.legalName}</p>
@@ -73,7 +73,7 @@ export default function Footer() {
           <Reveal delay={220} from="right">
             <div className="text-center sm:text-left">
               <h4 className="footer-heading inline-block sm:block">Contact</h4>
-              <address className="not-italic text-brand-gray text-sm space-y-1.5 sm:space-y-2">
+              <address className="not-italic text-brand-black/80 font-medium text-sm space-y-1.5 sm:space-y-2">
                 {contact.lines.map((line) => (
                   <p key={line}>{line}</p>
                 ))}

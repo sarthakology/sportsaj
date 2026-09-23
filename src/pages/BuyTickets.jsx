@@ -74,7 +74,7 @@ function InterestForm({ event }) {
         <h3 className="font-porsche tracking-porsche text-brand-black uppercase mb-2 text-sm sm:text-base">
           Interest Registered
         </h3>
-        <p className="text-brand-gray text-sm max-w-sm mx-auto">
+        <p className="text-brand-black/80 font-medium text-sm max-w-sm mx-auto">
           Thanks for your interest in {event.title}. We will reach out when tickets go on sale.
         </p>
       </div>
@@ -195,7 +195,7 @@ export default function BuyTickets() {
               <h1 className="section-title text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4">
                 {pageHeading}
               </h1>
-              <p className="text-brand-gray text-sm sm:text-base leading-relaxed max-w-2xl">
+              <p className="text-brand-black/80 font-medium text-sm sm:text-base leading-relaxed max-w-2xl">
                 {pageSubheading}
               </p>
             </div>

@@ -31,7 +31,7 @@ export default function PageHeader({ label, title, description, breadcrumb }) {
 
         {description && (
           <Reveal delay={220}>
-            <p className="text-brand-gray text-base sm:text-lg max-w-2xl leading-relaxed">{description}</p>
+            <p className="text-brand-black/80 font-medium text-base sm:text-lg max-w-2xl leading-relaxed">{description}</p>
           </Reveal>
         )}
       </div>

@@ -83,7 +83,7 @@ export default function Home() {
               </h2>
             </Reveal>
             <Reveal className="lg:col-span-7" from="right" delay={120}>
-              <p className="prose-copy text-base sm:text-lg">Sports AJ is proud to present the first ever El Clásico Legends Tour 2026, bringing legendary footballers from FC Barcelona Legends and Real Madrid Leyendas together to celebrate the world’s most iconic football rivalry in India. Featuring celebrated former players who have represented the two clubs at the highest level, the landmark tour will give Indian fans a rare opportunity to witness footballing legends renew the historic El Clásico rivalry on Indian soil. This landmark India tour will feature matches in Ahmedabad on November 22 and Kolkata on November 25, 2026 — one of the most ambitious exhibition football events India has ever hosted.</p>
+              <p className="text-brand-black/80 font-medium text-base sm:text-lg leading-relaxed">Sports AJ is proud to present the first ever El Clásico Legends Tour 2026, bringing legendary footballers from FC Barcelona Legends and Real Madrid Leyendas together to celebrate the world’s most iconic football rivalry in India. Featuring celebrated former players who have represented the two clubs at the highest level, the landmark tour will give Indian fans a rare opportunity to witness footballing legends renew the historic El Clásico rivalry on Indian soil. This landmark India tour will feature matches in Ahmedabad on November 22 and Kolkata on November 25, 2026 — one of the most ambitious exhibition football events India has ever hosted.</p>
             </Reveal>
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function Home() {
           <Reveal className="max-w-3xl mb-8 sm:mb-12 mx-auto text-center">
             <p className="section-label mb-3">About Us</p>
             <h2 className="section-title text-xl sm:text-2xl md:text-3xl mb-4">
-              {founders.heading}
+              Leadership
             </h2>
             <p className="prose-copy text-base sm:text-lg">{founders.intro}</p>
           </Reveal>

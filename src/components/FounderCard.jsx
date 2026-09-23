@@ -30,7 +30,7 @@ export default function FounderCard({ founder }) {
       <p className="prose-copy">{founder.bio}</p>
 
       {founder.highlights?.length > 0 && (
-        <ul className="mt-5 space-y-2 text-brand-gray text-sm">
+        <ul className="mt-5 space-y-2 text-brand-black/80 font-medium text-sm">
           {founder.highlights.map((item) => (
             <li key={item}>{item}</li>
           ))}

@@ -129,7 +129,7 @@ export default function OurJourney() {
       <section className="section-py bg-brand-red overflow-hidden">
         <Reveal>
           <div className="page-container max-w-4xl text-center">
-            <p className="font-sans font-light text-lg sm:text-xl lg:text-2xl leading-relaxed text-white">
+            <p className="font-sans font-bold text-lg sm:text-xl lg:text-2xl leading-relaxed text-white">
               {journey.foundersLine}
             </p>
           </div>
