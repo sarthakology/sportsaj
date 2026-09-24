@@ -9,11 +9,9 @@ export default function Footer() {
       <div className="page-container py-10 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           <Reveal className="text-center sm:text-left" from="left">
-            <img
-              src="/assets/logo-sportsaj.png"
-              alt="Sports AJ"
-              className="h-10 sm:h-12 w-auto mb-4 sm:mb-5 mx-auto sm:mx-0"
-            />
+            <p className="font-porsche font-bold uppercase tracking-porsche text-brand-red text-[1.6875rem] sm:text-[1.875rem] lg:text-[2.25rem] leading-none mb-4 sm:mb-5">
+              {site.brand}
+            </p>
             <p className="text-brand-black/80 font-medium text-sm leading-relaxed max-w-md mb-4 sm:mb-6 mx-auto sm:mx-0">
               {site.welcome}
             </p>

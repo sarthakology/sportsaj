@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { navItems } from '../content';
+import { navItems, site } from '../content';
 
 const linkHover =
   'relative after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-brand-red after:transition-transform after:duration-300 hover:after:scale-x-100';
@@ -35,11 +35,9 @@ export default function Navbar() {
               entered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
             }`}
           >
-            <img
-              src="/assets/logo-sportsaj.png"
-              alt="Sports AJ"
-              className="h-8 sm:h-9 lg:h-11 w-auto max-w-[140px] sm:max-w-none object-contain"
-            />
+            <span className="font-porsche font-bold uppercase tracking-porsche text-brand-red text-[1.6875rem] sm:text-[1.875rem] lg:text-[2.25rem] leading-none">
+              {site.brand}
+            </span>
           </Link>
 
           <div className="hidden xl:flex items-center gap-0.5">
