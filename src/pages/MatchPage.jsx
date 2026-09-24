@@ -31,13 +31,13 @@ export default function MatchPage({ city }) {
 
         <div className="page-container mb-10 sm:mb-14">
           <Reveal delay={120}>
-            <div className="overflow-hidden border border-brand-gray-light">
-              <img
-                src={match.stadiumImage}
-                alt={match.venue}
-                className="w-full h-48 sm:h-64 md:h-80 object-cover bg-brand-gray-bg"
-              />
-            </div>
+<div className="overflow-hidden border border-brand-gray-light">
+  <img
+    src={match.stadiumImage}
+    alt={match.venue}
+    className="w-full h-auto object-contain bg-brand-gray-bg"
+  />
+</div>
           </Reveal>
         </div>
       </section>
