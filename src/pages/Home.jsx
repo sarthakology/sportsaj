@@ -4,8 +4,6 @@ import EventIdentity from '../components/EventIdentity';
 import Reveal from '../components/Reveal';
 import {
   matches,
-  confirmedEvents,
-  visibleUpcoming,
   founders,
   aboutCompany,
   brandNameYear,
@@ -29,6 +27,7 @@ export default function Home() {
         title={seoCopy.homeTitle}
         description={seoCopy.homeDescription}
         keywords={seoCopy.homeKeywords}
+        image={matches.kolkata.logo}
         imageAlt={seoCopy.homeTitle}
         schema={{
           '@context': 'https://schema.org',
@@ -36,7 +35,7 @@ export default function Home() {
           name: brandNameYear(),
           description: seoCopy.homeDescription,
           url: 'https://sportsaj.com/',
-          subEvent: confirmedEvents.map(sportsEventSchema),
+          subEvent: [matches.kolkata].map(sportsEventSchema),
         }}
       />
       <section className="relative bg-white pt-20 sm:pt-24 lg:pt-28">
@@ -46,10 +45,10 @@ export default function Home() {
               <Reveal>
                 <h1>
                     <span className="block text-center">
-                    <span className="block font-sans font-extralight text-brand-black uppercase tracking-[0.18em] sm:tracking-[0.22em] text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[1.05]">
+                    <span className="block font-sans font-semibold text-brand-black uppercase tracking-[0.08em] sm:tracking-[0.1em] text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-[7.25rem] leading-[0.92]">
                       EL CLÁSICO
                     </span>
-                    <span className="mt-5 sm:mt-6 block font-sans font-light text-brand-black uppercase tracking-[0.28em] sm:tracking-[0.36em] text-lg sm:text-2xl md:text-3xl lg:text-4xl">
+                    <span className="mt-4 sm:mt-5 block font-sans font-medium text-brand-black uppercase tracking-[0.16em] sm:tracking-[0.2em] text-2xl sm:text-4xl md:text-5xl lg:text-6xl">
                       India Tour 2026
                     </span>
                   </span>
@@ -80,7 +79,7 @@ export default function Home() {
           </div>
         </div>
 
-        <FootballPitch left={matches.gujarat} right={matches.kolkata} />
+        <FootballPitch event={matches.kolkata} />
       </section>
 
       <section className="section-py bg-white border-t border-brand-gray-light overflow-hidden">
@@ -89,11 +88,11 @@ export default function Home() {
             <Reveal className="lg:col-span-5" from="left">
               <p className="section-label mb-4 text-sm sm:text-base tracking-[0.2em]">India Tour 2026</p>
               <h2 className="font-sans font-light text-brand-black text-2xl sm:text-3xl lg:text-4xl leading-snug">
-                Welcome to the first ever El Clásico India Tour.
+                Welcome to the first ever El Clásico India Tour in Kolkata.
               </h2>
             </Reveal>
             <Reveal className="lg:col-span-7" from="right" delay={120}>
-              <p className="text-brand-black/80 font-medium text-base sm:text-lg leading-relaxed">Sports AJ is proud to present the first ever El Clásico Legends Tour 2026, bringing legendary footballers from FC Barcelona Legends and Real Madrid Leyendas together to celebrate the world’s most iconic football rivalry in India. Featuring celebrated former players who have represented the two clubs at the highest level, the landmark tour will give Indian fans a rare opportunity to witness footballing legends renew the historic El Clásico rivalry on Indian soil. This landmark India tour will feature matches in Ahmedabad on November 22 and Kolkata on November 25, 2026 — one of the most ambitious exhibition football events India has ever hosted.</p>
+              <p className="text-brand-black/80 font-medium text-base sm:text-lg leading-relaxed">Sports AJ is proud to present the first ever El Clásico Legends Tour 2026, bringing legendary footballers from FC Barcelona Legends and Real Madrid Leyendas together to celebrate the world’s most iconic football rivalry in India. Featuring celebrated former players who have represented the two clubs at the highest level, the landmark tour will give Indian fans a rare opportunity to witness footballing legends renew the historic El Clásico rivalry on Indian soil. This landmark India tour will feature a match in Kolkata on November 25, 2026 — one of the most ambitious exhibition football events India has ever hosted.</p>
             </Reveal>
           </div>
         </div>
@@ -171,36 +170,23 @@ export default function Home() {
           <Reveal className="max-w-3xl mb-8 sm:mb-12">
             <p className="section-label mb-3">Upcoming events</p>
             <h2 className="section-title text-xl sm:text-2xl md:text-3xl mb-4">
-              Ahmedabad and Kolkata
+              Kolkata
             </h2>
-            <p className="prose-copy text-base sm:text-lg">The first ever El Clásico India Tour will be Ahmedabad and Kolkata. Ahmedabad is the nerve centre of India's pursuit of global sporting excellence. Kolkata, as we all know, has a very deep-rooted football culture, with some of the clubs being established in the 19th century.</p>
+            <p className="prose-copy text-base sm:text-lg">Watch out for more excitement coming soon</p>
           </Reveal>
 
-          <div className={`grid grid-cols-1 gap-6 sm:gap-8 ${visibleUpcoming.length ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
-            {confirmedEvents.map((event, index) => (
-              <Reveal key={event.slug} delay={index * 140} from={index === 0 ? 'left' : 'right'}>
-                <Link
-                  to={event.path}
-                  className="group block overflow-hidden border border-brand-gray-light bg-white hover:border-brand-red/40 transition-colors p-8 sm:p-10"
-                >
-                  <EventIdentity event={event} size="md" cityPosition="bottom" />
-                  <p className="text-center text-brand-red font-porsche tracking-porsche uppercase text-[10px] sm:text-xs mt-6">
-                    View event →
-                  </p>
-                </Link>
-              </Reveal>
-            ))}
-
-            {visibleUpcoming.map((city) => (
-              <Reveal key={city.city} delay={280}>
-                <div className="border border-dashed border-brand-gray-light bg-white p-8 sm:p-10 min-h-[280px] flex flex-col items-center justify-center text-center">
-                  <p className="section-label mb-3">Coming soon</p>
-                  <p className="font-sans font-light text-brand-black uppercase tracking-[0.22em] text-2xl">
-                    {city.city}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 max-w-md">
+            <Reveal from="left">
+              <Link
+                to={matches.kolkata.path}
+                className="group block overflow-hidden border border-brand-gray-light bg-white hover:border-brand-red/40 transition-colors p-8 sm:p-10"
+              >
+                <EventIdentity event={matches.kolkata} size="md" cityPosition="bottom" />
+                <p className="text-center text-brand-red font-porsche tracking-porsche uppercase text-[10px] sm:text-xs mt-6">
+                  View event →
+                </p>
+              </Link>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -209,7 +195,7 @@ export default function Home() {
         <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             <Reveal className="lg:col-span-4 flex justify-center" from="left">
-              <EventIdentity event={matches.gujarat} size="md" showCity={false} showName={false} />
+              <EventIdentity event={matches.kolkata} size="md" showCity={false} showName={false} />
             </Reveal>
             <Reveal className="lg:col-span-8" from="right" delay={120}>
               <p className="section-label mb-3">Exclusive rights holder</p>

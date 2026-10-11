@@ -35,7 +35,7 @@ export default function Navbar() {
               entered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
             }`}
           >
-            <span className="font-porsche font-bold uppercase tracking-porsche text-brand-red text-[1.6875rem] sm:text-[1.875rem] lg:text-[2.25rem] leading-none">
+            <span className="font-porsche font-bold uppercase tracking-porsche text-brand-red text-lg sm:text-xl lg:text-2xl leading-none">
               {site.brand}
             </span>
           </Link>

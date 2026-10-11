@@ -4,6 +4,7 @@ const sizes = {
   sm: 'w-20 h-20 sm:w-24 sm:h-24',
   md: 'w-28 h-28 sm:w-36 sm:h-36',
   lg: 'w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 xl:w-72 xl:h-72',
+  xl: 'w-80 h-80 sm:w-[26rem] sm:h-[26rem] lg:w-[32rem] lg:h-[32rem] xl:w-[36rem] xl:h-[36rem] max-w-[90vw]',
 };
 
 export default function EventIdentity({

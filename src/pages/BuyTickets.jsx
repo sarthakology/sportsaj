@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import SEO from '../components/SEO';
 import Reveal from '../components/Reveal';
 import { matches, seoCopy } from '../content';
 
-const events = [matches.gujarat, matches.kolkata];
+const event = matches.kolkata;
 
 const inputClass =
   'w-full px-4 py-3 text-base border border-brand-gray-light bg-white text-brand-black focus:border-brand-red focus:ring-1 focus:ring-brand-red outline-none transition-colors rounded-none';
@@ -394,6 +394,24 @@ const handleSubmit = async (e) => {
         {loading ? 'Submitting...' : 'Register Interest'}
       </button>
 
+      <p className="text-brand-gray text-xs leading-relaxed max-w-xl">
+        By registering, you agree to the{' '}
+        <Link
+          to="/terms-and-conditions"
+          className="text-brand-black underline underline-offset-4 decoration-brand-gray-light hover:text-brand-red"
+        >
+          Terms and Conditions
+        </Link>{' '}
+        and{' '}
+        <Link
+          to="/privacy-policy"
+          className="text-brand-black underline underline-offset-4 decoration-brand-gray-light hover:text-brand-red"
+        >
+          Privacy Policy
+        </Link>
+        . Registering records your interest only and does not buy a ticket.
+      </p>
+
     </form>
   );
 }
@@ -406,34 +424,7 @@ const handleSubmit = async (e) => {
 */
 
 export default function BuyTickets() {
-
-  const location = useLocation();
-
-
-  /*
-   * Determine initial city
-   */
-  const fromKolkata =
-    location.search.includes('city=kolkata') ||
-    location.hash === '#kolkata';
-
-
-  /*
-   * Capture UTM parameters
-   */
   const utmData = captureUTMData();
-
-
-  /*
-   * Active event
-   */
-  const [activeTab, setActiveTab] = useState(
-    fromKolkata ? 'kolkata' : 'gujarat'
-  );
-
-  const activeEvent =
-    events.find((e) => e.slug === activeTab) ||
-    events[0];
 
 
   return (
@@ -470,34 +461,6 @@ export default function BuyTickets() {
           </Reveal>
 
 
-          {/* City Tabs */}
-
-          <Reveal delay={100}>
-
-            <div className="flex border-b border-brand-gray-light mb-8 sm:mb-10">
-
-              {events.map((event) => (
-
-                <button
-                  key={event.slug}
-                  type="button"
-                  onClick={() => setActiveTab(event.slug)}
-                  className={`flex-1 min-h-[48px] px-4 py-3 font-porsche tracking-porsche uppercase text-xs sm:text-sm transition-colors border-b-2 -mb-px ${
-                    activeTab === event.slug
-                      ? 'border-brand-red text-brand-red'
-                      : 'border-transparent text-brand-gray hover:text-brand-black'
-                  }`}
-                >
-                  {event.title}
-                </button>
-
-              ))}
-
-            </div>
-
-          </Reveal>
-
-
           {/* Event card */}
 
           <Reveal delay={180}>
@@ -510,23 +473,23 @@ export default function BuyTickets() {
               <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-6 mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-brand-gray-light">
 
                 <img
-                  src={activeEvent.logo}
-                  alt={activeEvent.title}
+                  src={event.logo}
+                  alt={event.title}
                   className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
                 />
 
                 <div className="text-center sm:text-left">
 
                   <h2 className="font-porsche tracking-wide sm:tracking-porsche text-brand-black uppercase text-lg sm:text-xl mb-1">
-                    {activeEvent.title}
+                    {event.title}
                   </h2>
 
                   <p className="text-brand-gray text-sm">
-                    {activeEvent.venue}
+                    {event.venue}
                   </p>
 
                   <p className="text-brand-red font-porsche tracking-porsche uppercase text-xs mt-1">
-                    {activeEvent.date}
+                    {event.date}
                   </p>
 
                 </div>
@@ -544,8 +507,8 @@ export default function BuyTickets() {
               {/* Form */}
 
               <InterestForm
-                key={activeEvent.slug}
-                event={activeEvent}
+                key={event.slug}
+                event={event}
                 utmData={utmData}
               />
 

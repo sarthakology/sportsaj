@@ -27,19 +27,20 @@ function PitchBackground() {
   );
 }
 
-function Half({ event, side }) {
+function Half({ event, side, size = 'lg' }) {
   const isLeft = side === 'left';
+  const isCenter = side === 'center';
 
   return (
     <Link
       to={event.path}
       className={`relative z-10 min-h-[50vh] lg:min-h-screen flex flex-col items-center justify-center px-6 sm:px-10 lg:px-16 py-10 lg:py-16 overflow-hidden group ${
-        isLeft ? 'lg:items-end lg:pr-20 xl:pr-24' : 'lg:items-start lg:pl-20 xl:pl-24'
+        isCenter ? '' : isLeft ? 'lg:items-end lg:pr-20 xl:pr-24' : 'lg:items-start lg:pl-20 xl:pl-24'
       }`}
     >
       <div className="relative transition-transform duration-500 group-hover:scale-105">
-        <Reveal from={isLeft ? 'left' : 'right'} delay={isLeft ? 80 : 200}>
-          <EventIdentity event={event} size="lg" cityPosition="top" />
+        <Reveal from={isCenter ? 'up' : isLeft ? 'left' : 'right'} delay={isCenter ? 80 : isLeft ? 80 : 200}>
+          <EventIdentity event={event} size={size} cityPosition="top" />
           <span className="relative mt-4 mx-auto block w-8 h-px bg-brand-red" />
         </Reveal>
       </div>
@@ -47,15 +48,21 @@ function Half({ event, side }) {
   );
 }
 
-export default function FootballPitch({ left, right }) {
+export default function FootballPitch({ left, right, event }) {
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-white">
       <PitchBackground />
 
-      <div className="relative grid grid-cols-1 lg:grid-cols-2 min-h-screen">
-        <Half event={left} side="left" />
-        <Half event={right} side="right" />
-      </div>
+      {event ? (
+        <div className="relative min-h-screen">
+          <Half event={event} side="center" size="xl" />
+        </div>
+      ) : (
+        <div className="relative grid grid-cols-1 lg:grid-cols-2 min-h-screen">
+          <Half event={left} side="left" />
+          <Half event={right} side="right" />
+        </div>
+      )}
     </div>
   );
 }
