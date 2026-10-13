@@ -5,11 +5,11 @@ import OurJourney from './pages/OurJourney';
 import InTheNews from './pages/InTheNews';
 import StarsLineup from './pages/StarsLineup';
 import BuyTickets from './pages/BuyTickets';
-import Gujarat from './pages/Gujarat';
 import Kolkata from './pages/Kolkata';
 import ForbesIndia from './pages/news/ForbesIndia';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -23,13 +23,14 @@ function App() {
           <Route path="/in-the-news" element={<InTheNews />} />
           <Route path="/buy-tickets" element={<BuyTickets />} />
           <Route path="/buy-now" element={<Navigate to="/buy-tickets" replace />} />
-          <Route path="/gujarat" element={<Gujarat />} />
-          <Route path="/ahemdabad" element={<Navigate to="/gujarat" replace />} />
+          <Route path="/gujarat" element={<Navigate to="/" replace />} />
+          <Route path="/ahemdabad" element={<Navigate to="/" replace />} />
           <Route path="/kolkata" element={<Kolkata />} />
           <Route path="/news/forbes-india" element={<ForbesIndia />} />
           <Route path="/forbes-india" element={<Navigate to="/news/forbes-india" replace />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

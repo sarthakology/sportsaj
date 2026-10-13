@@ -2,7 +2,6 @@
  * Central content + brand configuration.
  *
  * To switch the public name if legal requires it, set BRAND_SPELLING to 'classic'.
- * To rename the west event, change matches.gujarat.region from 'Gujarat' to 'Ahmedabad'.
  */
 
 export const BRAND_SPELLING = 'clasico'; // 'clasico' | 'classic'
@@ -62,21 +61,6 @@ export const identity = {
 };
 
 export const matches = {
-  gujarat: {
-    slug: 'gujarat',
-    region: 'Gujarat',
-    city: 'Ahmedabad',
-    variant: 'gujarat',
-    date: 'Saturday, 22 November 2026',
-    startDateISO: '2026-11-22',
-    venue: 'Eka Arena, Ahmedabad',
-    venueName: 'Eka Arena',
-    addressRegion: 'Gujarat',
-    stadiumImage: '/assets/stadium-ahemdabad.webp',
-    logo: '/assets/amdavad-el-clasico.png',
-    path: '/gujarat',
-    status: 'confirmed',
-  },
   kolkata: {
     slug: 'kolkata',
     region: 'Kolkata',
@@ -98,7 +82,7 @@ Object.values(matches).forEach((event) => {
   event.title = eventName(event);
 });
 
-export const confirmedEvents = [matches.gujarat, matches.kolkata];
+export const confirmedEvents = [matches.kolkata];
 
 export const upcomingCities = [
   {
@@ -146,7 +130,7 @@ export const story = {
   tour: {
     heading: 'El Clásico Legends India Tour',
     body:
-      'Sports AJ is proud to present the first ever El Clásico Legends Tour 2026, bringing legendary footballers from FC Barcelona Legends and Real Madrid Leyendas together to celebrate the world’s most iconic football rivalry in India. Featuring celebrated former players who have represented the two clubs at the highest level, the landmark tour will give Indian fans a rare opportunity to witness footballing legends renew the historic El Clásico rivalry on Indian soil. This landmark India tour will feature matches in Ahmedabad on November 22 and Kolkata on November 25, 2026 — one of the most ambitious exhibition football events India has ever hosted.',
+      'Sports AJ is proud to present the first ever El Clásico Legends Tour 2026, bringing legendary footballers from FC Barcelona Legends and Real Madrid Leyendas together to celebrate the world’s most iconic football rivalry in India. Featuring celebrated former players who have represented the two clubs at the highest level, the landmark tour will give Indian fans a rare opportunity to witness footballing legends renew the historic El Clásico rivalry on Indian soil. This landmark India tour will feature a match in Kolkata on November 25, 2026 — one of the most ambitious exhibition football events India has ever hosted.',
   },
 };
 
@@ -161,17 +145,17 @@ export const legendaryPlayers = {
 };
 
 export const hostCities = {
-  heading: 'Ahmedabad and Kolkata',
+  heading: 'Kolkata',
   body:
-    `Ahmedabad and Kolkata, two of India’s foremost cities, celebrated for their rich cultural heritage and passionate sporting communities will host the country’s greatest football spectacle and home to this iconic ${brandNameYear()}`,
+    `Kolkata, celebrated for its rich cultural heritage and passionate sporting community, will host the country’s greatest football spectacle and home to this iconic ${brandNameYear()}`,
 };
 
 export const aboutCompany = {
   heading: 'Sports AJ Ventures',
   body:
-    'Sports AJ Ventures Private Limited is the sole and exclusive rights holder authorized by both FC Barcelona and Real Madrid to organise and host the proposed Legends exhibition match in Ahmedabad and Kolkata. The only Indian company which holds exclusive agreements with both clubs for this friendly exhibition match.',
+    'Sports AJ Ventures Private Limited is the sole and exclusive rights holder authorized by both FC Barcelona and Real Madrid to organise and host the proposed Legends exhibition match in Kolkata. The only Indian company which holds exclusive agreements with both clubs for this friendly exhibition match.',
   separation:
-    'This event is presented by Sports AJ Ventures Private Limited. It is not a Barça Academy event.',
+    'This event is presented by Sports AJ Ventures Private Limited.',
 };
 
 export const journey = {
@@ -258,7 +242,7 @@ export const newsItems = [
     dateISO: '2025-04-07',
     title: 'FC Barcelona’s Barca Academy India announces football camps',
     excerpt:
-      'Registration opened for Barca Academy camps in Ahmedabad, Hyderabad, Bengaluru and Delhi, with Abhishek Saklani and Jatin Ahluwalia of SportsNTW.',
+      'Registration opened for Barca Academy camps in Hyderabad, Bengaluru and Delhi, with Abhishek Saklani and Jatin Ahluwalia of SportsNTW.',
     image: '/assets/press/sportstak-barca-camps.jpg',
   },
   {
