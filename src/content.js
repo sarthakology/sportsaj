@@ -155,7 +155,7 @@ export const aboutCompany = {
   body:
     'Sports AJ Ventures Private Limited is the sole and exclusive rights holder authorized by both FC Barcelona and Real Madrid to organise and host the proposed Legends exhibition match in Kolkata. The only Indian company which holds exclusive agreements with both clubs for this friendly exhibition match.',
   separation:
-    'This event is presented by Sports AJ Ventures Private Limited.',
+    'This event is presented by Sports AJ Ventures Private Limited. It is not a Barça Academy event.',
 };
 
 export const journey = {
