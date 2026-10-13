@@ -42,6 +42,7 @@ export function eventName(event) {
 
 export const site = {
   year: '2026',
+  url: 'https://elclasicoindia.com',
   brand: 'Sports AJ',
   legalName: 'Sports AJ Ventures Private Limited',
   intro:
@@ -191,6 +192,7 @@ export const journey = {
     { id: 'bundesliga', label: 'Bundesliga Digital Experience' },
     { id: 'french-open', label: 'French Open' },
     { id: 'us-open', label: 'US Open' },
+    { id: 'barca-academy', label: 'Barça Academy India' },
     { id: 'tour', label: 'EL CLÁSICO INDIA TOUR' },
   ],
 };
@@ -276,7 +278,7 @@ export const seoCopy = {
   homeTitle: brandNameUpperYear(),
   homeDescription: `The first ever ${brandNameYear()}: FC Barcelona Legends vs Real Madrid Leyendas in Kolkata on 25 November 2026.`,
   homeKeywords:
-    'El Clasico India Tour 2026, El Clásico India Tour, Gujarat El Clásico, Kolkata El Clásico, Ahmedabad, FC Barcelona Legends, Real Madrid Leyendas, Sports AJ',
+    'El Clasico India Tour 2026, El Clásico India Tour, elclasicoindia.com, Kolkata El Clásico, Salt Lake Stadium, FC Barcelona Legends, Real Madrid Leyendas, Sports AJ, Barça Academy India',
   journeyDescription: journey.lead,
   pressDescription: `Press and coverage of ${site.brand} and ${brandNameYear()}, including the Forbes India feature on founders Abhishek Saklani and Jatin Ahluwalia.`,
   ticketsDescription: `Register your interest for ${brandNameYear()} tickets — Kolkata El Clásico.`,

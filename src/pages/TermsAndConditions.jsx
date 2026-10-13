@@ -10,7 +10,7 @@ const sections = [
   {
     title: 'About these terms',
     body: [
-      `These terms apply to sportsaj.com and to registering your interest in the El Clásico India Tour, presented by ${site.legalName}. By using the website or submitting the interest form, you agree to these terms and to our Privacy Policy.`,
+      `These terms apply to elclasicoindia.com and to registering your interest in the El Clásico India Tour, presented by ${site.legalName}. By using the website or submitting the interest form, you agree to these terms and to our Privacy Policy.`,
     ],
   },
   {

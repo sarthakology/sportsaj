@@ -2,14 +2,15 @@ import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { brandNameUpperYear, brandNameYear, contact, site } from '../content';
 
-const SITE_URL = 'https://sportsaj.com';
+const SITE_URL = site.url;
 const SITE_NAME = brandNameUpperYear();
-const DEFAULT_OG_IMAGE = '/assets/amdavad-el-clasico.png';
+const DEFAULT_OG_IMAGE = '/assets/EL KOLKATA.png';
 
 function absoluteUrl(path) {
-  if (!path) return `${SITE_URL}${DEFAULT_OG_IMAGE}`;
+  if (!path) return `${SITE_URL}${encodeURI(DEFAULT_OG_IMAGE)}`;
   if (path.startsWith('http')) return path;
-  return `${SITE_URL}${path.startsWith('/') ? path : `/${path}`}`;
+  const normalized = path.startsWith('/') ? path : `/${path}`;
+  return `${SITE_URL}${encodeURI(normalized)}`;
 }
 
 function pageTitle(title) {

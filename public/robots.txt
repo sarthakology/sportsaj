@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sportsaj.com/sitemap.xml
+Sitemap: https://elclasicoindia.com/sitemap.xml

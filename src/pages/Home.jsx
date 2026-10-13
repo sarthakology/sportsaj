@@ -8,6 +8,7 @@ import {
   aboutCompany,
   brandNameYear,
   seoCopy,
+  site,
 } from '../content';
 import SEO, { sportsEventSchema } from '../components/SEO';
 
@@ -19,6 +20,7 @@ export default function Home() {
   { id: 'bundesliga', label: 'Bundesliga Digital Experience' },
   { id: 'french-open', label: 'French Open' },
   { id: 'us-open', label: 'US Open' },
+  { id: 'barca-academy', label: 'Barça Academy India' },
   { id: 'tour', label: 'EL CLÁSICO INDIA TOUR' },
 ];
   return (
@@ -34,7 +36,7 @@ export default function Home() {
           '@type': 'EventSeries',
           name: brandNameYear(),
           description: seoCopy.homeDescription,
-          url: 'https://sportsaj.com/',
+          url: `${site.url}/`,
           subEvent: [matches.kolkata].map(sportsEventSchema),
         }}
       />

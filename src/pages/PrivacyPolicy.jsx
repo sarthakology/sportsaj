@@ -8,7 +8,7 @@ const sections = [
   {
     title: 'Who we are',
     body: [
-      `${site.legalName} (“Sports AJ”, “we”, “us”) operates sportsaj.com and organises the El Clásico India Tour. This policy explains how we handle personal information when you use the website or register your interest in tickets.`,
+      `${site.legalName} (“Sports AJ”, “we”, “us”) operates elclasicoindia.com and organises the El Clásico India Tour. This policy explains how we handle personal information when you use the website or register your interest in tickets.`,
       `Our office is at 001 BPTP Park Centra, Sector 31, Gurugram, Haryana 122001, India. For privacy questions, email ${contact.email}.`,
     ],
   },
@@ -37,7 +37,7 @@ const sections = [
     title: 'Your choices',
     body: [
       'You may ask us what personal information we hold about you, ask us to correct it, or ask us to delete it. Write to us at the email above and tell us the name and phone number or email you used on the form so we can find the registration.',
-      'You can also clear the campaign source stored in your browser by clearing site data for sportsaj.com in your browser settings.',
+      'You can also clear the campaign source stored in your browser by clearing site data for elclasicoindia.com in your browser settings.',
     ],
   },
   {
