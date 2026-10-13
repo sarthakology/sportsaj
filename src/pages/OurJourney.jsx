@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader';
 import Reveal from '../components/Reveal';
 import SEO from '../components/SEO';
 import EventIdentity from '../components/EventIdentity';
-import { journey, aboutCompany, matches, seoCopy } from '../content';
+import { journey, aboutCompany, matches, seoCopy, founders } from '../content';
 
 export default function OurJourney() {
   const lineRef = useRef(null);
@@ -55,7 +55,7 @@ export default function OurJourney() {
                 <div className="absolute -inset-3 bg-brand-red/10 blur-2xl pointer-events-none transition-opacity duration-500 group-hover:opacity-80" />
                 <img
                   src="/assets/forbes-billion-dollar-kick-cover.jpg"
-                  alt="Forbes India — Abhishek Saklani and Jatin Ahluwalia"
+                  alt={founders.imageAlt}
                   className="relative w-full shadow-xl transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
               </div>

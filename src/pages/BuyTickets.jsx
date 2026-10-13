@@ -474,7 +474,7 @@ export default function BuyTickets() {
 
                 <img
                   src={event.logo}
-                  alt={event.title}
+                  alt={event.logoAlt || event.title}
                   className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
                 />
 

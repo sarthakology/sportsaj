@@ -34,7 +34,7 @@ export default function MatchPage({ city }) {
 <div className="overflow-hidden border border-brand-gray-light">
   <img
     src={match.stadiumImage}
-    alt={match.venue}
+    alt={match.stadiumImageAlt || match.venue}
     className="w-full h-auto object-contain bg-brand-gray-bg"
   />
 </div>
@@ -72,7 +72,7 @@ export default function MatchPage({ city }) {
               <div className="card card-pad border-t-4 border-t-brand-red">
                 <img
                   src={match.logo}
-                  alt={match.title}
+                  alt={match.logoAlt || match.title}
                   className="w-28 h-28 sm:w-32 sm:h-32 object-contain mx-auto mb-5"
                 />
                 <div className="space-y-3">

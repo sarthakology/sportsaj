@@ -29,7 +29,7 @@ export default function EventIdentity({
         <div className={`relative ${showName || cityPosition === 'bottom' ? 'mb-6 sm:mb-8' : ''}`}>
           <img
             src={event.logo}
-            alt={name}
+            alt={event.logoAlt || name}
             className={`relative ${sizes[size]} object-contain [filter:drop-shadow(0_4px_10px_rgba(0,0,0,0.18))]`}
           />
         </div>

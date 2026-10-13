@@ -4,7 +4,7 @@ import SEO from '../../components/SEO';
 import Reveal from '../../components/Reveal';
 import { story, journey, newsItems, founders } from '../../content';
 
-const item = newsItems[0];
+const item = newsItems.find((storyItem) => storyItem.slug === 'forbes-india');
 
 const highlights = [
   {
@@ -43,7 +43,7 @@ export default function ForbesIndia() {
         description={item.excerpt}
         breadcrumb={item.source}
         image={item.image}
-        imageAlt={item.title}
+        imageAlt={item.imageAlt || item.title}
         type="article"
         article={{
           headline: item.title,

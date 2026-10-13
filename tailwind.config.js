@@ -36,6 +36,7 @@ module.exports = {
         'slide-up': 'slideUp 0.6s ease-out forwards',
         'slide-down': 'slideDown 0.55s ease-out forwards',
         'scale-x': 'scaleX 0.8s ease-out forwards',
+        'ken-burns': 'kenBurns 8s ease-out forwards',
       },
       keyframes: {
         fadeIn: {
@@ -57,6 +58,11 @@ module.exports = {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        kenBurns: {
+          '0%': { transform: 'scale(1.08)', opacity: '0' },
+          '12%': { opacity: '1' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
         },
       },
     },

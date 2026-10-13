@@ -11,7 +11,7 @@ export default function FounderCard({ founder }) {
       {founder.image ? (
         <img
           src={founder.image}
-          alt={founder.name}
+          alt={founder.imageAlt || founder.name}
           className="mx-auto mb-6 h-40 w-40 sm:h-48 sm:w-48 object-cover object-top"
         />
       ) : (

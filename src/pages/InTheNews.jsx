@@ -31,7 +31,7 @@ export default function InTheNews() {
         description={seoCopy.pressDescription}
         breadcrumb="Press & Coverage"
         image={featured.image}
-        imageAlt={featured.title}
+        imageAlt={featured.imageAlt || featured.title}
       />
       <PageHeader
         label={site.brand}
@@ -41,28 +41,25 @@ export default function InTheNews() {
       <section className="section-py bg-white">
         <div className="page-container">
           <Reveal>
-            <StoryLink
-              item={featured}
-              className="group grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center"
-            >
-              <div className="lg:col-span-5">
+            <StoryLink item={featured} className="group block">
+              {featured.image ? (
                 <div className="overflow-hidden border border-brand-gray-light bg-white">
                   <img
                     src={featured.image}
-                    alt={`${featured.source} — ${featured.title}`}
-                    className="w-full group-hover:scale-[1.02] transition-transform duration-500"
+                    alt={featured.imageAlt || `${featured.source} — ${featured.title}`}
+                    className="w-full group-hover:scale-[1.01] transition-transform duration-500"
                   />
                 </div>
-              </div>
-              <div className="lg:col-span-7">
+              ) : null}
+              <div className="mt-6 sm:mt-8 max-w-4xl">
                 <p className="section-label mb-3">{featured.source}</p>
                 <p className="text-brand-gray text-xs mb-4">{featured.date}</p>
-                <h2 className="font-sans font-light text-brand-black uppercase tracking-[0.12em] text-2xl sm:text-3xl lg:text-4xl mb-4 leading-tight group-hover:text-brand-red transition-colors">
+                <h2 className="font-sans font-light text-brand-black uppercase tracking-[0.12em] text-3xl sm:text-4xl lg:text-5xl mb-5 leading-tight group-hover:text-brand-red transition-colors">
                   {featured.title}
                 </h2>
-                <p className="prose-copy text-base sm:text-lg mb-6">{featured.excerpt}</p>
+                <p className="prose-copy text-lg sm:text-xl mb-6">{featured.excerpt}</p>
                 <p className="text-brand-red font-porsche tracking-porsche uppercase text-[10px] sm:text-xs">
-                  Read story →
+                  {featured.cta || 'Read story →'}
                 </p>
               </div>
             </StoryLink>
@@ -79,7 +76,7 @@ export default function InTheNews() {
                     <div className="sm:col-span-4 overflow-hidden border border-brand-gray-light bg-white">
                       <img
                         src={item.image}
-                        alt={`${item.source} — ${item.title}`}
+                        alt={item.imageAlt || `${item.source} — ${item.title}`}
                         className="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition-transform duration-500"
                       />
                     </div>
@@ -92,7 +89,7 @@ export default function InTheNews() {
                     </h2>
                     <p className="prose-copy text-base sm:text-lg mb-4 max-w-3xl">{item.excerpt}</p>
                     <p className="text-brand-red font-porsche tracking-porsche uppercase text-[10px] sm:text-xs">
-                      Read story →
+                      {item.cta || 'Read story →'}
                     </p>
                   </div>
                 </StoryLink>

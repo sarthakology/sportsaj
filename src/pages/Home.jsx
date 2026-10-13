@@ -5,6 +5,7 @@ import Reveal from '../components/Reveal';
 import {
   matches,
   founders,
+  ministerAnnouncement,
   aboutCompany,
   brandNameYear,
   seoCopy,
@@ -30,7 +31,7 @@ export default function Home() {
         description={seoCopy.homeDescription}
         keywords={seoCopy.homeKeywords}
         image={matches.kolkata.logo}
-        imageAlt={seoCopy.homeTitle}
+        imageAlt={matches.kolkata.logoAlt}
         schema={{
           '@context': 'https://schema.org',
           '@type': 'EventSeries',
@@ -40,7 +41,42 @@ export default function Home() {
           subEvent: [matches.kolkata].map(sportsEventSchema),
         }}
       />
-      <section className="relative bg-white pt-20 sm:pt-24 lg:pt-28">
+      <a
+        href={ministerAnnouncement.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative block bg-white pt-14 sm:pt-16 lg:pt-20 overflow-hidden"
+      >
+        <div className="overflow-hidden">
+          <img
+            src={ministerAnnouncement.image}
+            alt={ministerAnnouncement.imageAlt}
+            className="w-full max-h-[72vh] object-cover object-[center_28%] motion-safe:animate-ken-burns"
+          />
+        </div>
+        <div className="bg-brand-red text-white motion-safe:animate-slide-up">
+          <div className="page-container py-5 sm:py-6 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+            <div>
+              <p className="font-porsche tracking-porsche uppercase text-[10px] sm:text-xs text-white/80">
+                Announced by
+              </p>
+              <p className="mt-1 font-sans font-medium uppercase tracking-[0.12em] text-2xl sm:text-4xl leading-tight">
+                {ministerAnnouncement.name}
+              </p>
+              <p className="mt-2 max-w-3xl text-sm sm:text-base text-white/90">
+                {ministerAnnouncement.role}
+              </p>
+              <p className="mt-1 text-sm sm:text-base text-white/90">
+                Kolkata El Clásico · 25 November 2026
+              </p>
+            </div>
+            <span className="font-porsche tracking-porsche uppercase text-[10px] sm:text-xs shrink-0 group-hover:translate-x-1 transition-transform">
+              Watch the announcement →
+            </span>
+          </div>
+        </div>
+      </a>
+      <section className="relative bg-white">
         <div className="px-4 sm:px-6 lg:px-10 pt-8 sm:pt-12 lg:pt-16 pb-8 sm:pb-10">
           <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.4fr)_minmax(0,1.1fr)] lg:items-center lg:gap-8">
             <div className="order-1 text-center lg:order-2">
@@ -66,14 +102,14 @@ export default function Home() {
               <Reveal className="flex justify-center lg:justify-start lg:order-1" from="left">
                 <img
                   src="/assets/barca-legends.png"
-                  alt="Barça Legends"
+                  alt="FC Barcelona Legends wordmark"
                   className="w-full max-w-[200px] sm:max-w-md lg:max-w-none h-28 sm:h-40 lg:h-56 xl:h-72 object-contain"
                 />
               </Reveal>
               <Reveal className="flex justify-center lg:justify-end lg:order-3" from="right" delay={120}>
                 <img
                   src="/assets/real-madrid-leyendas.png"
-                  alt="Real Madrid Leyendas"
+                  alt="Real Madrid Leyendas wordmark"
                   className="w-full max-w-[160px] sm:max-w-[260px] lg:max-w-none h-28 sm:h-40 lg:h-56 xl:h-72 object-contain"
                 />
               </Reveal>

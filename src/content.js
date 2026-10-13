@@ -72,7 +72,9 @@ export const matches = {
     venueName: 'Salt Lake Stadium',
     addressRegion: 'West Bengal',
     stadiumImage: '/assets/stadium-kolkata.jpg',
+    stadiumImageAlt: 'Salt Lake Stadium in Kolkata, host venue for the Kolkata El Clásico',
     logo: '/assets/EL KOLKATA.png',
+    logoAlt: 'Kolkata El Clásico crest for the El Clásico India Tour 2026',
     path: '/kolkata',
     status: 'confirmed',
   },
@@ -186,12 +188,13 @@ export const founders = {
   intro:
     'Led by sports entrepreneurs Abhishek Saklani and Jatin Ahluwalia, our leadership team brings extensive experience in acquiring, broadcasting and monetising some of the world’s leading sports properties.',
   image: '/assets/forbes-billion-dollar-kick-cover.jpg',
-  imageAlt: 'Forbes India — Abhishek Saklani and Jatin Ahluwalia',
+  imageAlt: 'Forbes India cover featuring founders Abhishek Saklani and Jatin Ahluwalia',
   people: [
     {
       name: 'Abhishek Saklani',
       role: 'Founder',
       image: '/assets/abhishek-saklani.jpg',
+      imageAlt: 'Portrait of Abhishek Saklani, Founder of Sports AJ',
       bio: '',
       highlights: [],
     },
@@ -199,6 +202,7 @@ export const founders = {
       name: 'Jatin Ahluwalia',
       role: 'Founder',
       image: '/assets/jatin-ahluwalia.png',
+      imageAlt: 'Portrait of Jatin Ahluwalia, Founder of Sports AJ',
       bio: '',
       highlights: [],
     },
@@ -211,7 +215,112 @@ export const navItems = [
   { label: 'Press & Coverage', path: '/in-the-news' },
 ];
 
+export const ministerAnnouncement = {
+  name: 'Dr. Indranil Khan',
+  role: 'Minister of State (Independent Charge), Youth Affairs and Sports, West Bengal',
+  date: 'October 12, 2026',
+  url: 'https://www.facebook.com/share/p/1FZARUNQNy/?mibextid=wwXIfr',
+  title: 'Dr. Indranil Khan announces the Kolkata El Clásico',
+  excerpt:
+    'West Bengal Minister of State (Independent Charge) for Youth Affairs and Sports, Dr. Indranil Khan, announced that Barcelona and Real Madrid legends will meet in Kolkata on 25 November 2026.',
+  image: '/assets/press/cm-suvendu-announcement.jpg',
+  imageAlt:
+    'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding a white Kolkata El Clásico jersey dated 25 November 2026',
+};
+
 export const newsItems = [
+  {
+    slug: 'dr-indranil-khan-announcement',
+    url: ministerAnnouncement.url,
+    source: 'Facebook',
+    date: ministerAnnouncement.date,
+    dateISO: '2026-10-12',
+    title: ministerAnnouncement.title,
+    excerpt: ministerAnnouncement.excerpt,
+    image: ministerAnnouncement.image,
+    imageAlt: ministerAnnouncement.imageAlt,
+    cta: 'Watch announcement →',
+  },
+  {
+    slug: 'anandabazar-kolkata-legends',
+    url: 'https://www.anandabazar.com/west-bengal/kolkata/match-between-barcelona-and-real-madrid-legends-will-take-place-in-kolkata-on-november-25-dgtl/cid/1719238',
+    source: 'Anandabazar',
+    date: 'October 13, 2026',
+    dateISO: '2026-10-13',
+    title: 'Barcelona and Real Madrid legends to meet in Kolkata on 25 November',
+    excerpt:
+      'Anandabazar reports that the legends’ match between Barcelona and Real Madrid will take place in Kolkata on 25 November.',
+  },
+  {
+    slug: 'news18-bangla-el-clasico',
+    url: 'https://bengali.news18.com/news/sports/fc-barcelona-vs-real-madrid-match-in-kolkata-possible-on-november-25-sup-2927084.html',
+    source: 'News18 Bangla',
+    date: 'October 13, 2026',
+    dateISO: '2026-10-13',
+    title: 'Barcelona vs Real Madrid legends set for Kolkata',
+    excerpt:
+      'News18 Bangla reports that Barcelona and Real Madrid legends are set to face each other in Kolkata, with the state sports department behind the fixture.',
+    image: '/assets/press/news18-el-clasico.jpg',
+    imageAlt: 'Real Madrid and FC Barcelona crests over a packed night-time football stadium',
+  },
+  {
+    slug: 'etv-bharat-el-clasico',
+    url: 'https://www.etvbharat.com/bn/sports/kolkata-to-witness-el-clasico-barcelona-vs-real-madrid-match-in-next-month-wbs26101207520',
+    source: 'ETV Bharat',
+    date: 'October 12, 2026',
+    dateISO: '2026-10-12',
+    title: 'Kolkata to witness El Clásico next month',
+    excerpt:
+      'ETV Bharat reports that a Barcelona–Real Madrid match could be held at Yuba Bharati on 25 November.',
+    image: '/assets/press/etv-el-clasico.jpg',
+    imageAlt: 'Real Madrid and FC Barcelona crests beside a football on a grass pitch',
+  },
+  {
+    slug: 'aajtak-bangla-el-clasico',
+    url: 'https://bangla.aajtak.in/sports/football/story/el-clasico-in-kolkata-when-will-barcelona-and-real-madrid-play-at-yuva-bharati-stadium-sud-1462211-2026-10-13',
+    source: 'Aaj Tak Bangla',
+    date: 'October 13, 2026',
+    dateISO: '2026-10-13',
+    title: 'El Clásico in Kolkata: when Barcelona and Real Madrid play at Yuba Bharati',
+    excerpt:
+      'Aaj Tak Bangla reports that the Chief Minister’s office has given the green signal for Barcelona and Real Madrid to meet in Kolkata.',
+    image: '/assets/press/aajtak-el-clasico.jpg',
+    imageAlt: 'FC Barcelona and Real Madrid flags facing each other for the Kolkata El Clásico',
+  },
+  {
+    slug: 'tv9-bangla-el-clasico',
+    url: 'https://tv9bangla.com/sports/el-clasico-legends-in-kolkata-real-madrid-and-barcelona-icons-set-for-salt-lake-stadium-match-1353049.html',
+    source: 'TV9 Bangla',
+    date: 'October 13, 2026',
+    dateISO: '2026-10-13',
+    title: 'Real Madrid and Barcelona icons set for a Salt Lake Stadium match',
+    excerpt:
+      'TV9 Bangla reports that Kolkata could see Real Madrid and Barcelona legends at Salt Lake Stadium before the year ends.',
+    image: '/assets/press/tv9-el-clasico.jpg',
+    imageAlt: 'Close-up of Real Madrid and FC Barcelona crests on match jerseys',
+  },
+  {
+    slug: 'zee-24-ghanta-el-clasico',
+    url: 'https://www.facebook.com/Zee24Ghanta/videos/%E0%A6%B6%E0%A7%80%E0%A6%A4%E0%A7%87%E0%A6%B0-%E0%A6%B6%E0%A7%81%E0%A6%B0%E0%A7%81%E0%A6%A4%E0%A7%87%E0%A6%87-%E0%A6%95%E0%A6%B2%E0%A6%95%E0%A6%BE%E0%A6%A4%E0%A6%BE%E0%A7%9F-%E0%A6%B8%E0%A7%8D%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A6%BF%E0%A6%B8-%E0%A6%AB%E0%A7%81%E0%A7%81%E0%A6%9F%E0%A6%AC%E0%A6%B2-%E0%A6%AB%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%B0-%E0%A6%AF%E0%A7%81%E0%A6%AC%E0%A6%AD%E0%A6%BE%E0%A6%B0%E0%A6%A4%E0%A7%80%E0%A6%A4%E0%A7%87-%E0%A6%B0%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%B2-%E0%A6%AE%E0%A6%BE%E0%A6%A6%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%A6-%E0%A6%AC%E0%A6%A8%E0%A6%BE%E0%A6%AE-%E0%A6%AC%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B8/2029563397699293/',
+    source: 'Zee 24 Ghanta',
+    date: 'October 13, 2026',
+    dateISO: '2026-10-13',
+    title: 'Spanish football fever in Kolkata: Real Madrid vs Barcelona at Yuba Bharati',
+    excerpt:
+      'Zee 24 Ghanta’s report on the Real Madrid and Barcelona legends’ fixture planned for Yuba Bharati Krirangan.',
+    cta: 'Watch video →',
+  },
+  {
+    slug: 'republic-bangla-el-clasico',
+    url: 'https://www.facebook.com/RepublicBangla/videos/%E0%A6%AF%E0%A7%81%E0%A6%AC%E0%A6%AD%E0%A6%BE%E0%A6%B0%E0%A6%A4%E0%A7%80%E0%A6%A4%E0%A7%87-%E0%A6%8F%E0%A6%AC%E0%A6%BE%E0%A6%B0-%E0%A6%B9%E0%A6%A4%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%87-%E0%A6%8F%E0%A6%B2-%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B8%E0%A6%BF%E0%A6%95%E0%A7%8B-%E0%A6%A8%E0%A6%AD%E0%A7%87%E0%A6%AE%E0%A7%8D%E0%A6%AC%E0%A6%B0%E0%A7%87%E0%A6%87-%E0%A6%95%E0%A6%B2%E0%A6%95%E0%A6%BE%E0%A6%A4%E0%A6%BE%E0%A7%9F-%E0%A6%86%E0%A6%B8%E0%A6%A4%E0%A7%87-%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%87-%E0%A6%B0%E0%A6%BF%E0%A7%9F%E0%A6%BE%E0%A6%B2-%E0%A6%AE%E0%A6%BE%E0%A6%A6%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%A6-%E0%A6%93/1963380944570272/',
+    source: 'Republic Bangla',
+    date: 'October 13, 2026',
+    dateISO: '2026-10-13',
+    title: 'El Clásico in November: Real Madrid and Barcelona coming to Kolkata',
+    excerpt:
+      'Republic Bangla’s report on the El Clásico legends’ match planned for Yuba Bharati in November.',
+    cta: 'Watch video →',
+  },
   {
     slug: 'forbes-india',
     path: '/news/forbes-india',
@@ -222,6 +331,7 @@ export const newsItems = [
     excerpt:
       'How India’s dynamic duo has chosen the challenging pathway to build a sustainable future for football in India.',
     image: '/assets/forbes-billion-dollar-kick-cover.jpg',
+    imageAlt: 'Forbes India cover, The Billion Dollar Kick, featuring Abhishek Saklani and Jatin Ahluwalia',
   },
   {
     slug: 'toi-goa-barca-academy',
@@ -233,6 +343,7 @@ export const newsItems = [
     excerpt:
       'Goa chief minister Pramod Sawant met Barca Academy officials, including Abhishek Saklani and Jatin Ahluwalia, on the support needed to set up an academy in the state.',
     image: '/assets/press/toi-goa-barca.jpg',
+    imageAlt: 'Goa Chief Minister Pramod Sawant meeting Barca Academy officials including Abhishek Saklani and Jatin Ahluwalia',
   },
   {
     slug: 'sportstak-barca-camps',
@@ -244,6 +355,7 @@ export const newsItems = [
     excerpt:
       'Registration opened for Barca Academy camps in Hyderabad, Bengaluru and Delhi, with Abhishek Saklani and Jatin Ahluwalia of SportsNTW.',
     image: '/assets/press/sportstak-barca-camps.jpg',
+    imageAlt: 'Abhishek Saklani and Jatin Ahluwalia with guests holding a Barça Academy India jersey',
   },
   {
     slug: 'ani-barca-academies',
@@ -255,6 +367,19 @@ export const newsItems = [
     excerpt:
       'Barca Academy returned to India with camps in six cities. Abhishek Saklani and Jatin Ahluwalia of SportsNTW spoke about training young players in the Barca methodology.',
     image: '/assets/press/ani-barca-academies.jpg',
+    imageAlt: 'Abhishek Saklani, Jatin Ahluwalia and Barca Academy India officials standing on an athletics track',
+  },
+  {
+    slug: 'revsportz-kolkata-legends',
+    url: 'https://revsportz.in/kolkata-set-to-host-legends-el-clasico-on-november-25/',
+    source: 'RevSportz',
+    date: 'October 13, 2026',
+    dateISO: '2026-10-13',
+    title: 'Kolkata set to host legends’ El Clásico on November 25',
+    excerpt:
+      'Vivekananda Yuba Bharati Krirangan is scheduled to host a legends’ El Clásico between former Real Madrid and Barcelona players on 25 November.',
+    image: '/assets/press/revsportz-el-clasico.jpg',
+    imageAlt: 'Football legends in Real Madrid and Barcelona kits playing in a stadium',
   },
 ];
 
