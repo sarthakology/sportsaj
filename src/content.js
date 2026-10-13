@@ -178,7 +178,7 @@ export const journey = {
   lead:
     'Over 25 years of creating and delivering experiences around some of the world’s most recognised sporting properties.',
   foundersLine:
-    'Led by sports entrepreneurs Jatin Ahluwalia and Abhishek Saklani, our leadership team brings extensive experience in acquiring, broadcasting and monetising some of the world’s leading sports properties.',
+    'Led by sports entrepreneurs Abhishek Saklani and Jatin Ahluwalia, our leadership team brings extensive experience in acquiring, broadcasting and monetising some of the world’s leading sports properties.',
   sections: [
     story.buildingBeyond,
     story.globalFootprint,
@@ -198,17 +198,10 @@ export const journey = {
 export const founders = {
   heading: 'About Us',
   intro:
-    'Led by sports entrepreneurs Jatin Ahluwalia and Abhishek Saklani, our leadership team brings extensive experience in acquiring, broadcasting and monetising some of the world’s leading sports properties.',
+    'Led by sports entrepreneurs Abhishek Saklani and Jatin Ahluwalia, our leadership team brings extensive experience in acquiring, broadcasting and monetising some of the world’s leading sports properties.',
   image: '/assets/forbes-billion-dollar-kick-cover.jpg',
-  imageAlt: 'Forbes India — Jatin Ahluwalia and Abhishek Saklani',
+  imageAlt: 'Forbes India — Abhishek Saklani and Jatin Ahluwalia',
   people: [
-    {
-      name: 'Jatin Ahluwalia',
-      role: 'Founder',
-      image: '/assets/jatin-ahluwalia.png',
-      bio: '',
-      highlights: [],
-    },
     {
       name: 'Abhishek Saklani',
       role: 'Founder',
@@ -216,10 +209,18 @@ export const founders = {
       bio: '',
       highlights: [],
     },
+    {
+      name: 'Jatin Ahluwalia',
+      role: 'Founder',
+      image: '/assets/jatin-ahluwalia.png',
+      bio: '',
+      highlights: [],
+    },
   ],
 };
 
 export const navItems = [
+  { label: 'Stars Lineup', path: '/stars-lineup' },
   { label: 'Our Journey', path: '/our-journey' },
   { label: 'Press & Coverage', path: '/in-the-news' },
 ];
@@ -236,6 +237,39 @@ export const newsItems = [
       'How India’s dynamic duo has chosen the challenging pathway to build a sustainable future for football in India.',
     image: '/assets/forbes-billion-dollar-kick-cover.jpg',
   },
+  {
+    slug: 'toi-goa-barca-academy',
+    url: 'https://timesofindia.indiatimes.com/city/goa/cm-sawant-mulls-over-barca-academy-in-goa/articleshow/124370718.cms',
+    source: 'The Times of India',
+    date: 'October 8, 2025',
+    dateISO: '2025-10-08',
+    title: 'CM Sawant discusses proposal to launch Barca Academy in Goa',
+    excerpt:
+      'Goa chief minister Pramod Sawant met Barca Academy officials, including Abhishek Saklani and Jatin Ahluwalia, on the support needed to set up an academy in the state.',
+    image: '/assets/press/toi-goa-barca.jpg',
+  },
+  {
+    slug: 'sportstak-barca-camps',
+    url: 'https://thesportstak.com/football/story/fc-barcelona-barca-academy-india-announces-football-camps-3169765-2025-04-07',
+    source: 'SportsTak',
+    date: 'April 7, 2025',
+    dateISO: '2025-04-07',
+    title: 'FC Barcelona’s Barca Academy India announces football camps',
+    excerpt:
+      'Registration opened for Barca Academy camps in Ahmedabad, Hyderabad, Bengaluru and Delhi, with Abhishek Saklani and Jatin Ahluwalia of SportsNTW.',
+    image: '/assets/press/sportstak-barca-camps.jpg',
+  },
+  {
+    slug: 'ani-barca-academies',
+    url: 'https://www.aninews.in/news/business/fc-barcelona-expands-its-footprint-in-india-with-new-football-academies20251008105855',
+    source: 'ANI',
+    date: 'October 8, 2025',
+    dateISO: '2025-10-08',
+    title: 'FC Barcelona expands its footprint in India with new football academies',
+    excerpt:
+      'Barca Academy returned to India with camps in six cities. Abhishek Saklani and Jatin Ahluwalia of SportsNTW spoke about training young players in the Barca methodology.',
+    image: '/assets/press/ani-barca-academies.jpg',
+  },
 ];
 
 export const seoCopy = {
@@ -244,7 +278,7 @@ export const seoCopy = {
   homeKeywords:
     'El Clasico India Tour 2026, El Clásico India Tour, Gujarat El Clásico, Kolkata El Clásico, Ahmedabad, FC Barcelona Legends, Real Madrid Leyendas, Sports AJ',
   journeyDescription: journey.lead,
-  pressDescription: `Press and coverage of ${site.brand} and ${brandNameYear()}, including the Forbes India feature on founders Jatin Ahluwalia and Abhishek Saklani.`,
+  pressDescription: `Press and coverage of ${site.brand} and ${brandNameYear()}, including the Forbes India feature on founders Abhishek Saklani and Jatin Ahluwalia.`,
   ticketsDescription: `Register your interest for ${brandNameYear()} tickets — Kolkata El Clásico.`,
   privacyDescription: `Privacy Policy for ${site.legalName} and ${brandNameYear()}.`,
   termsDescription: `Terms and Conditions for ${site.legalName} and ${brandNameYear()}.`,

@@ -3,6 +3,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import OurJourney from './pages/OurJourney';
 import InTheNews from './pages/InTheNews';
+import StarsLineup from './pages/StarsLineup';
 import BuyTickets from './pages/BuyTickets';
 import Gujarat from './pages/Gujarat';
 import Kolkata from './pages/Kolkata';
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/our-journey" element={<OurJourney />} />
           <Route path="/about" element={<Navigate to="/our-journey" replace />} />
+          <Route path="/stars-lineup" element={<StarsLineup />} />
           <Route path="/in-the-news" element={<InTheNews />} />
           <Route path="/buy-tickets" element={<BuyTickets />} />
           <Route path="/buy-now" element={<Navigate to="/buy-tickets" replace />} />

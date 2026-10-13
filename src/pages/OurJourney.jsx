@@ -54,7 +54,7 @@ export default function OurJourney() {
                 <div className="absolute -inset-3 bg-brand-red/10 blur-2xl pointer-events-none transition-opacity duration-500 group-hover:opacity-80" />
                 <img
                   src="/assets/forbes-billion-dollar-kick-cover.jpg"
-                  alt="Forbes India — Jatin Ahluwalia and Abhishek Saklani"
+                  alt="Forbes India — Abhishek Saklani and Jatin Ahluwalia"
                   className="relative w-full shadow-xl transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
               </div>
