@@ -35,6 +35,11 @@ export default function Navbar() {
               entered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'
             }`}
           >
+            <img
+              src={site.logo}
+              alt={site.logoAlt}
+              className="h-10 sm:h-12 lg:h-14 w-auto"
+            />
             <span className="font-porsche font-bold uppercase tracking-porsche text-brand-red text-lg sm:text-xl lg:text-2xl leading-none">
               {site.brand}
             </span>

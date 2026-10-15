@@ -38,7 +38,7 @@ function Half({ event, side, size = 'lg' }) {
         isCenter ? '' : isLeft ? 'lg:items-end lg:pr-20 xl:pr-24' : 'lg:items-start lg:pl-20 xl:pl-24'
       }`}
     >
-      <div className="relative transition-transform duration-500 group-hover:scale-105">
+      <div className="relative">
         <Reveal from={isCenter ? 'up' : isLeft ? 'left' : 'right'} delay={isCenter ? 80 : isLeft ? 80 : 200}>
           <EventIdentity event={event} size={size} cityPosition="top" />
           <span className="relative mt-4 mx-auto block w-8 h-px bg-brand-red" />

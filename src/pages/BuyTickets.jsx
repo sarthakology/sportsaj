@@ -5,68 +5,12 @@ import axios from 'axios';
 import SEO from '../components/SEO';
 import Reveal from '../components/Reveal';
 import { matches, seoCopy } from '../content';
+import { captureUTMData } from '../utils/utm';
 
 const event = matches.kolkata;
 
 const inputClass =
   'w-full px-4 py-3 text-base border border-brand-gray-light bg-white text-brand-black focus:border-brand-red focus:ring-1 focus:ring-brand-red outline-none transition-colors rounded-none';
-
-const captureUTMData = () => {
-  const params = new URLSearchParams(window.location.search);
-
-  const currentUTM = {
-    utm_source: params.get('utm_source') || '',
-    utm_medium: params.get('utm_medium') || '',
-    utm_campaign: params.get('utm_campaign') || '',
-    utm_content: params.get('utm_content') || '',
-    utm_term: params.get('utm_term') || '',
-  };
-
-  const hasTrackingData = Object.values(currentUTM).some(
-    (value) => value !== ''
-  );
-
-  /*
-   * If tracking parameters are present in the URL,
-   * save them as the user's attribution.
-   *
-   * This keeps the FIRST source that brought the user
-   * to the website.
-   */
-  if (hasTrackingData) {
-    const existingAttribution =
-      localStorage.getItem('marketing_attribution');
-
-    /*
-     * Only save if we don't already have attribution.
-     *
-     * This means:
-     *
-     * Facebook → Website → Buy Tickets
-     *
-     * remains attributed to Facebook even if the user
-     * navigates around the website.
-     */
-    if (!existingAttribution) {
-      localStorage.setItem(
-        'marketing_attribution',
-        JSON.stringify(currentUTM)
-      );
-    }
-  }
-
-  /*
-   * Return saved attribution.
-   */
-  try {
-    return JSON.parse(
-      localStorage.getItem('marketing_attribution') || '{}'
-    );
-  } catch {
-    return {};
-  }
-};
-
 
 /*
 |--------------------------------------------------------------------------

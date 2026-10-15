@@ -4,7 +4,7 @@ import { brandNameUpperYear, brandNameYear, contact, site } from '../content';
 
 const SITE_URL = site.url;
 const SITE_NAME = brandNameUpperYear();
-const DEFAULT_OG_IMAGE = '/assets/EL KOLKATA.png';
+const DEFAULT_OG_IMAGE = site.ogImage;
 
 function absoluteUrl(path) {
   if (!path) return `${SITE_URL}${encodeURI(DEFAULT_OG_IMAGE)}`;
@@ -33,7 +33,7 @@ function organizationSchema() {
     name: site.legalName,
     alternateName: site.brand,
     url: SITE_URL,
-    logo: absoluteUrl('/assets/logo-sportsaj.png'),
+    logo: absoluteUrl(site.logo),
     email: contact.email,
     address: {
       '@type': 'PostalAddress',
@@ -146,7 +146,7 @@ export default function SEO({
         name: site.legalName,
         logo: {
           '@type': 'ImageObject',
-          url: absoluteUrl('/assets/logo-sportsaj.png'),
+          url: absoluteUrl(site.logo),
         },
       },
       mainEntityOfPage: canonical,

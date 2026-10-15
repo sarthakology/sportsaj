@@ -141,7 +141,7 @@ export default function OurJourney() {
         <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
             <Reveal className="lg:col-span-4 flex justify-center" from="left">
-              <EventIdentity event={matches.kolkata} size="md" showCity={false} showName={false} />
+              <EventIdentity event={matches.kolkata} size="xl" showCity={false} showName={false} />
             </Reveal>
             <Reveal className="lg:col-span-8" from="right" delay={120}>
               <p className="section-label mb-3">Exclusive rights holder</p>

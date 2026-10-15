@@ -4,7 +4,7 @@ const sizes = {
   sm: 'w-20 h-20 sm:w-24 sm:h-24',
   md: 'w-28 h-28 sm:w-36 sm:h-36',
   lg: 'w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 xl:w-72 xl:h-72',
-  xl: 'w-80 h-80 sm:w-[26rem] sm:h-[26rem] lg:w-[32rem] lg:h-[32rem] xl:w-[36rem] xl:h-[36rem] max-w-[90vw]',
+  xl: 'w-56 h-56 sm:w-[18rem] sm:h-[18rem] lg:w-[22.5rem] lg:h-[22.5rem] xl:w-[25rem] xl:h-[25rem] max-w-[70vw]',
 };
 
 export default function EventIdentity({
@@ -30,7 +30,7 @@ export default function EventIdentity({
           <img
             src={event.logo}
             alt={event.logoAlt || name}
-            className={`relative ${sizes[size]} object-contain [filter:drop-shadow(0_4px_10px_rgba(0,0,0,0.18))]`}
+            className={`relative ${sizes[size]} object-contain`}
           />
         </div>
       )}
