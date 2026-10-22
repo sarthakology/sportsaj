@@ -402,7 +402,7 @@ export default function GalaDinner() {
       <img
         src={HERO}
         alt="Grand blue-lit gala ballroom set for dinner"
-        className="block w-full h-[396px] sm:h-[572px] lg:h-[748px] object-cover mt-14 sm:mt-16 lg:mt-20"
+        className="block w-full h-[317px] sm:h-[458px] lg:h-[598px] object-cover mt-14 sm:mt-16 lg:mt-20"
       />
 
 
