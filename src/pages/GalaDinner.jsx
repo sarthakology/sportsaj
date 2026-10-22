@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 import { galaDinners, seoCopy, site } from '../content';
 import { captureUTMData } from '../utils/utm';
 
-const HERO = '/assets/draft/hero-ballroom.jpg';
+const HERO = '/assets/draft/hero-ballroom.png';
 const CREST = '/assets/draft/crest.png';
 const ICON_PLUS = '/assets/draft/icon-plus-black.svg';
 const ICON_PLUS_HOVER = '/assets/draft/icon-plus-white.svg';
@@ -399,43 +399,23 @@ export default function GalaDinner() {
         }}
       />
 
-      <section className="relative overflow-hidden h-[62vh] min-h-[480px] sm:min-h-[640px] lg:h-[963px]">
-        <img
-          src={HERO}
-          alt="Grand blue-lit gala ballroom set for dinner"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-        />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[22%] sm:h-[34%] lg:h-[38%] bg-gradient-to-t from-white from-[8%] to-transparent" />
+      <img
+        src={HERO}
+        alt="Grand blue-lit gala ballroom set for dinner"
+        className="block w-full h-[396px] sm:h-[572px] lg:h-[748px] object-cover mt-14 sm:mt-16 lg:mt-20"
+      />
 
-        <div className="relative z-10 h-full flex flex-col items-center px-5 pt-36 sm:pt-32 lg:pt-[226px] text-center motion-safe:animate-slide-up">
-          <div className="flex items-center justify-center gap-2.5 text-brand-black">
-            <p className="font-garamond font-semibold text-lg sm:text-2xl leading-none">AHMEDABAD</p>
-            <p className="font-garamond font-bold text-2xl sm:text-[32px] leading-none">·</p>
-            <p className="font-garamond font-semibold text-lg sm:text-2xl leading-none">KOLKATA</p>
-          </div>
-          <p className="mt-2.5 font-garamond font-bold text-brand-red text-[40px] sm:text-6xl lg:text-[64px] leading-none">
-            EL CLASICO
-          </p>
-          <p className="mt-2.5 font-garamond font-bold text-brand-black text-xl sm:text-[32px] leading-none">
-            LEGENDS TOUR INDIA
-          </p>
-          <p className="mt-2.5 font-garamond font-semibold text-brand-black text-base sm:text-2xl leading-none">
-            21 & 24 NOVEMBER, 2026
-          </p>
-        </div>
 
-        <div className="absolute z-10 left-5 sm:left-10 lg:left-[155px] right-5 bottom-10 sm:bottom-[80px] lg:bottom-[118px] motion-safe:animate-slide-up" style={{ animationDelay: '180ms' }}>
-          <h1 className="font-garamond font-bold text-brand-red text-[32px] sm:text-5xl lg:text-[64px] leading-none">
-            GALA DINNER
-          </h1>
-          <p className="mt-2.5 font-garamond font-bold text-brand-black text-base sm:text-2xl lg:text-[32px] leading-none">
-            Your exclusive evening with Barça Legends and Real Madrid Leyendas before they hit the pitch
-          </p>
-        </div>
-      </section>
+      <section className="bg-white px-5 sm:px-10 lg:px-[155px] pt-10 sm:pt-12 lg:pt-16 pb-16 sm:pb-20 lg:pb-[100px]">
+        <h1 className="font-garamond font-bold text-brand-red text-[32px] sm:text-5xl lg:text-[64px] leading-none">
+          GALA DINNER
+        </h1>
+        <p className="mt-2.5 font-garamond font-bold text-brand-black text-base sm:text-2xl lg:text-[32px] leading-none">
+          Your exclusive evening with Barça Legends and Real Madrid Leyendas before they hit the pitch
+        </p>
+        <div className="mt-8 sm:mt-10 h-px bg-brand-red" />
 
-      <section className="bg-white px-5 sm:px-10 lg:px-[155px] pt-8 pb-16 sm:pt-16 sm:pb-20 lg:py-[100px]">
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] gap-10 lg:gap-16 items-start">
+        <div className="mt-12 lg:mt-16 grid grid-cols-1 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] gap-10 lg:gap-16 items-start">
           <Reveal from="left">
             <p className="font-garamond font-medium text-[12px] leading-none text-brand-red px-2.5">
               EL CLASICO LEGENDS INDIA TOUR 2026

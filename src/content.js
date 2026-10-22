@@ -121,6 +121,11 @@ export const contact = {
   email: 'info@sportsaj.com',
 };
 
+export const social = {
+  instagram: 'https://www.instagram.com/elclasicoindia',
+  facebook: 'https://www.facebook.com/elclasicoindia',
+};
+
 export const story = {
   buildingBeyond: {
     heading: 'Building Beyond',
