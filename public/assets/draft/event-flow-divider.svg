@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="241.5" height="17.5" viewBox="0 0 241.5 17.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 6308">
+<rect id="Rectangle 8" y="8.25" width="100" height="1" fill="url(#paint0_linear_0_21)"/>
+<path id="Vector" d="M120.75 17.5C120.75 12.6675 124.668 8.75 129.5 8.75C124.668 8.75 120.75 4.83249 120.75 0C120.75 4.83249 116.832 8.75 112 8.75C116.832 8.75 120.75 12.6675 120.75 17.5Z" fill-rule="evenodd" clip-rule="evenodd" fill="#CF122D" fill-opacity="0.866667"/>
+<rect id="Rectangle 9" x="141.5" y="8.25" width="100" height="1" fill="url(#paint1_linear_0_21)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_21" x1="0" y1="8.75" x2="100" y2="8.75" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CF122D" stop-opacity="0"/>
+<stop offset="1" stop-color="#CF122D"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_21" x1="141.5" y1="8.75" x2="241.5" y2="8.75" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CF122D"/>
+<stop offset="1" stop-color="#CF122D" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

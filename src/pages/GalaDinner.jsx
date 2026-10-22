@@ -12,6 +12,7 @@ const ICON_PLUS = '/assets/draft/icon-plus-black.svg';
 const ICON_PLUS_HOVER = '/assets/draft/icon-plus-white.svg';
 const ICON_MINUS = '/assets/draft/icon-minus-black.svg';
 const ICON_MINUS_HOVER = '/assets/draft/icon-minus-white.svg';
+const FLOW_DIVIDER = '/assets/draft/event-flow-divider.svg';
 
 // Paste your n8n POST webhook URL here
 const N8N_WEBHOOK_URL = 'https://n8n.barcaacademy.tech/webhook/3ca0afed-ac82-499b-a34d-75df5dbe7822';
@@ -42,7 +43,7 @@ const flowPreview = [
     title: 'Rivalry Strike Session',
     bullets: [
       'Members of both squads on stage, in conversation with our host',
-      'Stories from El Clasico in their prime, the dressing-room tension and nights that defined a rivalry',
+      'Stories from El Clasico in their prime, the dressing-room tension and the nights that defined a rivalry',
       'Their thoughts on tomorrow’s match and on football in India',
     ],
   },
@@ -386,7 +387,7 @@ export default function GalaDinner() {
       <section className="bg-white px-5 sm:px-10 lg:px-[155px] py-16 sm:py-20 lg:py-[100px]">
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] gap-10 lg:gap-16 items-start">
           <Reveal from="left">
-            <p className="font-garamond font-medium text-[12px] leading-none text-brand-red">
+            <p className="font-garamond font-medium text-[12px] leading-none text-brand-red px-2.5">
               EL CLASICO LEGENDS INDIA TOUR 2026
             </p>
             <h2 className="mt-2.5 font-garamond font-medium text-[32px] sm:text-[40px] leading-none text-brand-black">
@@ -408,33 +409,39 @@ export default function GalaDinner() {
       </section>
 
       <section className="bg-brand-gray-bg px-5 sm:px-10 lg:px-[155px] py-16 sm:py-20 lg:py-[100px]">
-        <Reveal className="text-center mb-10">
-          <p className="font-garamond font-medium text-[12px] leading-none text-brand-red">GALA DINNER</p>
-          <h2 className="mt-2.5 font-garamond font-medium text-[32px] sm:text-[40px] leading-none text-brand-black">
-            Event Flow
-          </h2>
-          <p className="mt-2.5 font-garamond text-sm sm:text-base leading-[1.4] text-brand-black">
-            One night. Two legendary squads. An evening reserved for a select few.
-          </p>
-        </Reveal>
+        <div className="flex flex-col items-center gap-10">
+          <Reveal className="text-center">
+            <p className="font-garamond font-medium text-[12px] leading-none text-brand-black">
+              GALA DINNER
+            </p>
+            <h2 className="mt-2.5 font-garamond font-medium text-[32px] sm:text-[40px] leading-none text-brand-red">
+              Event Flow
+            </h2>
+            <p className="mt-2.5 font-garamond font-normal text-base sm:text-2xl leading-[1.4] text-brand-black">
+              One night. Two legendary squads. An evening reserved for a select few.
+            </p>
+          </Reveal>
 
-        <div className="flex flex-col items-center">
-          <div className="flex w-full flex-col items-center gap-10">
-            {flowPreview.map((item, index) => (
-              <Reveal key={item.title} delay={index * 80}>
-                <FlowBlock {...item} />
-              </Reveal>
-            ))}
-          </div>
+          <img src={FLOW_DIVIDER} alt="" width={241.5} height={17.5} />
 
-          <Expand open={expanded}>
-            {flowMore.map((item) => (
-              <FlowBlock key={item.title} {...item} />
-            ))}
-          </Expand>
+          <div className="flex w-full flex-col items-center">
+            <div className="flex w-full flex-col items-center gap-10">
+              {flowPreview.map((item, index) => (
+                <Reveal key={item.title} delay={index * 80}>
+                  <FlowBlock {...item} />
+                </Reveal>
+              ))}
+            </div>
 
-          <div className="pt-10">
-            <ShowToggle expanded={expanded} onClick={() => setExpanded((v) => !v)} />
+            <Expand open={expanded}>
+              {flowMore.map((item) => (
+                <FlowBlock key={item.title} {...item} />
+              ))}
+            </Expand>
+
+            <div className="pt-10">
+              <ShowToggle expanded={expanded} onClick={() => setExpanded((v) => !v)} />
+            </div>
           </div>
         </div>
       </section>
@@ -442,7 +449,7 @@ export default function GalaDinner() {
       <section className="bg-white px-5 sm:px-10 lg:px-[155px] py-16 sm:py-20 lg:py-[100px]">
         <div className="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16">
           <Reveal className="lg:w-[291px] shrink-0" from="left">
-            <p className="font-garamond font-medium text-[12px] leading-none text-brand-red">
+            <p className="font-garamond font-medium text-[12px] leading-none text-brand-red px-2.5">
               EL CLASICO LEGENDS INDIA TOUR 2026
             </p>
             <h2 className="mt-2.5 font-garamond font-medium text-[32px] sm:text-[40px] leading-none text-brand-black">
