@@ -7,7 +7,7 @@
 export const BRAND_SPELLING = 'clasico'; // 'clasico' | 'classic'
 
 const WORDS = {
-  clasico: { title: 'El Clásico', upper: 'EL CLÁSICO' },
+  clasico: { title: 'El Clasico', upper: 'EL CLASICO' },
   classic: { title: 'El Classic', upper: 'EL CLASSIC' },
 };
 
@@ -46,7 +46,7 @@ export const site = {
   legalName: 'Sports AJ Ventures Private Limited',
   logo: '/assets/el-clasico-logo.png',
   ogImage: '/assets/el-clasico-logo.png',
-  logoAlt: 'El Clásico India Tour — Barça Legends vs Real Madrid Leyendas',
+  logoAlt: 'El Clasico India Tour — Barça Legends vs Real Madrid Leyendas',
   intro:
     'Sports AJ Ventures Private Limited is the exclusive rights holder for this first ever El Classico India Tour 2026, pursuant to executed agreements with FC Barcelona and Real Madrid to organise the friendly exhibition match between FC Barcelona Legends vs Real Madrid Leyendas!',
 };
@@ -75,9 +75,9 @@ export const matches = {
     venueName: 'Salt Lake Stadium',
     addressRegion: 'West Bengal',
     stadiumImage: '/assets/stadium-kolkata.jpg',
-    stadiumImageAlt: 'Salt Lake Stadium in Kolkata, host venue for the Kolkata El Clásico',
+    stadiumImageAlt: 'Salt Lake Stadium in Kolkata, host venue for the Kolkata El Clasico',
     logo: '/assets/el-clasico-logo.png',
-    logoAlt: 'El Clásico India Tour — Barça Legends vs Real Madrid Leyendas',
+    logoAlt: 'El Clasico India Tour — Barça Legends vs Real Madrid Leyendas',
     path: '/kolkata',
     status: 'confirmed',
   },
@@ -133,9 +133,9 @@ export const story = {
       'Through their presence in London and Barcelona, the duo has extended India’s influence across the global sports industry while remaining firmly committed to developing grassroots sport and creating new opportunities for young athletes at home.',
   },
   tour: {
-    heading: 'El Clásico Legends India Tour',
+    heading: 'El Clasico Legends India Tour',
     body:
-      'Sports AJ is proud to present the first ever El Clásico Legends Tour 2026, bringing legendary footballers from FC Barcelona Legends and Real Madrid Leyendas together to celebrate the world’s most iconic football rivalry in India. Featuring celebrated former players who have represented the two clubs at the highest level, the landmark tour will give Indian fans a rare opportunity to witness footballing legends renew the historic El Clásico rivalry on Indian soil. This landmark India tour will feature a match in Kolkata on November 25, 2026 — one of the most ambitious exhibition football events India has ever hosted.',
+      'Sports AJ is proud to present the first ever El Clasico Legends Tour 2026, bringing legendary footballers from FC Barcelona Legends and Real Madrid Leyendas together to celebrate the world’s most iconic football rivalry in India. Featuring celebrated former players who have represented the two clubs at the highest level, the landmark tour will give Indian fans a rare opportunity to witness footballing legends renew the historic El Clasico rivalry on Indian soil. This landmark India tour will feature a match in Kolkata on November 25, 2026 — one of the most ambitious exhibition football events India has ever hosted.',
   },
 };
 
@@ -182,7 +182,7 @@ export const journey = {
     { id: 'french-open', label: 'French Open' },
     { id: 'us-open', label: 'US Open' },
     { id: 'barca-academy', label: 'Barça Academy India' },
-    { id: 'tour', label: 'EL CLÁSICO INDIA TOUR' },
+    { id: 'tour', label: 'EL CLASICO INDIA TOUR' },
   ],
 };
 
@@ -215,6 +215,7 @@ export const founders = {
 export const navItems = [
   { label: 'Stars Lineup', path: '/stars-lineup' },
   { label: 'Our Journey', path: '/our-journey' },
+  { label: 'Gala Dinner', path: '/gala-dinner' },
   { label: 'Press & Coverage', path: '/in-the-news' },
 ];
 
@@ -223,12 +224,12 @@ export const ministerAnnouncement = {
   role: 'Minister of State (Independent Charge), Youth Affairs and Sports, West Bengal',
   date: 'October 12, 2026',
   url: 'https://www.facebook.com/share/p/1FZARUNQNy/?mibextid=wwXIfr',
-  title: 'Dr. Indranil Khan announces the Kolkata El Clásico',
+  title: 'Dr. Indranil Khan announces the Kolkata El Clasico',
   excerpt:
     'West Bengal Minister of State (Independent Charge) for Youth Affairs and Sports, Dr. Indranil Khan, announced that Barcelona and Real Madrid legends will meet in Kolkata on 25 November 2026.',
   image: '/assets/press/cm-suvendu-announcement.jpg',
   imageAlt:
-    'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding a white Kolkata El Clásico jersey dated 25 November 2026',
+    'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding a white Kolkata El Clasico jersey dated 25 November 2026',
 };
 
 export const newsItems = [
@@ -254,7 +255,7 @@ export const newsItems = [
     excerpt:
       'News18 reports that West Bengal sports minister Dr. Indranil Khan announced a Barcelona vs Real Madrid legends match at Salt Lake Stadium on 25 November 2026.',
     image: '/assets/press/news18-el-clasico-en.jpg',
-    imageAlt: 'Salt Lake Stadium in Kolkata, the venue for the El Clásico legends match',
+    imageAlt: 'Salt Lake Stadium in Kolkata, the venue for the El Clasico legends match',
   },
   {
     slug: 'indiagazette-el-clasico',
@@ -262,12 +263,12 @@ export const newsItems = [
     source: 'India Gazette',
     date: 'October 13, 2026',
     dateISO: '2026-10-13',
-    title: 'Bengal sports minister announces El Clásico clash between Barcelona and Real Madrid legends',
+    title: 'Bengal sports minister announces El Clasico clash between Barcelona and Real Madrid legends',
     excerpt:
-      'India Gazette reports that Dr. Indranil Khan announced a special El Clásico between Barcelona and Real Madrid legends in Kolkata on 25 November at Salt Lake Stadium.',
+      'India Gazette reports that Dr. Indranil Khan announced a special El Clasico between Barcelona and Real Madrid legends in Kolkata on 25 November at Salt Lake Stadium.',
     image: '/assets/press/ani-el-clasico.jpg',
     imageAlt:
-      'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding the Kolkata El Clásico jersey dated 25 November 2026',
+      'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding the Kolkata El Clasico jersey dated 25 November 2026',
   },
   {
     slug: 'instagram-el-clasico-announcement',
@@ -275,9 +276,9 @@ export const newsItems = [
     source: 'Instagram',
     date: 'October 13, 2026',
     dateISO: '2026-10-13',
-    title: 'El Clásico in Kolkata: the announcement on Instagram',
+    title: 'El Clasico in Kolkata: the announcement on Instagram',
     excerpt:
-      'The Kolkata El Clásico announcement shared on Instagram, with Barcelona and Real Madrid legends set to meet on 25 November 2026.',
+      'The Kolkata El Clasico announcement shared on Instagram, with Barcelona and Real Madrid legends set to meet on 25 November 2026.',
     image: ministerAnnouncement.image,
     imageAlt: ministerAnnouncement.imageAlt,
     cta: 'Watch post →',
@@ -292,7 +293,7 @@ export const newsItems = [
     excerpt:
       'The Indian Express reports that Salt Lake Stadium will host Barcelona and Real Madrid legends on 25 November, after India played Brazil and Uruguay earlier this month.',
     image: '/assets/press/indianexpress-el-clasico.jpg',
-    imageAlt: 'Carles Puyol of Barcelona and Luís Figo of Real Madrid competing in an El Clásico',
+    imageAlt: 'Carles Puyol of Barcelona and Luís Figo of Real Madrid competing in an El Clasico',
   },
   {
     slug: 'ndtv-el-clasico',
@@ -300,7 +301,7 @@ export const newsItems = [
     source: 'NDTV Sports',
     date: 'October 13, 2026',
     dateISO: '2026-10-13',
-    title: 'El Clásico in India: Kolkata to host blockbuster Real Madrid vs Barcelona match in November',
+    title: 'El Clasico in India: Kolkata to host blockbuster Real Madrid vs Barcelona match in November',
     excerpt:
       'NDTV Sports reports that Dr. Indranil Khan announced a Barcelona vs Real Madrid legends exhibition at Salt Lake Stadium on 25 November 2026.',
   },
@@ -310,7 +311,7 @@ export const newsItems = [
     source: 'Olympics.com',
     date: 'October 13, 2026',
     dateISO: '2026-10-13',
-    title: 'Barcelona vs Real Madrid legends El Clásico set for Kolkata in 2026',
+    title: 'Barcelona vs Real Madrid legends El Clasico set for Kolkata in 2026',
     excerpt:
       'Olympics.com reports that Barcelona and Real Madrid legends will meet in Kolkata on 25 November 2026 at Salt Lake Stadium.',
   },
@@ -320,7 +321,7 @@ export const newsItems = [
     source: 'The Telegraph',
     date: 'October 13, 2026',
     dateISO: '2026-10-13',
-    title: 'Real Madrid and Barcelona legends to bring El Clásico to Kolkata on November 25',
+    title: 'Real Madrid and Barcelona legends to bring El Clasico to Kolkata on November 25',
     excerpt:
       'The Telegraph reports that Salt Lake Stadium will host Real Madrid and Barcelona legends on 25 November, after India’s friendlies against Brazil and Uruguay.',
   },
@@ -340,12 +341,12 @@ export const newsItems = [
     source: 'The Times of India',
     date: 'October 14, 2026',
     dateISO: '2026-10-14',
-    title: 'Kolkata to bring El Clásico to India: Barcelona vs Real Madrid legends on Nov 25',
+    title: 'Kolkata to bring El Clasico to India: Barcelona vs Real Madrid legends on Nov 25',
     excerpt:
       'The Times of India reports the Salt Lake Stadium fixture on 25 November, with Luís Figo, Carles Puyol and Iker Casillas among names expected.',
     image: '/assets/press/toi-el-clasico.jpg',
     imageAlt:
-      'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding the Kolkata El Clásico jersey, as published by The Times of India',
+      'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding the Kolkata El Clasico jersey, as published by The Times of India',
   },
   {
     slug: 'dailyjagran-el-clasico',
@@ -353,7 +354,7 @@ export const newsItems = [
     source: 'The Daily Jagran',
     date: 'October 13, 2026',
     dateISO: '2026-10-13',
-    title: 'El Clásico in Kolkata: Barcelona and Real Madrid icons prepare to face off at Salt Lake Stadium',
+    title: 'El Clasico in Kolkata: Barcelona and Real Madrid icons prepare to face off at Salt Lake Stadium',
     excerpt:
       'The Daily Jagran reports that Dr. Indranil Khan announced the legends’ match for 25 November, with Luís Figo, Iker Casillas and Carles Puyol among names mentioned.',
     image: '/assets/press/dailyjagran-el-clasico.jpg',
@@ -365,12 +366,12 @@ export const newsItems = [
     source: 'NewsX',
     date: 'October 13, 2026',
     dateISO: '2026-10-13',
-    title: 'El Clásico in India: Bengal sports minister announces Barcelona vs Real Madrid legends clash',
+    title: 'El Clasico in India: Bengal sports minister announces Barcelona vs Real Madrid legends clash',
     excerpt:
-      'NewsX reports that Dr. Indranil Khan announced an exclusive El Clásico exhibition between Barcelona and Real Madrid legends in Kolkata on 25 November.',
+      'NewsX reports that Dr. Indranil Khan announced an exclusive El Clasico exhibition between Barcelona and Real Madrid legends in Kolkata on 25 November.',
     image: '/assets/press/newsx-el-clasico.jpg',
     imageAlt:
-      'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding the Kolkata El Clásico jersey dated 25 November 2026',
+      'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding the Kolkata El Clasico jersey dated 25 November 2026',
   },
   {
     slug: 'ani-el-clasico-kolkata',
@@ -378,12 +379,12 @@ export const newsItems = [
     source: 'ANI',
     date: 'October 13, 2026',
     dateISO: '2026-10-13',
-    title: 'Bengal sports minister announces El Clásico clash between Barcelona and Real Madrid legends',
+    title: 'Bengal sports minister announces El Clasico clash between Barcelona and Real Madrid legends',
     excerpt:
       'ANI reports that West Bengal sports minister Dr. Indranil Khan announced a Barcelona legends vs Real Madrid legends match in Kolkata on 25 November at Salt Lake Stadium.',
     image: '/assets/press/ani-el-clasico.jpg',
     imageAlt:
-      'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding the Kolkata El Clásico jersey dated 25 November 2026',
+      'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding the Kolkata El Clasico jersey dated 25 November 2026',
   },
   {
     slug: 'thenewsmill-el-clasico-kolkata',
@@ -393,10 +394,10 @@ export const newsItems = [
     dateISO: '2026-10-13',
     title: 'West Bengal to host Barcelona vs Real Madrid legends match',
     excerpt:
-      'The News Mill reports that West Bengal sports minister Dr. Indranil Khan announced the El Clásico legends match at Kolkata’s Salt Lake Stadium on 25 November 2026.',
+      'The News Mill reports that West Bengal sports minister Dr. Indranil Khan announced the El Clasico legends match at Kolkata’s Salt Lake Stadium on 25 November 2026.',
     image: '/assets/press/thenewsmill-el-clasico.jpg',
     imageAlt:
-      'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding the Kolkata El Clásico jersey, as published by The News Mill',
+      'Dr. Indranil Khan with Abhishek Saklani and Jatin Ahluwalia holding the Kolkata El Clasico jersey, as published by The News Mill',
   },
   {
     slug: 'anandabazar-kolkata-legends',
@@ -426,7 +427,7 @@ export const newsItems = [
     source: 'ETV Bharat',
     date: 'October 12, 2026',
     dateISO: '2026-10-12',
-    title: 'Kolkata to witness El Clásico next month',
+    title: 'Kolkata to witness El Clasico next month',
     excerpt:
       'ETV Bharat reports that a Barcelona–Real Madrid match could be held at Yuba Bharati on 25 November.',
     image: '/assets/press/etv-el-clasico.jpg',
@@ -438,11 +439,11 @@ export const newsItems = [
     source: 'Aaj Tak Bangla',
     date: 'October 13, 2026',
     dateISO: '2026-10-13',
-    title: 'El Clásico in Kolkata: when Barcelona and Real Madrid play at Yuba Bharati',
+    title: 'El Clasico in Kolkata: when Barcelona and Real Madrid play at Yuba Bharati',
     excerpt:
       'Aaj Tak Bangla reports that the Chief Minister’s office has given the green signal for Barcelona and Real Madrid to meet in Kolkata.',
     image: '/assets/press/aajtak-el-clasico.jpg',
-    imageAlt: 'FC Barcelona and Real Madrid flags facing each other for the Kolkata El Clásico',
+    imageAlt: 'FC Barcelona and Real Madrid flags facing each other for the Kolkata El Clasico',
   },
   {
     slug: 'tv9-bangla-el-clasico',
@@ -473,9 +474,9 @@ export const newsItems = [
     source: 'Republic Bangla',
     date: 'October 13, 2026',
     dateISO: '2026-10-13',
-    title: 'El Clásico in November: Real Madrid and Barcelona coming to Kolkata',
+    title: 'El Clasico in November: Real Madrid and Barcelona coming to Kolkata',
     excerpt:
-      'Republic Bangla’s report on the El Clásico legends’ match planned for Yuba Bharati in November.',
+      'Republic Bangla’s report on the El Clasico legends’ match planned for Yuba Bharati in November.',
     cta: 'Watch video →',
   },
   {
@@ -532,9 +533,9 @@ export const newsItems = [
     source: 'RevSportz',
     date: 'October 13, 2026',
     dateISO: '2026-10-13',
-    title: 'Kolkata set to host legends’ El Clásico on November 25',
+    title: 'Kolkata set to host legends’ El Clasico on November 25',
     excerpt:
-      'Vivekananda Yuba Bharati Krirangan is scheduled to host a legends’ El Clásico between former Real Madrid and Barcelona players on 25 November.',
+      'Vivekananda Yuba Bharati Krirangan is scheduled to host a legends’ El Clasico between former Real Madrid and Barcelona players on 25 November.',
     image: '/assets/press/revsportz-el-clasico.jpg',
     imageAlt: 'Football legends in Real Madrid and Barcelona kits playing in a stadium',
   },
@@ -544,10 +545,10 @@ export const seoCopy = {
   homeTitle: brandNameUpperYear(),
   homeDescription: `The first ever ${brandNameYear()}: FC Barcelona Legends vs Real Madrid Leyendas in Kolkata on 25 November 2026.`,
   homeKeywords:
-    'El Clasico India Tour 2026, El Clásico India Tour, elclasicoindia.com, Kolkata El Clásico, Salt Lake Stadium, FC Barcelona Legends, Real Madrid Leyendas, Sports AJ, Barça Academy India',
+    'El Clasico India Tour 2026, El Clasico India Tour, elclasicoindia.com, Kolkata El Clasico, Salt Lake Stadium, FC Barcelona Legends, Real Madrid Leyendas, Sports AJ, Barça Academy India',
   journeyDescription: journey.lead,
   pressDescription: `Press and coverage of ${site.brand} and ${brandNameYear()}, including the Forbes India feature on founders Abhishek Saklani and Jatin Ahluwalia.`,
-  ticketsDescription: `Register your interest for ${brandNameYear()} tickets — Kolkata El Clásico.`,
+  ticketsDescription: `Register your interest for ${brandNameYear()} tickets — Kolkata El Clasico.`,
   privacyDescription: `Privacy Policy for ${site.legalName} and ${brandNameYear()}.`,
   termsDescription: `Terms and Conditions for ${site.legalName} and ${brandNameYear()}.`,
 };

@@ -26,6 +26,18 @@ function pageTitle(title) {
   return `${normalized} | ${SITE_NAME}`;
 }
 
+function omitSchemaContext(node) {
+  if (Array.isArray(node)) return node.map(omitSchemaContext);
+  if (!node || typeof node !== 'object') return node;
+
+  const next = {};
+  for (const [key, value] of Object.entries(node)) {
+    if (key === '@context') continue;
+    next[key] = omitSchemaContext(value);
+  }
+  return next;
+}
+
 function organizationSchema() {
   return {
     '@context': 'https://schema.org',
@@ -158,7 +170,10 @@ export default function SEO({
     schemas.push(...extra);
   }
 
-  const jsonLd = JSON.stringify(schemas).replace(/</g, '\\u003c');
+  const jsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@graph': schemas.map(omitSchemaContext),
+  }).replace(/</g, '\\u003c');
 
   return (
     <Helmet>

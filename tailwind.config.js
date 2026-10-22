@@ -22,6 +22,7 @@ module.exports = {
         sans: ['Cormorant', 'Georgia', 'serif'],
         porsche: ['Cormorant', 'Georgia', 'serif'],
         display: ['Cormorant', 'Georgia', 'serif'],
+        garamond: ['"Cormorant Garamond"', 'Cormorant', 'Georgia', 'serif'],
       },
       letterSpacing: {
         porsche: '0.08em',

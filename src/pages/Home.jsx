@@ -22,7 +22,7 @@ export default function Home() {
   { id: 'french-open', label: 'French Open' },
   { id: 'us-open', label: 'US Open' },
   { id: 'barca-academy', label: 'Barça Academy India' },
-  { id: 'tour', label: 'EL CLÁSICO INDIA TOUR' },
+  { id: 'tour', label: 'EL CLASICO INDIA TOUR' },
 ];
   return (
     <>
@@ -67,7 +67,7 @@ export default function Home() {
                 {ministerAnnouncement.role}
               </p>
               <p className="mt-1 text-sm sm:text-base text-white/90">
-                Kolkata El Clásico · 25 November 2026
+                Kolkata El Clasico · 25 November 2026
               </p>
             </div>
             <span className="font-porsche tracking-porsche uppercase text-[10px] sm:text-xs shrink-0 group-hover:translate-x-1 transition-transform">
@@ -84,7 +84,7 @@ export default function Home() {
                 <h1>
                     <span className="block text-center">
                     <span className="block font-sans font-semibold text-brand-black uppercase tracking-[0.08em] sm:tracking-[0.1em] text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-[7.25rem] leading-[0.92]">
-                      EL CLÁSICO
+                      EL CLASICO
                     </span>
                     <span className="mt-4 sm:mt-5 block font-sans font-medium text-brand-black uppercase tracking-[0.16em] sm:tracking-[0.2em] text-2xl sm:text-4xl md:text-5xl lg:text-6xl">
                       India Tour 2026
@@ -126,11 +126,11 @@ export default function Home() {
             <Reveal className="lg:col-span-5" from="left">
               <p className="section-label mb-4 text-sm sm:text-base tracking-[0.2em]">India Tour 2026</p>
               <h2 className="font-sans font-light text-brand-black text-2xl sm:text-3xl lg:text-4xl leading-snug">
-                Welcome to the first ever El Clásico India Tour in Kolkata.
+                Welcome to the first ever El Clasico India Tour in Kolkata.
               </h2>
             </Reveal>
             <Reveal className="lg:col-span-7" from="right" delay={120}>
-              <p className="text-brand-black/80 font-medium text-base sm:text-lg leading-relaxed">Sports AJ is proud to present the first ever El Clásico Legends Tour 2026, bringing legendary footballers from FC Barcelona Legends and Real Madrid Leyendas together to celebrate the world’s most iconic football rivalry in India. Featuring celebrated former players who have represented the two clubs at the highest level, the landmark tour will give Indian fans a rare opportunity to witness footballing legends renew the historic El Clásico rivalry on Indian soil. This landmark India tour will feature a match in Kolkata on November 25, 2026 — one of the most ambitious exhibition football events India has ever hosted.</p>
+              <p className="text-brand-black/80 font-medium text-base sm:text-lg leading-relaxed">Sports AJ is proud to present the first ever El Clasico Legends Tour 2026, bringing legendary footballers from FC Barcelona Legends and Real Madrid Leyendas together to celebrate the world’s most iconic football rivalry in India. Featuring celebrated former players who have represented the two clubs at the highest level, the landmark tour will give Indian fans a rare opportunity to witness footballing legends renew the historic El Clasico rivalry on Indian soil. This landmark India tour will feature a match in Kolkata on November 25, 2026 — one of the most ambitious exhibition football events India has ever hosted.</p>
             </Reveal>
           </div>
         </div>

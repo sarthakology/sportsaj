@@ -17,7 +17,7 @@ export default function OurJourney() {
     { id: 'french-open', label: 'French Open' },
     { id: 'us-open', label: 'US Open' },
     { id: 'barca-academy', label: 'Barça Academy India' },
-    { id: 'tour', label: 'EL CLÁSICO INDIA TOUR' },
+    { id: 'tour', label: 'EL CLASICO INDIA TOUR' },
   ];
   useEffect(() => {
     const el = lineRef.current;

@@ -10,6 +10,7 @@ import ForbesIndia from './pages/news/ForbesIndia';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
 import NotFound from './pages/NotFound';
+import GalaDinner from './pages/GalaDinner';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/gala-dinner" element={<GalaDinner />} />
+          <Route path="/draft" element={<Navigate to="/gala-dinner" replace />} />
           <Route path="/our-journey" element={<OurJourney />} />
           <Route path="/about" element={<Navigate to="/our-journey" replace />} />
           <Route path="/stars-lineup" element={<StarsLineup />} />

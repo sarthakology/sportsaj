@@ -44,7 +44,7 @@ export default function AnnouncementSplash() {
       className="fixed inset-0 z-[80] bg-white"
       role="dialog"
       aria-modal="true"
-      aria-label={`${ministerAnnouncement.name} announces the Kolkata El Clásico`}
+      aria-label={`${ministerAnnouncement.name} announces the Kolkata El Clasico`}
     >
       <button
         type="button"

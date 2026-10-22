@@ -8,7 +8,7 @@ export default function NotFound() {
     <>
       <SEO
         title="Page not found"
-        description="This page does not exist on the El Clásico India Tour website."
+        description="This page does not exist on the El Clasico India Tour website."
         breadcrumb="Page not found"
         noIndex
       />

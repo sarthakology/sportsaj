@@ -7,7 +7,7 @@ export default function StarsLineup() {
     <>
       <SEO
         title="Stars Lineup"
-        description="The Stars Lineup for the El Clásico India Tour is coming soon."
+        description="The Stars Lineup for the El Clasico India Tour is coming soon."
         breadcrumb="Stars Lineup"
       />
       <PageHeader title="Stars Lineup" breadcrumb="Stars Lineup" />

@@ -8,7 +8,7 @@ const sections = [
   {
     title: 'Who we are',
     body: [
-      `${site.legalName} (“Sports AJ”, “we”, “us”) operates elclasicoindia.com and organises the El Clásico India Tour. This policy explains how we handle personal information when you use the website or register your interest in tickets.`,
+      `${site.legalName} (“Sports AJ”, “we”, “us”) operates elclasicoindia.com and organises the El Clasico India Tour. This policy explains how we handle personal information when you use the website or register your interest in tickets.`,
       `Our office is at 001 BPTP Park Centra, Sector 31, Gurugram, Haryana 122001, India. For privacy questions, email ${contact.email}.`,
     ],
   },
