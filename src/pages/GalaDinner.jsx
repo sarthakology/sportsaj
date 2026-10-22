@@ -14,7 +14,7 @@ const ICON_MINUS = '/assets/draft/icon-minus-black.svg';
 const ICON_MINUS_HOVER = '/assets/draft/icon-minus-white.svg';
 
 // Paste your n8n POST webhook URL here
-const N8N_WEBHOOK_URL = '';
+const N8N_WEBHOOK_URL = 'https://n8n.barcaacademy.tech/webhook-test/3ca0afed-ac82-499b-a34d-75df5dbe7822';
 
 const flowPreview = [
   {
