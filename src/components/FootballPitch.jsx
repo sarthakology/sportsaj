@@ -34,13 +34,13 @@ function Half({ event, side, size = 'lg' }) {
   return (
     <Link
       to={event.path}
-      className={`relative z-10 min-h-[50vh] lg:min-h-screen flex flex-col items-center justify-center px-6 sm:px-10 lg:px-16 py-10 lg:py-16 overflow-hidden group ${
+      className={`relative z-10 min-h-[50vh] lg:min-h-screen flex flex-col items-center justify-center px-6 sm:px-10 lg:px-16 py-10 lg:py-16 group ${
         isCenter ? '' : isLeft ? 'lg:items-end lg:pr-20 xl:pr-24' : 'lg:items-start lg:pl-20 xl:pl-24'
       }`}
     >
       <div className="relative">
         <Reveal from={isCenter ? 'up' : isLeft ? 'left' : 'right'} delay={isCenter ? 80 : isLeft ? 80 : 200}>
-          <EventIdentity event={event} size={size} cityPosition="top" />
+          <EventIdentity event={event} size={size} cityPosition="top" hover />
           <span className="relative mt-4 mx-auto block w-8 h-px bg-brand-red" />
         </Reveal>
       </div>

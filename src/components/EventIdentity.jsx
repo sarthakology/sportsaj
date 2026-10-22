@@ -14,6 +14,7 @@ export default function EventIdentity({
   showCity = true,
   showName = true,
   cityPosition = 'top',
+  hover = false,
 }) {
   const name = eventName(event);
 
@@ -30,7 +31,9 @@ export default function EventIdentity({
           <img
             src={event.logo}
             alt={event.logoAlt || name}
-            className={`relative ${sizes[size]} object-contain`}
+            className={`relative ${sizes[size]} object-contain origin-center ${
+              hover ? 'pitch-crest' : ''
+            }`}
           />
         </div>
       )}

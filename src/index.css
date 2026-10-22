@@ -98,3 +98,24 @@ body.menu-open {
     @apply text-brand-black/80 font-medium text-sm sm:text-base leading-relaxed;
   }
 }
+
+.pitch-crest {
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: center center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .group:hover .pitch-crest {
+    transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pitch-crest {
+    transition: none;
+  }
+
+  .group:hover .pitch-crest {
+    transform: none;
+  }
+}
