@@ -116,6 +116,8 @@ export default function SEO({
   breadcrumb,
   image = DEFAULT_OG_IMAGE,
   imageAlt = SITE_NAME,
+  imageWidth,
+  imageHeight,
   keywords,
   type = 'website',
   noIndex = false,
@@ -192,6 +194,8 @@ export default function SEO({
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:alt" content={imageAlt} />
+      {imageWidth ? <meta property="og:image:width" content={String(imageWidth)} /> : null}
+      {imageHeight ? <meta property="og:image:height" content={String(imageHeight)} /> : null}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />

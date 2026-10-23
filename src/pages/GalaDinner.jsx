@@ -7,6 +7,7 @@ import { galaDinners, seoCopy, site } from '../content';
 import { captureUTMData } from '../utils/utm';
 
 const HERO = '/assets/draft/hero-ballroom.png';
+const OG_IMAGE = '/assets/draft/hero-ballroom.jpg';
 const CREST = '/assets/draft/crest.png';
 const ICON_PLUS = '/assets/draft/icon-plus-black.svg';
 const ICON_PLUS_HOVER = '/assets/draft/icon-plus-white.svg';
@@ -18,13 +19,6 @@ const FLOW_DIVIDER = '/assets/draft/event-flow-divider.svg';
 const N8N_WEBHOOK_URL = 'https://n8n.barcaacademy.tech/webhook/3ca0afed-ac82-499b-a34d-75df5dbe7822';
 
 const flowPreview = [
-  {
-    title: 'Registration & Champagne',
-    bullets: [
-      'Private red-carpet arrival and personal guest check-in',
-      'Champagne on arrival as the evening begins',
-    ],
-  },
   {
     title: 'Curtain Raiser on El Clasico Legends Match',
     bullets: [
@@ -347,21 +341,54 @@ export default function GalaDinner() {
         description={seoCopy.galaDinnerDescription}
         keywords={seoCopy.galaDinnerKeywords}
         breadcrumb="Gala Dinner"
-        image={HERO}
+        image={OG_IMAGE}
         imageAlt="Grand blue-lit gala ballroom for the El Clasico Legends India Tour Gala Dinner"
-        schema={{
-          '@context': 'https://schema.org',
-          '@type': 'EventSeries',
-          name: 'El Clasico Legends Gala Dinner',
-          description: seoCopy.galaDinnerDescription,
-          url: `${site.url}/gala-dinner`,
-          image: `${site.url}${HERO}`,
-          organizer: {
-            '@type': 'Organization',
-            name: site.legalName,
-            url: site.url,
+        imageWidth={1024}
+        imageHeight={570}
+        schema={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: seoCopy.galaDinnerTitle,
+            description: seoCopy.galaDinnerDescription,
+            url: `${site.url}/gala-dinner`,
+            inLanguage: 'en-IN',
+            primaryImageOfPage: {
+              '@type': 'ImageObject',
+              url: `${site.url}${OG_IMAGE}`,
+            },
           },
-          subEvent: galaDinners.map((event) => ({
+          {
+            '@context': 'https://schema.org',
+            '@type': 'EventSeries',
+            name: 'El Clasico Legends Gala Dinner',
+            description: seoCopy.galaDinnerDescription,
+            url: `${site.url}/gala-dinner`,
+            image: `${site.url}${OG_IMAGE}`,
+            inLanguage: 'en-IN',
+            organizer: {
+              '@type': 'Organization',
+              name: site.legalName,
+              url: site.url,
+            },
+            subEvent: galaDinners.map((event) => ({
+              '@type': 'Event',
+              name: event.name,
+              startDate: event.startDateISO,
+              location: {
+                '@type': 'Place',
+                name: event.city,
+                address: {
+                  '@type': 'PostalAddress',
+                  addressLocality: event.city,
+                  addressRegion: event.addressRegion,
+                  addressCountry: 'IN',
+                },
+              },
+            })),
+          },
+          ...galaDinners.map((event) => ({
+            '@context': 'https://schema.org',
             '@type': 'Event',
             name: event.name,
             description: seoCopy.galaDinnerDescription,
@@ -369,7 +396,9 @@ export default function GalaDinner() {
             eventStatus: 'https://schema.org/EventScheduled',
             eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
             url: `${site.url}/gala-dinner`,
-            image: `${site.url}${HERO}`,
+            image: `${site.url}${OG_IMAGE}`,
+            inLanguage: 'en-IN',
+            isAccessibleForFree: false,
             location: {
               '@type': 'Place',
               name: event.city,
@@ -388,20 +417,25 @@ export default function GalaDinner() {
             performer: [
               { '@type': 'SportsTeam', name: 'FC Barcelona Legends' },
               { '@type': 'SportsTeam', name: 'Real Madrid Leyendas' },
+              { '@type': 'Person', name: 'Luís Figo' },
+              { '@type': 'Person', name: 'Carles Puyol' },
+              { '@type': 'Person', name: 'Jordi Alba' },
+              { '@type': 'Person', name: 'Iker Casillas' },
             ],
             offers: {
               '@type': 'Offer',
+              name: 'Register interest',
               url: `${site.url}/gala-dinner`,
               availability: 'https://schema.org/PreOrder',
               priceCurrency: 'INR',
             },
           })),
-        }}
+        ]}
       />
 
       <img
         src={HERO}
-        alt="Grand blue-lit gala ballroom set for dinner"
+        alt="Grand blue-lit gala ballroom set for the El Clasico Legends Gala Dinner"
         className="block w-full h-[317px] sm:h-[458px] lg:h-[598px] object-cover mt-14 sm:mt-16 lg:mt-20"
       />
 
@@ -456,8 +490,22 @@ export default function GalaDinner() {
 
           <div className="flex w-full flex-col items-center">
             <div className="flex w-full flex-col items-center gap-10">
+              <Reveal>
+                <div className="flex flex-col items-center gap-6 text-center">
+                  <h3 className="font-garamond font-semibold text-xl sm:text-2xl leading-none text-brand-red">
+                    Refreshment & Champagne
+                  </h3>
+                  <ul className="font-garamond text-base sm:text-2xl leading-[1.4] text-brand-black max-w-6xl">
+                    <li>• Private red-carpet arrival and personal guest check-in</li>
+                    <li>• Refreshment on arrival as the evening begins</li>
+                  </ul>
+                  <p className="font-garamond text-[10px] sm:text-xs leading-none text-brand-black">
+                    *Subject to state regulations
+                  </p>
+                </div>
+              </Reveal>
               {flowPreview.map((item, index) => (
-                <Reveal key={item.title} delay={index * 80}>
+                <Reveal key={item.title} delay={(index + 1) * 80}>
                   <FlowBlock {...item} />
                 </Reveal>
               ))}

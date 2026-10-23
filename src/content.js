@@ -554,11 +554,11 @@ export const seoCopy = {
   journeyDescription: journey.lead,
   pressDescription: `Press and coverage of ${site.brand} and ${brandNameYear()}, including the Forbes India feature on founders Abhishek Saklani and Jatin Ahluwalia.`,
   ticketsDescription: `Register your interest for ${brandNameYear()} tickets — Kolkata El Clasico.`,
-  galaDinnerTitle: 'Gala Dinner',
+  galaDinnerTitle: 'El Clasico Legends Gala Dinner',
   galaDinnerDescription:
-    'Your exclusive evening with Barça Legends and Real Madrid Leyendas before they hit the pitch. Gala dinners in Ahmedabad on 21 November 2026 and Kolkata on 24 November 2026, with premium hospitality at the match the next day.',
+    'Meet Barça Legends and Real Madrid Leyendas at the El Clasico Gala Dinner in Ahmedabad (21 Nov) and Kolkata (24 Nov 2026), with match hospitality the next day.',
   galaDinnerKeywords:
-    'El Clasico Gala Dinner, El Clasico Legends Gala Dinner India, Ahmedabad Gala Dinner 21 November 2026, Kolkata Gala Dinner 24 November 2026, Barça Legends, Real Madrid Leyendas, El Clasico India Tour 2026',
+    'El Clasico Gala Dinner, El Clasico Legends Gala Dinner India, Gala Dinner Ahmedabad 21 November 2026, Gala Dinner Kolkata 24 November 2026, Barça Legends, Barca Legends, Real Madrid Leyendas, Luis Figo, Carles Puyol, Jordi Alba, Iker Casillas, El Clasico India Tour 2026, Sports AJ',
   privacyDescription: `Privacy Policy for ${site.legalName} and ${brandNameYear()}.`,
   termsDescription: `Terms and Conditions for ${site.legalName} and ${brandNameYear()}.`,
 };
