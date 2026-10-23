@@ -493,7 +493,7 @@ export default function GalaDinner() {
               <Reveal>
                 <div className="flex flex-col items-center gap-6 text-center">
                   <h3 className="font-garamond font-semibold text-xl sm:text-2xl leading-none text-brand-red">
-                    Refreshment & Champagne
+                   Registration & Refreshment
                   </h3>
                   <ul className="font-garamond text-base sm:text-2xl leading-[1.4] text-brand-black max-w-6xl">
                     <li>• Private red-carpet arrival and personal guest check-in</li>
