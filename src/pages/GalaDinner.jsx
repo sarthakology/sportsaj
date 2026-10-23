@@ -14,6 +14,8 @@ const ICON_PLUS_HOVER = '/assets/draft/icon-plus-white.svg';
 const ICON_MINUS = '/assets/draft/icon-minus-black.svg';
 const ICON_MINUS_HOVER = '/assets/draft/icon-minus-white.svg';
 const FLOW_DIVIDER = '/assets/draft/event-flow-divider.svg';
+const DISTRICT_LOGO = '/assets/draft/district-by-zomato.png';
+const DISTRICT_URL = 'https://www.district.in';
 
 // Paste your n8n POST webhook URL here
 const N8N_WEBHOOK_URL = 'https://n8n.barcaacademy.tech/webhook/3ca0afed-ac82-499b-a34d-75df5dbe7822';
@@ -447,6 +449,9 @@ export default function GalaDinner() {
         <p className="mt-2.5 font-garamond font-bold text-brand-black text-base sm:text-2xl lg:text-[32px] leading-none">
           Your exclusive evening with Barça Legends and Real Madrid Leyendas before they hit the pitch
         </p>
+        <p className="mt-3 font-garamond text-[10px] sm:text-xs leading-none text-brand-black">
+          *BOOK YOUR TICKETS NOW, EXCLUSIVELY ON DISTRICT.
+        </p>
         <div className="mt-8 sm:mt-10 h-px bg-brand-red" />
 
         <div className="mt-12 lg:mt-16 grid grid-cols-1 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] gap-10 lg:gap-16 items-start">
@@ -533,13 +538,33 @@ export default function GalaDinner() {
             <h2 className="mt-2.5 font-garamond font-medium text-[32px] sm:text-[40px] leading-none text-brand-black">
               REGISTER NOW
             </h2>
+            <div className="mt-10 flex w-full flex-col items-center lg:w-auto lg:items-start">
+              <p className="font-garamond text-[11px] leading-none tracking-[0.14em] uppercase text-brand-black">
+                Ticketing Partner
+              </p>
+              <a
+                href={DISTRICT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="District by Zomato"
+                className="mt-3 inline-block"
+              >
+                <img
+                  src={DISTRICT_LOGO}
+                  alt="District by Zomato"
+                  width={121}
+                  height={71}
+                  className="w-[121px] h-[71px] object-cover"
+                />
+              </a>
+            </div>
           </Reveal>
 
           <Reveal className="w-full max-w-[704px] lg:ml-auto" from="right" delay={120}>
             <div className="h-1 bg-brand-red origin-left motion-safe:animate-scale-x" />
             <div className="border-[0.5px] border-[rgba(10,10,10,0.25)] bg-white p-6 sm:p-10">
               <div className="flex items-center gap-2.5 pb-4 border-b-[0.5px] border-[rgba(10,10,10,0.25)] mb-6">
-                <img src={CREST} alt={site.logoAlt} className="size-[90px] sm:size-[150px] object-contain" />
+                <img src={CREST} alt={site.logoAlt} className="size-[72px] sm:size-[90px] object-contain" />
                 <div>
                   <p className="font-garamond text-base sm:text-xl leading-none text-brand-black">
                     EL CLASICO LEGENDS INDIA TOUR 2026

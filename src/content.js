@@ -122,8 +122,8 @@ export const contact = {
 };
 
 export const social = {
-  instagram: 'https://www.instagram.com/elclasicoindia',
-  facebook: 'https://www.facebook.com/elclasicoindia',
+  instagram: 'https://www.instagram.com/elclasico.india',
+  facebook: 'https://www.facebook.com/share/19WFBemxbj',
 };
 
 export const story = {

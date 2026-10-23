@@ -137,18 +137,20 @@ export default function Footer() {
               alt={site.logoAlt}
               className="h-16 sm:h-20 lg:h-24 w-auto mb-4 sm:mb-5 mx-auto sm:mx-0"
             />
-            <p className="font-porsche font-bold uppercase tracking-porsche text-brand-red text-[1.6875rem] sm:text-[1.875rem] lg:text-[2.25rem] leading-none mb-4 sm:mb-5">
+            <p className="font-garamond font-medium text-[28px] sm:text-[32px] leading-none text-brand-red mb-4 sm:mb-5">
               {site.brand}
             </p>
-            <p className="text-brand-black/80 font-medium text-sm leading-relaxed max-w-md mb-4 sm:mb-6 mx-auto sm:mx-0">
+            <p className="font-garamond text-brand-black/80 text-sm leading-relaxed max-w-md mb-4 sm:mb-6 mx-auto sm:mx-0">
               {site.welcome}
             </p>
-            <p className="text-brand-gray text-xs">{site.legalName}</p>
+            <p className="font-garamond text-brand-gray text-xs">{site.legalName}</p>
           </Reveal>
 
           <Reveal delay={120}>
             <div className="text-center sm:text-left">
-              <h4 className="footer-heading inline-block sm:block">Navigation</h4>
+              <h4 className="font-garamond font-medium text-lg leading-none text-brand-black pl-3 border-l-2 border-brand-red mb-4">
+                Navigation
+              </h4>
               <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2 sm:space-y-2">
                 {footerLinks.map((link) => (
                   <li key={link.path}>
@@ -166,7 +168,9 @@ export default function Footer() {
 
           <Reveal delay={180}>
             <div className="text-center sm:text-left">
-              <h4 className="footer-heading inline-block sm:block">Legal</h4>
+              <h4 className="font-garamond font-medium text-lg leading-none text-brand-black pl-3 border-l-2 border-brand-red mb-4">
+                Legal
+              </h4>
               <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2 sm:space-y-2">
                 <li>
                   <Link
@@ -181,7 +185,7 @@ export default function Footer() {
                     to="/terms-and-conditions"
                     className="text-brand-gray hover:text-brand-red text-sm transition-all duration-300 inline-block py-1 sm:hover:translate-x-1"
                   >
-                    Terms and Conditions
+                    Terms &amp; Conditions
                   </Link>
                 </li>
               </ul>
@@ -190,7 +194,9 @@ export default function Footer() {
 
           <Reveal delay={220} from="right">
             <div className="text-center sm:text-left">
-              <h4 className="footer-heading inline-block sm:block">Contact</h4>
+              <h4 className="font-garamond font-medium text-lg leading-none text-brand-black pl-3 border-l-2 border-brand-red mb-4">
+                Contact
+              </h4>
               <address className="not-italic text-brand-black/80 font-medium text-sm space-y-1.5 sm:space-y-2">
                 {contact.lines.map((line) => (
                   <p key={line}>{line}</p>
@@ -208,23 +214,29 @@ export default function Footer() {
           </Reveal>
         </div>
 
-        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-brand-gray-light flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left">
-          <p className="text-brand-gray text-xs sm:text-sm">
-            &copy; {new Date().getFullYear()} Sports AJ. All rights reserved.
+        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-brand-gray-light flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="font-garamond text-brand-gray text-sm leading-none">
+            @{new Date().getFullYear()} Sports AJ. All rights reserved.
           </p>
-          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-5 gap-y-2">
-            <Link
-              to="/privacy-policy"
-              className="text-brand-black hover:text-brand-red text-sm underline underline-offset-4 decoration-brand-gray-light transition-colors"
+          <div className="flex items-center gap-5 text-brand-black">
+            <a
+              href={social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-red transition-colors"
+              aria-label="Sports AJ on Instagram"
             >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/terms-and-conditions"
-              className="text-brand-black hover:text-brand-red text-sm underline underline-offset-4 decoration-brand-gray-light transition-colors"
+              <InstagramIcon />
+            </a>
+            <a
+              href={social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-brand-red transition-colors"
+              aria-label="Sports AJ on Facebook"
             >
-              Terms and Conditions
-            </Link>
+              <FacebookIcon />
+            </a>
           </div>
         </div>
       </div>
